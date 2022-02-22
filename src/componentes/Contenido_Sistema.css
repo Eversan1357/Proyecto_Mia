@@ -1,0 +1,34 @@
+#sistema_div{
+    height: 650px; 
+}
+
+#sistema_divruta{
+    display: flex;
+    margin-bottom: -15px;
+}
+
+#sistema_divrutas{
+    align-items: center;
+    margin: 10px;
+    display: flex;
+    gap: 7px;
+}
+
+#sistema_iconos{
+    height: 20px;
+    width: 20px;
+}
+
+#sistema_textrutas{
+    font-size: 18px;
+}
+
+#sistema_parrafos{
+    margin: 50px;
+    margin-top: 150px;
+}
+
+#sistema-link_inicio{
+    text-decoration: none;
+    color: black;
+}

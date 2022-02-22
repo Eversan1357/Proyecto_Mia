@@ -1,0 +1,7 @@
+#divfac{
+    width: fit-content;
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 100px 100px;
+}

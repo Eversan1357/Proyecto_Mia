@@ -1,0 +1,79 @@
+#headermenu{
+    background: rgb(238, 13, 13);
+}
+
+#titulos{
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+}
+
+#circulos{
+    margin: 5px;
+    display: flex;
+    gap: 0.4em;
+}
+#circulo{
+    height: 11px;
+    width: 11px;
+    border-radius: 50%;
+    background: yellow;
+}
+
+#texto_titulo{
+    width: fit-content;
+    margin: 0 auto; 
+    color: white;
+}
+
+#div_horas{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+#div_hora{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#fecha{
+    background: #ee240a;
+    border-radius: 25px;
+    color: white;
+    border: none;
+}
+
+#dimagen{
+   height: 50px;
+   width: 50px;
+   margin-right: 20px;
+   margin-left:  5px;
+   background: white;
+   border-radius: 50px;
+}
+
+#texto_admin{
+   color: white;
+}
+
+#foter{
+    display: grid;
+    grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% ;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#select{
+    background: #ee240a;
+    color: white;
+    border: 1px solid white;
+    border-radius: 9px 9px 0px 0px;
+    text-align: center;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: -1px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+select:focus{ outline: none;}

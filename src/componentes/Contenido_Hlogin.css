@@ -1,0 +1,64 @@
+body{
+  height: 700px;
+}
+
+#divbienvenido{
+    width: fit-content;
+    margin: 0 auto; 
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+#te1{
+    font-size: 27px;
+    margin-top: 20px;
+  }
+  
+  #te2{
+    font-size: 21px;
+    margin-top: 20px;
+  }
+  
+  #te3{
+     font-size: 17px;
+     margin-top: -5px;
+  }
+
+  #te4{
+    font-size: 17px;
+    margin-top: 30px;
+    font-weight: bold;
+ }
+  
+  #botones{
+    color: white;
+    background: red;
+}
+#divbotones{
+   width: fit-content;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: 50% 50%;
+   width: 425px;
+   justify-self: center;
+   align-self: center; 
+   gap: 10px;
+}
+
+#recuadro{
+  width: fit-content;
+  margin: 0 auto; 
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 450px;
+  justify-self: center;
+  align-self: center; 
+  margin-top: 50px;
+}
+
+#cuadro{
+  justify-self: center;
+    align-self: center;  
+    padding: 40px;
+    border: 1px solid black;
+}

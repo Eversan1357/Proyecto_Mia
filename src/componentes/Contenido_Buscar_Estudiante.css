@@ -1,0 +1,53 @@
+#div{
+    height: auto;
+}
+
+#divruta{
+    display: flex;
+    margin-bottom: -15px;
+}
+
+#divrutas{
+    align-items: center;
+    margin: 10px;
+    display: flex;
+    gap: 7px;
+}
+
+#iconos{
+    height: 20px;
+    width: 20px;
+}
+
+#textrutas{
+    font-size: 18px;
+}
+
+#selector{
+    width: fit-content;
+    margin: 0 auto; 
+    margin-top: 20px;
+}
+#seleccionar{
+    background: white;
+    border-radius: 2px;
+    border: 1px solid black;
+    color: black;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 5px;
+    width: 210px;
+    border-color: gray;
+}
+
+#busc{
+    width: fit-content;
+    margin: 0 auto; 
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#tablains{
+    width: fit-content;
+    margin: 0 auto; 
+}

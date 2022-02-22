@@ -1,0 +1,12 @@
+#selector{
+    width: fit-content;
+    margin: 0 auto; 
+    margin-top: 80px;
+}
+
+#tabla{
+  width: fit-content;
+  margin: 0 auto; 
+  margin-top: 160px;
+  width: 900px;
+}
