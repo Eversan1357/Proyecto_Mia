@@ -19,7 +19,7 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
 
 
     return (
-        <>
+        <div id='huella_div'>
             <div id='divruta'>
                 <div id='divrutas'>
                     <img id="iconos" src='/img/icono_inicio.png' alt='' />
@@ -117,32 +117,62 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
                     <button id="reg" type="submit" class="btn btn-danger">Registrar Ingreso</button>
                 </div>
             </div>
-            <h3>Lista de estudiantes</h3>
-            <div>
-                <table nameclass="table table-dark" >
-                    <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Documento</th>
-                        <th scope="col" >Grado</th>
-                        <th scope="col">Dirección</th>
-                        <th scope="col">Acudiente</th>
-                        <th scope="col">Parentesco</th>
-                        <th scope="col">Celular</th>
-                    </tr>
-                    {estudiantes.map(estudiante => (
-                        <tr key={estudiante.idEstudiante}>
-                            <td>{estudiante.unaPersona.nombre}</td>
-                            <td>{estudiante.unaPersona.numeroDocumento}</td>
-                            <td>{estudiante.grado}</td>
-                            <td>{estudiante.unaPersona.direccion}</td>
-                            <td>{estudiante.nombreAcudiente}</td>
-                            <td>{estudiante.parentescoAcudiente}</td>
-                            <td>{estudiante.unaPersona.telefono}</td>
-                        </tr>
-                    ))}
-                </table>
+
+
+
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                </div>
+                <div className='card-body'>
+                    <div className='table-responsive'>
+                        <table className='table table-bordered' id='tablacar' width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Documento</th>
+                                    <th scope="col" >Grado</th>
+                                    <th scope="col">Dirección</th>
+                                    <th scope="col">Acudiente</th>
+                                    <th scope="col">Parentesco</th>
+                                    <th scope="col">Celular</th>
+                                </tr>
+                            </thead>
+                            {estudiantes.map(estudiante => (
+                                <tbody>
+                                    <tr key={estudiante.idEstudiante}>
+                                        <td>{estudiante.unaPersona.nombre}</td>
+                                        <td>{estudiante.unaPersona.numeroDocumento}</td>
+                                        <td>{estudiante.grado}</td>
+                                        <td>{estudiante.unaPersona.direccion}</td>
+                                        <td>{estudiante.nombreAcudiente}</td>
+                                        <td>{estudiante.parentescoAcudiente}</td>
+                                        <td>{estudiante.unaPersona.telefono}</td>
+                                    </tr>
+                                </tbody>
+                            ))}
+                        </table>
+                    </div>
+                </div>
             </div>
-        </>
+{/*-----------------------------------------------------------------*/}
+
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <script src="js/demo/datatables-demo.js"></script>
+
+        </ div>
     );
 }
+
+
 export default Contenido_Huella_Estudiante_Nuevo;
