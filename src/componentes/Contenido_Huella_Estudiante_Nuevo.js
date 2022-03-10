@@ -5,7 +5,6 @@ import estudianteService from '../services/estudiante.service';
 const Contenido_Huella_Estudiante_Nuevo = () => {
 
     const [estudiantes, setEstudiantes] = useState([]);
-
     useEffect(() => {
         estudianteService.getAll()
             .then(response => {
@@ -14,9 +13,17 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
             })
             .catch(error => {
                 console.log('Something went wrong', error);
-            })
-    }, [])
+            });
+    }, []);
 
+
+    /*
+
+    handleSubmit = e => {
+        e.preventDefaultult();
+        console.log(data);
+    }
+*/
 
     return (
         <div id='huella_div'>
@@ -37,8 +44,7 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
                     </select>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Institución Educativa">
-                    </input>
+                    <input type="text" id="ins" class="form-control" placeholder="Institución Educativa"></input>
                 </div>
                 <div>
                     <select id="mun" class="form-select" >
@@ -46,8 +52,7 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
                     </select>
                 </div>
                 <div>
-                    <label for="exampleInputEmail1" class="form-label">Fecha Registro</label>
-                    <input class="date" type="date" ></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Fecha Registro"></input>
                 </div>
                 <div>
                     <select id="mun" class="form-select">
@@ -55,44 +60,34 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
                     </select>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Numero Documento*">
-                    </input>
+                    <input type="text" id="ins" class="form-control" placeholder="Numero Documento:*"></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Nombre Completo*">
-                    </input>
+                    <input type="text" id="ins" class="form-control" placeholder="Nombre Completo:*"></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Apellido Completo*">
-                    </input>
+                    <input type="text" id="ins" class="form-control" placeholder="Apellido Completo:*"></input>
                 </div>
                 <div>
-                    <select id="mun" class="form-select">
-                        <option>Grado*</option>
-                    </select>
+                    <input type="text" id="ins" class="form-control" placeholder="Grado:*"></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Dirección*">
-                    </input>
+                    <input type="text" id="ins" class="form-control" placeholder="Dirección:*"></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Barrio*">
-                    </input>
+                    <input type="text" id="ins" class="form-control" placeholder="Barrio:*"></input>
                 </div>
                 <div>
-                    Fecha nacimiento*<input class="date" type="date"  ></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Fecha Nacimiento"></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Nombre Acudiente*">
-                    </input>
+                    <input type="text" id="ins" class="form-control" placeholder="Nombre Acudiente:*"></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Parentesco*">
-                    </input>
+                    <input type="text" id="ins" class="form-control" placeholder="Parentesco:*"></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Telefono/Celular*">
-                    </input>
+                    <input type="text" id="ins" class="form-control" placeholder="Telefono/Celular:*"></input>
                 </div>
             </form>
             <div id="divdatos">
@@ -111,19 +106,14 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
                 </div>
                 <div>
                     <button id="lim" type="submit" class="btn btn-danger">Limpiar</button>
-                    <button id="lim" type="submit" class="btn btn-danger">Guardar</button>
+                    <button id="lim" class="btn btn-primary btn-block">Guardar</button>
                 </div>
                 <div>
                     <button id="reg" type="submit" class="btn btn-danger">Registrar Ingreso</button>
                 </div>
             </div>
 
-
-
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-                </div>
+            <div class="card shadow mb-4" id='card-table'>
                 <div className='card-body'>
                     <div className='table-responsive'>
                         <table className='table table-bordered' id='tablacar' width="100%" cellspacing="0">
@@ -141,35 +131,27 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
                             {estudiantes.map(estudiante => (
                                 <tbody>
                                     <tr key={estudiante.idEstudiante}>
-                                        <td>{estudiante.unaPersona.nombre}</td>
-                                        <td>{estudiante.unaPersona.numeroDocumento}</td>
+                                        <td>{estudiante.nombre1}</td>
+                                        <td>{estudiante.numeroDocumento}</td>
                                         <td>{estudiante.grado}</td>
-                                        <td>{estudiante.unaPersona.direccion}</td>
-                                        <td>{estudiante.nombreAcudiente}</td>
-                                        <td>{estudiante.parentescoAcudiente}</td>
-                                        <td>{estudiante.unaPersona.telefono}</td>
+                                        <td>{estudiante.direccionRecidencia}</td>
+                                        <td>{estudiante.acudiente}</td>
+                                        <td>{estudiante.acudiente}</td>
+                                        <td>{estudiante.telefono}</td>
                                     </tr>
                                 </tbody>
                             ))}
                         </table>
                     </div>
                 </div>
+                <nav className='d-flex justify-content-center'>
+                    <ul className='pagination'>
+                        <li className='page-link'>1</li>
+                        <li className='page-link'>2</li>
+                        <li className='page-link'>3</li>
+                    </ul>
+                </nav>
             </div>
-{/*-----------------------------------------------------------------*/}
-
-
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <script src="js/sb-admin-2.min.js"></script>
-
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-    <script src="js/demo/datatables-demo.js"></script>
-
         </ div>
     );
 }

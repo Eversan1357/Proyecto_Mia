@@ -11,7 +11,7 @@ class Superior extends React.Component {
             <img src='/img/usuario50.jpg' alt='' />LOGIN
           </div>
           <div id='superior_fecha' >
-            <input id="superior_fechas" className="date" type="date" defaultValue="2022-02-04" ></input>
+            <input id="superior_fechas" type="date" defaultValue="2022-03-07" ></input>
           </div>
         </div>
       </>

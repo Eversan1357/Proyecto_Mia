@@ -1,5 +1,5 @@
 #headermenu{
-    background: rgb(238, 13, 13);
+    background: rgb(219, 219, 219);
 }
 
 #titulos{
@@ -12,17 +12,18 @@
     display: flex;
     gap: 0.4em;
 }
+
 #circulo{
     height: 11px;
     width: 11px;
     border-radius: 50%;
-    background: yellow;
+    background: rgb(255, 0, 0);
 }
 
 #texto_titulo{
     width: fit-content;
     margin: 0 auto; 
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 #div_horas{
@@ -36,23 +37,24 @@
 }
 
 #fecha{
-    background: #ee240a;
-    border-radius: 25px;
+    background: #DA1E37;
+    border-radius: 15px;
     color: white;
     border: none;
+    padding: 6px
 }
 
 #dimagen{
    height: 50px;
    width: 50px;
-   margin-right: 20px;
-   margin-left:  5px;
-   background: white;
+   margin-right: 15px;
+   margin-left:  10px;
+   background: rgb(126, 117, 117);
    border-radius: 50px;
 }
 
 #texto_admin{
-   color: white;
+   color: rgb(0, 0, 0);
 }
 
 
@@ -81,8 +83,8 @@
     list-style: none;
     display: grid;
     grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% ;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-top: 20px;
 }
 
 #link_menu{
@@ -105,24 +107,23 @@
 #menu #desple{
     display: none;
     position: absolute;
-    min-width: 246px;
+    min-width: 150px;
 }
 
 #menu #item a:hover{
-    color: rgb(0, 0, 0);
+    color: rgb(141, 137, 137);
 }
 
 #menu #item:hover #desple{
-    background-color: #ee240a;
-    transition: 1s;
+    background-color: #DA1E37;
+    transition: 1.5s;
     display: block;
     
 }
 
 #item{
-    background: #ee240a;
+    background: #E01E37;
     color: white;
-    border: 1px solid white;
     border-radius: 9px 9px 0px 0px;
     text-align: center;
     padding-top: 9px;
@@ -135,6 +136,7 @@
 #desple{
     text-decoration: none;
     list-style: none;
+    border-radius: 0px 0px 9px 9px;
 }
 
 #boxli{

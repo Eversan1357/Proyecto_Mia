@@ -25,9 +25,14 @@
     font-size: 18px;
 }
 
-#formulario{
+#formu_cambiar{
     width: fit-content;
-    margin: 0 auto; 
-    margin-top: 90px;
-    height: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 600px;
+}
+
+#input_camb{
+    
 }

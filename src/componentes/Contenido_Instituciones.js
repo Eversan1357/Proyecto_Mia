@@ -4,7 +4,7 @@ import './Contenido_Instituciones.css'
 class Contenido_Instituciones extends React.Component {
     render() {
         return (
-            <div id="div">
+            <div id="div_ins">
                 <div id='divruta'>
                     <div id='divrutas'>
                         <img id="iconos" src='/img/icono_inicio.png' alt='' />
@@ -14,37 +14,30 @@ class Contenido_Instituciones extends React.Component {
                     </div>
                 </div>
                 <hr />
-
-                <div id='selector'>
+                <div id="card_ins">
                     <text>Departamento*</text>
                     <select id='seleccionar' class="form-select">
                         <option>Selecione una Opción</option>
                     </select>
-                </div>
-                <div id='selector'>
                     <text>Municipio*</text>
                     <select id='seleccionar' class="form-select">
                         <option>Selecione una Opción</option>
                     </select>
-                </div>
-                <div id='selector'>
                     <text>E.E(Establecimiento Educativo):*</text>
-                    <input type="text" id="ins" class="form-control" placeholder="Institución Educativa">
+                    <input type="text" id="input_ins" class="form-control" placeholder="Institución Educativa">
                     </input>
-                </div>
-                <div id='selector'>
                     <text>Sedes*</text>
                     <select id='seleccionar' class="form-select">
                         <option>Selecione una Opción</option>
                     </select>
                 </div>
-                <div id="busc">
-                    <button type="submit" class="btn btn-danger">Registrar Ingreso</button>
+                <div id='busc_ins'>
+                    <button  type="submit" class="btn btn-danger">Buscar</button>
                 </div>
 
                 <table id="tablains" class="table table-hover">
                     <thead>
-                        <tr>                                                                                                                                                                                                                                                                                                                                                                                                                  
+                        <tr>
                             <th scope="col">Código DANE</th>
                             <th scope="col">Nombre Institución</th>
                             <th scope="col">Rector Institución</th>

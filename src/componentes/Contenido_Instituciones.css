@@ -1,4 +1,4 @@
-#div{
+#div_ins{
     height: 700px;
 }
 
@@ -23,11 +23,19 @@
     font-size: 18px;
 }
 
-#selector{
+#card_ins{
     width: fit-content;
-    margin: 0 auto; 
-    margin-top: 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 600px;
 }
+
+#input_ins{
+    width: 250px;
+    margin-left: 5px;
+}
+
 #seleccionar{
     background: white;
     border-radius: 2px;
@@ -36,11 +44,11 @@
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 5px;
-    width: 210px;
+    width: 250px;
     border-color: gray;
 }
 
-#busc{
+#busc_ins{
     width: fit-content;
     margin: 0 auto; 
     margin-top: 40px;

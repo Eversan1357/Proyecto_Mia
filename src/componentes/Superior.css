@@ -1,11 +1,11 @@
 #superior_header{
-  background-color: rgb(199, 30, 30);
+  background-color: #E01E37;
   display: grid;
   height: 80px;
   grid-template-columns: 33% 33% 33%;
-  }
+}
   
-  #superior_log{
+#superior_log{
   width: fit-content;
   margin: 0 auto; 
   padding-top: 10px;
@@ -13,20 +13,19 @@
   align-self: center;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
-  }
+}
   
-  #superior_fecha{
+#superior_fecha{
   justify-self: center;
   align-self: center; 
-  }
+}
   
-  #superior_fechas{
-  font-size: 18px;
-  background: white;
-  border-radius: 4px;
-  border: 2px solid rgb(18, 162, 219);
-  font-family: 'Roboto Mono', monospace;
-  outline: none;
-  }
+#superior_fechas{
+  background: #ffffff;
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 6px;
+}
   
   

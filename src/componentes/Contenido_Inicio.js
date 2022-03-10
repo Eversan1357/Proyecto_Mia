@@ -1,32 +1,45 @@
 import React, { Component } from 'react'
+import Carousel from 'react-bootstrap/Carousel'
 import './Contenido_Inicio.css'
-
 
 export default class Contenido_Inicio extends Component {
     render() {
         return (
-            <body >
+            <div id="body">
                 <div id='div_ruta'>
-                    <div id='div_rutas'>
-                        <img id="icono" src='/img/icono_inicio.png' alt='' />
-                        <text id='text_rutas'>Inicio</text>
-                    </div>
+                    <img id="icono" src='/img/icono_inicio.png' alt='' />
+                    <text id='text_rutas'>Inicio</text>
                 </div>
                 <hr />
-                Bienvenido al Sistema
-                <br />
-                <form id="formulario_inicio">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Usuario</label>
-                        <input type="email" class="form-control" id="exampleEmail" aria-describedby="emailHelp" placeholder="Usuario" />
-                    </div>
-                    <br />
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Rol</label>
-                        <input type="text" class="form-control" id="example" aria-describedby="emailHelp" placeholder="Rol" />
-                    </div>
-                </form>
-            </body>
+                <h4 id='text_titulo' >Bienvenido al Sistema</h4>
+                <Carousel id="carusel" >
+                    <Carousel.Item interval={4000}>
+                        <img
+                            id='img_carusel'
+                            className="d-block w-100"
+                            src='/img/img1.jpeg'
+                            alt="First slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item interval={4000}>
+                        <img
+                            id='img_carusel'
+                            className="d-block w-100"
+                            src='/img/img2.jpeg'
+                            alt="Second slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item interval={4000}>
+                        <img
+                            id='img_carusel'
+                            className="d-block w-100"
+                            src='/img/img3.jpeg'
+                            alt="Third slide"
+                        />
+                    </Carousel.Item>
+                </Carousel>
+
+            </div>
         )
     }
 }
