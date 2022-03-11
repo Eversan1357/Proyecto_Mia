@@ -77,7 +77,7 @@ const Contenido_Buscar_Estudiante = () => {
                         <th scope="col">Institución</th>
                         <th scope="col">Sede</th>
                         <th scope="col">Grado</th>
-                        <th scope="col">Fecha</th>
+                        <th scope="col">Fecha de Registro</th>
                         <th scope="col">Tipo Beneficio</th>
                         <th scope="col">Estado Beneficio</th>
                         <th scope="col">Ver más</th>
@@ -86,13 +86,14 @@ const Contenido_Buscar_Estudiante = () => {
                 {estudiantes.map(estudiante => (
                     <tbody>
                         <tr key={estudiante.idEstudiante}>
-                            <td>{estudiante.nombre1}</td>
+                            <td>{estudiante.unTipoDocumento}</td>
                             <td>{estudiante.numeroDocumento}</td>
+                            <td>{estudiante.nombre1}</td>
+                            <td>{estudiante.apellido1}</td>
+                            <td>{estudiante.fechaNacimiento}</td>
+                            <td>{estudiante.unaInstitucion}</td>
+                            <td>{estudiante.unaSede}</td>
                             <td>{estudiante.grado}</td>
-                            <td>{estudiante.direccionRecidencia}</td>
-                            <td>{estudiante.acudiente}</td>
-                            <td>{estudiante.acudiente}</td>
-                            <td>{estudiante.telefono}</td>
                         </tr>
                     </tbody>
                 ))}

@@ -18,11 +18,11 @@ class Contenido_Cambiar_Clave extends React.Component {
                 <hr />
                 <form id="formu_cambiar">
                     <label for="exampleInputEmail1">Login:*</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su Usuario" />
+                    <input type="email" class="form-control" id="ins" aria-describedby="emailHelp" placeholder="Ingrese su Usuario" />
                     <label for="exampleInputEmail1">Clave Actual:*</label>
-                    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Clave Actual" />
+                    <input type="password" class="form-control" id="ins" aria-describedby="emailHelp" placeholder="Clave Actual" />
                     <label for="exampleInputEmail1">Clave Nueva*</label>
-                    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Clave Nueva" />
+                    <input type="password" class="form-control" id="ins" aria-describedby="emailHelp" placeholder="Clave Nueva" />
                     <label for="exampleInputPassword1">Repetir Contraseña Nueva</label>
                     <input type="password" class="form-control" id="ins" placeholder="Repetir Contraseña Nueva" />
                 </form>

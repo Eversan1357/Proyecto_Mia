@@ -32,11 +32,11 @@
     width: fit-content;
     margin: 0 auto; 
     margin-top: 50px;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 #contenido_tema{
-    margin-left: -30px;
-    margin-right: 30px;
     font-size: 22px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -48,4 +48,5 @@
     color: rgb(8, 8, 8);
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 250px;
 }

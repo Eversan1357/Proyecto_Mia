@@ -18,7 +18,7 @@ class Contenido_Archivos extends React.Component {
                 <hr />
                 <div id='contenido_selector'>
                     <text id="contenido_tema">Tema :</text>
-                    <select id='contenido_seleccionar'>
+                    <select id='contenido_seleccionar' class="form-select" >
                         <option >Selecione una Opción</option>
                         <option download="" href="" >Diccionario de Datos</option>
                         <option>Estrategia PAE</option>

@@ -1,7 +1,7 @@
 import httpClient from '../http-common';
 
 const getAll = () => {
-    return httpClient.get('/estudiante');
+    return httpClient.get('/beneficiario');
 } 
 
 export default {getAll};

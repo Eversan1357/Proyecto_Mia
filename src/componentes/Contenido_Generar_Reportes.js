@@ -76,21 +76,21 @@ class Contenido_Generar_Reportes extends React.Component {
                 <div>
                     <div id="iconos_ger">
                         <div>
-                            <img id="icoger" src='/img/icono_pdf.png' alt='' />
+                            <img id="ico_ger" src='/img/icono_pdf.png' alt='' />
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                 <label class="form-check-label" for="flexCheckDefault">PDF</label>
                             </div>
                         </div>
                         <div>
-                            <img id="icoger" src='/img/icono_excel.png' alt='' />
+                            <img id="ico_ger" src='/img/icono_excel.png' alt='' />
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                 <label class="form-check-label" for="flexCheckDefault">Excel</label>
                             </div>
                         </div>
                         <div>
-                            <img id="icoger" src='/img/icono_archivo_plano.png' alt='' />
+                            <img id="ico_ger" src='/img/icono_archivo_plano.png' alt='' />
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                 <label class="form-check-label" for="flexCheckDefault">Archivo Plano</label>
@@ -99,7 +99,7 @@ class Contenido_Generar_Reportes extends React.Component {
                     </div>
                 </div>
 
-                <div id="botonger">
+                <div id="boton_ger">
                     <div className='btn btn-danger' href='./Inicio'><a href="./Inicio">Generar Reporte</a></div>
                 </div>
 
