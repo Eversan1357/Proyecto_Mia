@@ -1,4 +1,5 @@
 import './Contenido_Huella_Estudiante_Nuevo.css'
+import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import estudianteService from '../services/estudiante.service';
 
@@ -27,16 +28,13 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
 
     return (
         <div id='huella_div'>
-            <div id='divruta'>
-                <div id='divrutas'>
-                    <img id="iconos" src='/img/icono_inicio.png' alt='' />
-                    <text id='textrutas'>Inicio/</text>
-                    <img id="iconos" src='/img/icono_administrador.png' alt='' />
-                    <text id='textrutas'>Administrador/</text>
-                    <text id='textrutas'>Cargue Huella Estudiante Nuevo</text>
-                </div>
+            <div id='huella_divruta'>
+                <img id="huella_iconos" src='/img/icono_inicio.png' alt='' />
+                <Link id="huella_linkinicio" to="/Inicio">Inicio</Link>
+                <img id="huella_iconos" src='/img/icono_administrador.png' alt='' />
+                <text id='huella_textrutas'>Administrador/</text>
+                <text id='huella_textrutas'>Huella Estudiante Nuevo</text>
             </div>
-            <hr />
             <form id="datos">
                 <div>
                     <select id="mun" class="form-select" >

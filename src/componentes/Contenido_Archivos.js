@@ -5,20 +5,17 @@ import './Contenido_Archivos.css'
 class Contenido_Archivos extends React.Component {
     render() {
         return (
-            <div id="contenido_div">
-                <div id='contenido_divruta'>
-                    <div id='contenido_divrutas'>
-                        <img id="contenido_iconos" src='/img/icono_inicio.png' alt='' />
-                        <Link id="contenido_link_inicio" to="/Inicio">Inicio</Link>
-                        <img id="iconos" src='/img/icono_ayuda.png' alt='' />
-                        <text id='contenido_textrutas'>Ayuda/</text>
-                        <text id='contenido_textrutas'>Archivos</text>
-                    </div>
+            <div id="archivos_div">
+                <div id='archivos_divruta'>
+                    <img id="archivos_iconos" src='/img/icono_inicio.png' alt='' />
+                    <Link id="archivos_linkinicio" to="/Inicio">Inicio</Link>
+                    <img id="archivos_iconos" src='/img/icono_ayuda.png' alt='' />
+                    <text id='archivos_textrutas'>Ayuda/</text>
+                    <text id='archivos_textrutas'>Archivos</text>
                 </div>
-                <hr />
-                <div id='contenido_selector'>
-                    <text id="contenido_tema">Tema :</text>
-                    <select id='contenido_seleccionar' class="form-select" >
+                <div id='archivos_selector'>
+                    <text id="archivos_tema">Tema :</text>
+                    <select id='archivos_seleccionar' class="form-select" >
                         <option >Selecione una Opción</option>
                         <option download="" href="" >Diccionario de Datos</option>
                         <option>Estrategia PAE</option>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Contenido_Usuarios.css'
 
 class Contenido_Cambiar_Clave extends React.Component {
@@ -6,15 +7,13 @@ class Contenido_Cambiar_Clave extends React.Component {
         return (
             <div id="usuarios_div">
                 <div id='usuarios_divruta'>
-                    <div id='usuarios_divrutas'>
-                        <img id="usuarios_iconos" src='/img/icono_inicio.png' alt='' />
-                        <text id='usuarios_textrutas'>Inicio/</text>
-                        <img id="usuarios_iconos" src='/img/icono_administrador.png' alt='' />
-                        <text id='usuarios_textrutas'>Administrador/</text>
-                        <text id='usuarios_textrutas'>Usuarios</text>
-                    </div>
+                    <img id="usuarios_iconos" src='/img/icono_inicio.png' alt='' />
+                    <Link id="usuarios_linkinicio" to="/Inicio">Inicio</Link>
+                    <img id="usuarios_iconos" src='/img/icono_administrador.png' alt='' />
+                    <text id='usuarios_textrutas'>Administrador/</text>
+                    <text id='usuarios_textrutas'>Usuarios</text>
                 </div>
-                <hr />
+                
                 <table id="usuarios_tabla" class="table table-striped">
                     <thead>
                         <th id="usuarios_th" scope="col">Roles</th>

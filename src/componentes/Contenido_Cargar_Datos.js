@@ -1,21 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Contenido_Cargar_Datos.css'
 
 class Contenido_Cambiar_Clave extends React.Component {
     render() {
         return (
-            <div id="div_datos">
-                <div id='divruta'>
-                    <div id='divrutas'>
-                        <img id="iconos" src='/img/icono_inicio.png' alt='' />
-                        <text id='textrutas'>Inicio/</text>
-                        <img id="iconos" src='/img/icono_administrador.png' alt='' />
-                        <text id='textrutas'>Administrador/</text>
-                        <text id='textrutas'>Cargar Datos</text>
-                    </div>
+            <div id="datos_div">
+                <div id='datos_divruta'>
+                    <img id="datos_iconos" src='/img/icono_inicio.png' alt='' />
+                    <Link id="datos_linkinicio" to="/Inicio">Inicio</Link>
+                    <img id="datos_iconos" src='/img/icono_administrador.png' alt='' />
+                    <text id='datos_textrutas'>Administrador/</text>
+                    <text id='datos_textrutas'>Cargar Datos</text>
                 </div>
-                <hr />
-                <form id="formulario_datos">
+                <form id="datos_formulario">
                     <label for="exampleInputEmail1" id="ins" >Tipo de Archivo:*</label>
                     <select id="ins" >
                         <option>Tipo de Archivo:</option>
@@ -33,7 +31,7 @@ class Contenido_Cambiar_Clave extends React.Component {
                     <label for="exampleInputPassword1" id="ins" >Fecha Cargue:*</label>
                     <input type="date" class="form-control" id="ins" placeholder="Repetir Contraseña Nueva" />
                 </form>
-                <div id="boton_datos">
+                <div id="datos_boton">
                     <div className='btn btn-danger' ><a href="./Cargar_Datos">Cargar Archivo</a></div>
                 </div>
             </div>

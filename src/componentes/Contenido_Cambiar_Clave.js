@@ -7,16 +7,13 @@ class Contenido_Cambiar_Clave extends React.Component {
         return (
             <div id="clave_div">
                 <div id='clave_divruta'>
-                    <div id='clave_divrutas'>
-                        <img id="clave_iconos" src='/img/icono_inicio.png' alt='' />
-                        <Link id="clave_textrutas" to="/Inicio">Inicio</Link>
-                        <img id="clave_iconos" src='/img/icono_administrador.png' alt='' />
-                        <text id='clave_textrutas'>Administrador/</text>
-                        <text id='clave_textrutas'>Cambiar Clave</text>
-                    </div>
+                    <img id="clave_iconos" src='/img/icono_inicio.png' alt='' />
+                    <Link id="clave_linkinicio" to="/Inicio">Inicio</Link>
+                    <img id="clave_iconos" src='/img/icono_administrador.png' alt='' />
+                    <text id='clave_textrutas'>Administrador/</text>
+                    <text id='clave_textrutas'>Cambiar Clave</text>
                 </div>
-                <hr />
-                <form id="formu_cambiar">
+                <form id="clave_form">
                     <label for="exampleInputEmail1">Login:*</label>
                     <input type="email" class="form-control" id="ins" aria-describedby="emailHelp" placeholder="Ingrese su Usuario" />
                     <label for="exampleInputEmail1">Clave Actual:*</label>

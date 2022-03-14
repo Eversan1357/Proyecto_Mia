@@ -1,21 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Contenido_Roles.css'
 
 class Contenido_Login extends React.Component {
     render() {
         return (
-            <div id="div">
-                <div id='divruta'>
-                    <div id='divrutas'>
-                        <img id="iconos" src='/img/icono_inicio.png' alt='' />
-                        <text id='textrutas'>Inicio/</text>
-                        <img id="iconos" src='/img/icono_administrador.png' alt='' />
-                        <text id='textrutas'>Administrador/</text>
-                        <text id='textrutas'>Roles</text>
-                    </div>
+            <div id="roles_div">
+                <div id='roles_divruta'>
+                    <img id="roles_iconos" src='/img/icono_inicio.png' alt='' />
+                    <Link id="roles_linkinicio" to="/Inicio">Inicio</Link>
+                    <img id="roles_iconos" src='/img/icono_administrador.png' alt='' />
+                    <text id='roles_textrutas'>Administrador/</text>
+                    <text id='roles_textrutas'>Roles</text>
                 </div>
-
-                <form id="form">
+                <form id="roles_form">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nuevo Rol:*</label>
                         <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Nuevo Rol" />

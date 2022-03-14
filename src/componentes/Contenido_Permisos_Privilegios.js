@@ -1,12 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Contenido_Permisos_Privilegios.css'
 
 class Contenido_Permisos_Privilegios extends React.Component {
     render() {
         return (
-            <body>
-
-                <div id="selector">
+            <div id="permisos_div">
+                <div id='permisos_divruta'>
+                    <img id="permisos_iconos" src='/img/icono_inicio.png' alt='' />
+                    <Link id="permisos_linkinicio" to="/Inicio">Inicio</Link>
+                    <img id="permisos_iconos" src='/img/icono_administrador.png' alt='' />
+                    <text id='permisos_textrutas'>Administrador/</text>
+                    <text id='permisos_textrutas'>Permisos y Privilegios</text>
+                </div>
+                <div id="permisos_selector">
                     <select>
                         <option>Rol</option>
                         <option>Rector</option>
@@ -18,8 +25,7 @@ class Contenido_Permisos_Privilegios extends React.Component {
                         <option>Operador-PAE</option>
                     </select>
                 </div>
-
-                <table id="tabla" class="table table-striped">
+                <table id="permisos_tabla" class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">Nombre</th>
@@ -46,7 +52,7 @@ class Contenido_Permisos_Privilegios extends React.Component {
                         </tr>
                     </tbody>
                 </table>
-            </body>
+            </div>
         )
     }
 }

@@ -1,29 +1,32 @@
-#div{
-    height: 700px;
+#roles_div{
+    height: 800px;
 }
 
-#divruta{
+#roles_divruta{
     display: flex;
     margin-bottom: -15px;
-}
-
-#divrutas{
     align-items: center;
     margin: 10px;
     display: flex;
     gap: 7px;
 }
 
-#iconos{
+#roles_iconos{
     height: 20px;
     width: 20px;
 }
 
-#textrutas{
+#roles_textrutas{
     font-size: 18px;
 }
 
-#form{  
+#roles_linkinicio{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+#roles_form{  
     width: fit-content;
     margin: 0 auto;
     margin-top: 100px;

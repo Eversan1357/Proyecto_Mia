@@ -1,29 +1,32 @@
-#div_datos{
-    height: 700px;
+#datos_div{
+    height: 800px;
 }
 
-#divruta{
+#datos_divruta{
     display: flex;
     margin-bottom: -15px;
-}
-
-#divrutas{
     align-items: center;
     margin: 10px;
     display: flex;
     gap: 7px;
 }
 
-#iconos{
+#datos_iconos{
     height: 20px;
     width: 20px;
 }
 
-#textrutas{
+#datos_textrutas{
     font-size: 18px;
 }
 
-#formulario_datos{
+#datos_linkinicio{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+#datos_formulario{
     width: fit-content;
     margin: 0 auto;
     width: 500px;
@@ -32,7 +35,7 @@
     margin-top: 70px;
 }
 
-#boton_datos{
+#datos_boton{
     width: fit-content;
     margin: 0 auto;
     margin-top: 30px;

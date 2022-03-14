@@ -1,10 +1,38 @@
-#selector{
+#permisos_div{
+  height: 800px;
+}
+
+#permisos_divruta{
+  display: flex;
+  margin-bottom: -15px;
+  align-items: center;
+  margin: 10px;
+  display: flex;
+  gap: 7px;
+}
+
+#permisos_iconos{
+  height: 20px;
+  width: 20px;
+}
+
+#permisos_textrutas{
+  font-size: 18px;
+}
+
+#permisos_linkinicio{
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+}
+
+#permisos_selector{
     width: fit-content;
     margin: 0 auto; 
     margin-top: 80px;
 }
 
-#tabla{
+#permisos_tabla{
   width: fit-content;
   margin: 0 auto; 
   margin-top: 160px;

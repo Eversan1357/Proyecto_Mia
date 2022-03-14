@@ -10,7 +10,6 @@ export default class Contenido_Inicio extends Component {
                     <img id="inicio_icono" src='/img/icono_inicio.png' alt='' />
                     <text id='inicio_textrutas'>Inicio</text>
                 </div>
-                <hr />
                 <h4 id='inicio_text_titulo' >Bienvenido al Sistema</h4>
                 <Carousel id="inicio_carusel" >
                     <Carousel.Item interval={4000}>

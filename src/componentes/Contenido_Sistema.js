@@ -8,12 +8,11 @@ class Contenido_Sistema extends React.Component {
       <div id="sistema_div">
         <div id='sistema_divruta'>
           <img id="sistema_iconos" src='/img/icono_inicio.png' alt='' />
-          <Link id="sistema-link_inicio" to="/Inicio">Inicio</Link>
+          <Link id="sistema_linkinicio" to="/Inicio">Inicio</Link>
           <img id="sistema_iconos" src='/img/icono_ayuda.png' alt='' />
           <text id='sistema_textrutas'>Ayuda/</text>
           <text id='sistema_textrutas'>Sistema</text>
         </div>
-        <hr />
         <div id="sistema_parrafos">
           <p>
             El proceso de matrícula es el conjunto de políticas, procedimientos y actividades, que permiten organizar la continuidad de los alumnos antiguos y el ingreso de nuevos, en el Sistema de Educación Oficial del País.
