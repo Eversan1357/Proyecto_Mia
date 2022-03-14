@@ -17,16 +17,9 @@ class Contenido_Archivos extends React.Component {
                     <text id="archivos_tema">Tema :</text>
                     <select id='archivos_seleccionar' class="form-select" >
                         <option >Selecione una Opción</option>
-                        <option download="" href="" >Diccionario de Datos</option>
+                        <option download="FORMATO DE PLANILLA - 1" href="./public" >Diccionario de Datos</option>
                         <option>Estrategia PAE</option>
-                        <option>Formato Cargue</option>
-                        <option>Formato Men Planillas</option>
-                        <option>Consolidado Mensual Planilla</option>
-                        <option>Instructivos</option>
-                        <option>Cargue Manual Usuario</option>
-                        <option>Cargue Matricula</option>
-                        <option>Cargue Anexo 13A</option>
-                        <option>Ingreso Huella estudiante Nuevo</option>
+                        <option download="FORMATO DE PLANILLA - 1" href="./public/FORMATO DE PLANILLA -1" >Diccionario de Datos</option>
                     </select>
                 </div>
             </div>

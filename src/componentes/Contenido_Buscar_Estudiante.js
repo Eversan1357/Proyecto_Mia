@@ -1,5 +1,6 @@
 import React from "react";
 import './Contenido_Buscar_Estudiante.css'
+import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import estudianteService from '../services/estudiante.service';
 
@@ -19,17 +20,12 @@ const Contenido_Buscar_Estudiante = () => {
 
     return (
         <div id="div">
-            <div id='divruta'>
-                <div id='divrutas'>
-                    <img id="iconos" src='/img/icono_inicio.png' alt='' />
-                    <text id='textrutas'>Inicio/</text>
-                    <img id="iconos" src='/img/icono_estudiantes.png' alt='' />
-                    <text id='textrutas'>Estudiante/</text>
-                    <text id='textrutas'>Buscar Estudiante</text>
-                </div>
+            <div id='buscar_divruta'>
+                <img id="buscar_iconos" src='/img/icono_inicio.png' alt='' />
+                <Link id="buscar_linkinicio" to="/Inicio">Inicio</Link>
+                <img id="buscar_iconos" src='/img/icono_estudiantes.png' alt='' />
+                <text id='buscar_textrutas'>Buscar/</text>
             </div>
-            <hr />
-
             <div id="form_buscar">
                 <text>Departamento*</text>
                 <select id='seleccionar' class="form-select">

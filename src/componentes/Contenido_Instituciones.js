@@ -1,5 +1,6 @@
 import React from "react";
 import './Contenido_Instituciones.css'
+import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import institucioneService from '../services/institucion.service';
 
@@ -18,16 +19,13 @@ const Contenido_Instituciones = () => {
     }, []);
 
     return (
-        <div id="div_ins">
-            <div id='divruta'>
-                <div id='divrutas'>
-                    <img id="iconos" src='/img/icono_inicio.png' alt='' />
-                    <text id='textrutas'>Inicio/</text>
-                    <img id="iconos" src='/img/icono_instituciones.png' alt='' />
-                    <text id='textrutas'>Instituciones</text>
-                </div>
+        <div id="instituciones_ins">
+            <div id='instituciones_divruta'>
+                <img id="instituciones_iconos" src='/img/icono_inicio.png' alt='' />
+                <Link id="instituciones_linkinicio" to="/Inicio">Inicio</Link>
+                <img id="instituciones_iconos" src='/img/icono_instituciones.png' alt='' />
+                <text id='instituciones_textrutas'>Instituciones</text>
             </div>
-            <hr />
             <div id="card_ins">
                 <text>Departamento*</text>
                 <select id='seleccionar' class="form-select">
@@ -67,9 +65,9 @@ const Contenido_Instituciones = () => {
                             <td>{instituciones.codDane}</td>
                             <td>{instituciones.nombre}</td>
                             <td>{instituciones.rector.username}</td>
-                            <td>{}</td>
-                            <td>{}</td>
-                            <td>{}</td>
+                            <td>{ }</td>
+                            <td>{ }</td>
+                            <td>{ }</td>
                         </tr>
                     </tbody>
                 ))}

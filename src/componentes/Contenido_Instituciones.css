@@ -1,26 +1,29 @@
-#div_ins{
-    height: 700px;
+#instituciones_div{
+    height: 800px;
 }
 
-#divruta{
+#instituciones_divruta{
     display: flex;
     margin-bottom: -15px;
-}
-
-#divrutas{
     align-items: center;
     margin: 10px;
     display: flex;
     gap: 7px;
 }
 
-#iconos{
+#instituciones_iconos{
     height: 20px;
     width: 20px;
 }
 
-#textrutas{
+#instituciones_textrutas{
     font-size: 18px;
+}
+
+#instituciones_linkinicio{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
 }
 
 #card_ins{
