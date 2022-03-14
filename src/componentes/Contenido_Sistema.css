@@ -1,18 +1,16 @@
 #sistema_div{
-    height: 650px; 
+    height: 800px;
 }
 
 #sistema_divruta{
     display: flex;
     margin-bottom: -15px;
-}
-
-#sistema_divrutas{
     align-items: center;
     margin: 10px;
     display: flex;
     gap: 7px;
 }
+
 
 #sistema_iconos{
     height: 20px;
@@ -29,6 +27,7 @@
 }
 
 #sistema-link_inicio{
+    font-size: 18px;
     text-decoration: none;
     color: black;
 }

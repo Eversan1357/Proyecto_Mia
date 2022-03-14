@@ -7,13 +7,11 @@ class Contenido_Sistema extends React.Component {
     return (
       <div id="sistema_div">
         <div id='sistema_divruta'>
-          <div id='sistema_divrutas'>
-            <img id="sistema_iconos" src='/img/icono_inicio.png' alt='' />
-            <Link id="sistema-link_inicio" to="/Inicio">Inicio</Link>
-            <img id="sistema_iconos" src='/img/icono_ayuda.png' alt='' />
-            <text id='sistema_textrutas'>Ayuda/</text>
-            <text id='sistema_textrutas'>Sistema</text>
-          </div>
+          <img id="sistema_iconos" src='/img/icono_inicio.png' alt='' />
+          <Link id="sistema-link_inicio" to="/Inicio">Inicio</Link>
+          <img id="sistema_iconos" src='/img/icono_ayuda.png' alt='' />
+          <text id='sistema_textrutas'>Ayuda/</text>
+          <text id='sistema_textrutas'>Sistema</text>
         </div>
         <hr />
         <div id="sistema_parrafos">

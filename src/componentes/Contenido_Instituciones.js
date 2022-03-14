@@ -66,7 +66,7 @@ const Contenido_Instituciones = () => {
                         <tr key={instituciones.idInstitucion}>
                             <td>{instituciones.codDane}</td>
                             <td>{instituciones.nombre}</td>
-                            <td>{instituciones.rector.id}</td>
+                            <td>{instituciones.rector.username}</td>
                             <td>{}</td>
                             <td>{}</td>
                             <td>{}</td>

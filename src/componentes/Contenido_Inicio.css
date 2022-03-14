@@ -1,46 +1,40 @@
-#body{
+#inicio_div{
     height: 800px;
 }
 
-#div_ruta{
+#inicio_divruta{
     display: flex;
+    margin-bottom: -15px;
     align-items: center;
     margin: 10px;
     display: flex;
     gap: 7px;
-    margin-top: -5px;
-    margin-bottom: -5px;
 }
 
-#icono{
+#inicio_icono{
     height: 20px;
     width: 20px;
 }
 
-#text_rutas{
+#inicio_textrutas{
     font-size: 18px;
 }
 
 #img_carusel{
-
     height: 500px;
     width: 400px;
 }
 
-#text_titulo{
+#inicio_text_titulo{
     margin-top: 30px;
     margin-left: 40px;
 }
 
-#carusel{
+#inicio_carusel{
     width: fit-content;
     margin: 0 auto;
     height: auto;
     width: 850px;
     margin-top: 80px;
     margin-bottom: 200px;
-}
-
-#carusel_font{
-    color:  rgb(208, 255, 1);
 }

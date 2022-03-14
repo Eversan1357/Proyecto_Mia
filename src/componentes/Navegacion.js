@@ -33,12 +33,12 @@ export default function Navegacion() {
                     </li>
                     <li id='item'><a href='#' className='menu_link'>Administrador<img id='imgflecha' src="/img/flecha_abajo.png" alt="" /></a>
                         <ul id='desple'>
-                            <li id='boxli'><Link className='menu_link' to="/Cambiar_Clave">Cambiar_Clave</Link></li>
-                            <li id='boxli'><Link className='menu_link' to="/Cargar_Datos">Cargar_Datos</Link></li>
-                            <li id='boxli'><Link className='menu_link' to="/Permisos_Privilegios">Permisos_Privilegios</Link></li>
+                            <li id='boxli'><Link className='menu_link' to="/Cambiar_Clave">Cambiar Clave</Link></li>
+                            <li id='boxli'><Link className='menu_link' to="/Cargar_Datos">Cargar Datos</Link></li>
+                            <li id='boxli'><Link className='menu_link' to="/Permisos_Privilegios">Permisos Privilegios</Link></li>
                             <li id='boxli'><Link className='menu_link' to="/Roles">Roles</Link></li>
                             <li id='boxli'><Link className='menu_link' to="/Usuarios">Usuarios</Link></li>
-                            <li id='boxli'><Link className='menu_link' to="/Huella_Estudiante_Nuevo">Huella-Estudiante-Nuevo</Link></li>
+                            <li id='boxli'><Link className='menu_link' to="/Huella_Estudiante_Nuevo">Huella Estudiante Nuevo</Link></li>
                         </ul>
                     </li>
                     <li id='item'><a href='#' className='menu_link'>Instituciones<img id='imgflecha' src="/img/flecha_abajo.png" alt="" /></a>

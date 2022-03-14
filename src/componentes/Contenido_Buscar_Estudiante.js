@@ -86,19 +86,22 @@ const Contenido_Buscar_Estudiante = () => {
                 {estudiantes.map(estudiante => (
                     <tbody>
                         <tr key={estudiante.idEstudiante}>
-                            <td>{estudiante.unTipoDocumento}</td>
+                            <td>{estudiante.unTipoDocumento.nombre}</td>
                             <td>{estudiante.numeroDocumento}</td>
                             <td>{estudiante.nombre1}</td>
                             <td>{estudiante.apellido1}</td>
                             <td>{estudiante.fechaNacimiento}</td>
-                            <td>{estudiante.unaInstitucion}</td>
-                            <td>{estudiante.unaSede}</td>
+                            <td>{estudiante.unaInstitucion.nombre}</td>
+                            <td>{estudiante.unaSede.nombre}</td>
                             <td>{estudiante.grado}</td>
+                            <td>{estudiante.unTipoDocumento.nombre}</td>
+                            <td>{estudiante.unTipoDocumento.nombre}</td>
+                            <td>{estudiante.unTipoDocumento.nombre}</td>
+                            <td>{estudiante.unTipoDocumento.nombre}</td>
                         </tr>
                     </tbody>
                 ))}
             </table>
-
         </div>
     )
 }

@@ -5,14 +5,14 @@ import './Contenido_Inicio.css'
 export default class Contenido_Inicio extends Component {
     render() {
         return (
-            <div id="body">
-                <div id='div_ruta'>
-                    <img id="icono" src='/img/icono_inicio.png' alt='' />
-                    <text id='text_rutas'>Inicio</text>
+            <div id="inicio_div">
+                <div id='inicio_divruta'>
+                    <img id="inicio_icono" src='/img/icono_inicio.png' alt='' />
+                    <text id='inicio_textrutas'>Inicio</text>
                 </div>
                 <hr />
-                <h4 id='text_titulo' >Bienvenido al Sistema</h4>
-                <Carousel id="carusel" >
+                <h4 id='inicio_text_titulo' >Bienvenido al Sistema</h4>
+                <Carousel id="inicio_carusel" >
                     <Carousel.Item interval={4000}>
                         <img
                             id='img_carusel'
@@ -38,7 +38,6 @@ export default class Contenido_Inicio extends Component {
                         />
                     </Carousel.Item>
                 </Carousel>
-
             </div>
         )
     }
