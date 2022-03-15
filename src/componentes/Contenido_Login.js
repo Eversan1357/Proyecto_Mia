@@ -50,7 +50,6 @@ export default class Contenido_Login extends Component {
       }
     };
 
-    
     return (
       <>
         <div id="login_div_bienvenido">
@@ -60,7 +59,6 @@ export default class Contenido_Login extends Component {
           <div id='login_imag'> <img src='/img/usuario50.jpg' alt='' /> </div>
         </div>
         <br />
-
         <Form onSubmit={this.handleSubmit} id="login_usform" ref={c => { this.form = c; }}>
           <div className="form-group">
             <label htmlFor="usernameOrEmail">Username</label>
@@ -72,7 +70,6 @@ export default class Contenido_Login extends Component {
               validations={[required]}
             />
           </div>
-
           <div className="form-group">
             <label htmlFor="password">Password</label>
             <Input
@@ -83,40 +80,11 @@ export default class Contenido_Login extends Component {
               validations={[required]}
             />
           </div>
-
           <div id="login_div_links">
             <Link id="login_link_res" to="/Login">He Olvidado Mi Contraseña</Link>
             <CheckButton className='btn btn-danger' ref={c => { this.checkBtn = c; }} >Ingresar</CheckButton>
           </div>
-
         </Form>
-
-        {/*--------------------------------------------------------- 
-        <form id="login_usform">
-          <div className="form-group">
-            <label htmlFor="exampleInputEmail1">Usuario</label>
-            <input type="text"
-              className="form-control"
-              id="login_exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Nombre de Usuario"
-            />
-          </div>
-          <br></br>
-          <form className="form-group">
-            <label htmlFor="exampleInputPassword1">Contraseña</label>
-            <input type="password"
-              className="form-control"
-              id="login_exampleInputPassword1"
-              placeholder="Contraseña"
-            />
-          </form>
-          <br />
-          <div id="login_div_links">
-            <Link id="login_link_res" to="/Login">He Olvidado Mi Contraseña</Link>
-            <div className='btn btn-danger'><Link id="login_link" to="/Inicio">Ingresar</Link></div>
-          </div>
-        </form>*/}
       </>
     );
   }

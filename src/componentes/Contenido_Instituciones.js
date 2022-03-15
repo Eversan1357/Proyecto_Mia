@@ -19,7 +19,7 @@ const Contenido_Instituciones = () => {
     }, []);
 
     return (
-        <div id="instituciones_ins">
+        <div id="instituciones_div">
             <div id='instituciones_divruta'>
                 <img id="instituciones_iconos" src='/img/icono_inicio.png' alt='' />
                 <Link id="instituciones_linkinicio" to="/Inicio">Inicio</Link>
@@ -46,7 +46,6 @@ const Contenido_Instituciones = () => {
             <div id='busc_ins'>
                 <button type="submit" class="btn btn-danger">Buscar</button>
             </div>
-
             <table id="tablains" class="table table-hover">
                 <thead>
                     <tr>
@@ -72,7 +71,6 @@ const Contenido_Instituciones = () => {
                     </tbody>
                 ))}
             </table>
-
         </div>
     )
 }

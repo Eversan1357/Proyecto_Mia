@@ -1,3 +1,4 @@
+/*-Navengacion subtitulos-*/
 #sistema_div{
     height: 800px;
 }
@@ -25,6 +26,7 @@
     text-decoration: none;
     color: black;
 }
+/*-Conteido de pagina-*/
 
 #sistema_parrafos{
     margin: 50px;

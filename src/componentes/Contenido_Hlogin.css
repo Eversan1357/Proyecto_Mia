@@ -1,4 +1,4 @@
-body{
+#hlogin_div{
   height: 700px;
 }
 
@@ -14,35 +14,36 @@ body{
     margin-top: 20px;
   }
   
-  #te2{
+#te2{
     font-size: 21px;
     margin-top: 20px;
-  }
-  
-  #te3{
-     font-size: 17px;
-     margin-top: -5px;
-  }
-
-  #te4{
-    font-size: 17px;
-    margin-top: 30px;
-    font-weight: bold;
- }
-  
-  #botones{
-    color: white;
-    background: red;
 }
+  
+#te3{
+  font-size: 17px;
+  margin-top: -5px;
+}
+
+#te4{
+  font-size: 17px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+  
+#botones{
+  color: white;
+  background: red;
+}
+
 #divbotones{
-   width: fit-content;
-   margin: 0 auto;
-   display: grid;
-   grid-template-columns: 50% 50%;
-   width: 425px;
-   justify-self: center;
-   align-self: center; 
-   gap: 10px;
+  width: fit-content;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 425px;
+  justify-self: center;
+  align-self: center; 
+  gap: 10px;
 }
 
 #recuadro{
@@ -58,7 +59,7 @@ body{
 
 #cuadro{
   justify-self: center;
-    align-self: center;  
-    padding: 40px;
-    border: 1px solid black;
+  align-self: center;  
+  padding: 40px;
+  border: 1px solid black;
 }

@@ -13,7 +13,7 @@ class Contenido_Cambiar_Clave extends React.Component {
                     <text id='usuarios_textrutas'>Administrador/</text>
                     <text id='usuarios_textrutas'>Usuarios</text>
                 </div>
-                
+
                 <table id="usuarios_tabla" class="table table-striped">
                     <thead>
                         <th id="usuarios_th" scope="col">Roles</th>

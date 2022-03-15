@@ -4,7 +4,7 @@ import './Contenido_Hlogin.css'
 export default class Contenido_Hlogin extends Component {
     render() {
         return (
-            <body>
+            <div id='hlogin_div'>
                 <div id="divbienvenido">
                     <h1 class="text-center" id='te1'>Bienvenido</h1>
                     <h2 class="text-center" id='te2'>Fundación Mía</h2>
@@ -31,7 +31,7 @@ export default class Contenido_Hlogin extends Component {
                         <a href='./Inicio' >Validar Ingreso</a>
                     </button>
                 </div>
-            </body>
+            </div>
         )
     }
 }

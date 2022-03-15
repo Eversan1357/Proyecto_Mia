@@ -1,3 +1,4 @@
+/*-Navengacion subtitulos-*/
 #clave_div{
     min-height: 800px;
 }
@@ -25,7 +26,7 @@
     text-decoration: none;
     color: black;
 }
-
+/*-Conteido de pagina-*/
 #clave_form{
     width: fit-content;
     margin: 0 auto;

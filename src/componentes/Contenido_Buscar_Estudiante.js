@@ -19,12 +19,13 @@ const Contenido_Buscar_Estudiante = () => {
     }, []);
 
     return (
-        <div id="div">
+        <div id="buscar_div">
             <div id='buscar_divruta'>
                 <img id="buscar_iconos" src='/img/icono_inicio.png' alt='' />
-                <Link id="buscar_linkinicio" to="/Inicio">Inicio</Link>
+                <Link id="buscar_linkinicio" to="/Inicio">Inicio/</Link>
                 <img id="buscar_iconos" src='/img/icono_estudiantes.png' alt='' />
-                <text id='buscar_textrutas'>Buscar/</text>
+                <text id='buscar_textrutas'>Estudiantes/</text>
+                <text id='buscar_textrutas'>Buscar Estudiantes</text>
             </div>
             <div id="form_buscar">
                 <text>Departamento*</text>
@@ -101,5 +102,4 @@ const Contenido_Buscar_Estudiante = () => {
         </div>
     )
 }
-
 export default Contenido_Buscar_Estudiante;

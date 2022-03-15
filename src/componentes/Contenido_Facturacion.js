@@ -1,22 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Contenido_Facturacion.css'
 
 class Contenido_Facturacion extends React.Component {
     render() {
         return (
-            <div id="div">
-                <div id='divruta'>
-                    <div id='divrutas'>
-                        <img id="iconos" src='/img/icono_inicio.png' alt='' />
-                        <text id='textrutas'>Inicio/</text>
-                        <img id="iconos" src='/img/icono_facturacion.png' alt='' />
-                        <text id='textrutas'>Facturación/</text>
-                        <text id='textrutas'>Generar Facturación</text>
-                    </div>
+            <div id="facturacion_div">
+                <div id='facturacion_divruta'>
+                    <img id="facturacion_iconos" src='/img/icono_inicio.png' alt='' />
+                    <Link id="facturacion_linkinicio" to="/Inicio">Inicio/</Link>
+                    <img id="facturacion_iconos" src='/img/icono_facturacion.png' alt='' />
+                    <text id='facturacion_textrutas'>Facturación/</text>
+                    <text id='facturacion_textrutas'>Generar Factura</text>
                 </div>
-                <hr />
-
-
                 <div id='divfac'>
                     <div>
                         <label for="exampleInputEmail1" class="form-label">Fecha Registro</label>
@@ -45,14 +41,10 @@ class Contenido_Facturacion extends React.Component {
                         <input type="text" id="ins" class="form-control" placeholder="Dirección*">
                         </input>
                     </div>
-
-
                 </div>
-
                 <div id="busc">
                     <button type="submit" class="btn btn-danger">Buscar</button>
                 </div>
-
                 <table id="tablains" class="table table-hover">
                     <thead>
                         <tr>

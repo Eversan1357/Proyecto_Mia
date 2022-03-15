@@ -11,7 +11,7 @@ export default function Navegacion() {
             <header id="headermenu">
                 <header id="titulos">
                     <div id="circulos"><div id="circulo"> </div><div id="circulo"> </div><div id="circulo"> </div></div>
-                    <text id="texto_titulo">FUNDACIÓN MIA CONSTRUYENDO FUTURO</text>
+                    <text id="texto_titulo">MI ALIMENTACIÓN MIA</text>
                     <div></div>
                 </header>
                 <div id="div_horas">

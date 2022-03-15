@@ -8,7 +8,7 @@ class Contenido_Cambiar_Clave extends React.Component {
             <div id="clave_div">
                 <div id='clave_divruta'>
                     <img id="clave_iconos" src='/img/icono_inicio.png' alt='' />
-                    <Link id="clave_linkinicio" to="/Inicio">Inicio</Link>
+                    <Link id="clave_linkinicio" to="/Inicio">Inicio/</Link>
                     <img id="clave_iconos" src='/img/icono_administrador.png' alt='' />
                     <text id='clave_textrutas'>Administrador/</text>
                     <text id='clave_textrutas'>Cambiar Clave</text>

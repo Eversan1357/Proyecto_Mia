@@ -1,20 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Contenido_Generar_Reportes.css'
 
 class Contenido_Generar_Reportes extends React.Component {
     render() {
         return (
-            <div id="divrepor">
-                <div id='divruta'>
-                    <div id='divrutas'>
-                        <img id="iconos" src='/img/icono_inicio.png' alt='' />
-                        <text id='textrutas'>Inicio/</text>
-                        <img id="iconos" src='/img/icono_reportes.png' alt='' />
-                        <text id='textrutas'>Reportes/</text>
-                        <text id='textrutas'>Generar Reportes</text>
-                    </div>
+            <div id="reportes_div">
+                <div id='reportes_divruta'>
+                    <img id="reportes_iconos" src='/img/icono_inicio.png' alt='' />
+                    <Link id="reportes_linkinicio" to="/Inicio">Inicio</Link>
+                    <img id="reportes_iconos" src='/img/icono_reportes.png' alt='' />
+                    <text id='reportes_textrutas'>Reportes/</text>
+                    <text id='reportes_textrutas'>Generar Reportes</text>
                 </div>
-                <hr />
                 <div id="divger">
                     <div>
                         <text>Fecha Inicial:*</text>
@@ -98,7 +96,6 @@ class Contenido_Generar_Reportes extends React.Component {
                         </div>
                     </div>
                 </div>
-
                 <div id="boton_ger">
                     <div className='btn btn-danger' href='./Inicio'><a href="./Inicio">Generar Reporte</a></div>
                 </div>
