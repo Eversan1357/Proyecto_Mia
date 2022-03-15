@@ -8,7 +8,7 @@ class Contenido_Cambiar_Clave extends React.Component {
             <div id="datos_div">
                 <div id='datos_divruta'>
                     <img id="datos_iconos" src='/img/icono_inicio.png' alt='' />
-                    <Link id="datos_linkinicio" to="/Inicio">Inicio</Link>
+                    <Link id="datos_linkinicio" to="/Inicio">Inicio/</Link>
                     <img id="datos_iconos" src='/img/icono_administrador.png' alt='' />
                     <text id='datos_textrutas'>Administrador/</text>
                     <text id='datos_textrutas'>Cargar Datos</text>

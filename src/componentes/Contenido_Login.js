@@ -31,9 +31,6 @@ export default class Contenido_Login extends Component {
         })
   };
 
-
-
-
   render() {
 
     if (this.state.loggedIn) {
@@ -61,7 +58,7 @@ export default class Contenido_Login extends Component {
         <br />
         <Form onSubmit={this.handleSubmit} id="login_usform" ref={c => { this.form = c; }}>
           <div className="form-group">
-            <label htmlFor="usernameOrEmail">Username</label>
+            <label htmlFor="usernameOrEmail">Usuario</label>
             <Input
               type="text"
               className="form-control"
@@ -71,7 +68,7 @@ export default class Contenido_Login extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Contraseña</label>
             <Input
               type="password"
               className="form-control"

@@ -22,8 +22,9 @@ const Contenido_Instituciones = () => {
         <div id="instituciones_div">
             <div id='instituciones_divruta'>
                 <img id="instituciones_iconos" src='/img/icono_inicio.png' alt='' />
-                <Link id="instituciones_linkinicio" to="/Inicio">Inicio</Link>
+                <Link id="instituciones_linkinicio" to="/Inicio">Inicio/</Link>
                 <img id="instituciones_iconos" src='/img/icono_instituciones.png' alt='' />
+                <text id='instituciones_textrutas'>Buscar Instituciones/</text>
                 <text id='instituciones_textrutas'>Instituciones</text>
             </div>
             <div id="card_ins">

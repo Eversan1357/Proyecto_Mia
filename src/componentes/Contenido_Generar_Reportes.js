@@ -8,7 +8,7 @@ class Contenido_Generar_Reportes extends React.Component {
             <div id="reportes_div">
                 <div id='reportes_divruta'>
                     <img id="reportes_iconos" src='/img/icono_inicio.png' alt='' />
-                    <Link id="reportes_linkinicio" to="/Inicio">Inicio</Link>
+                    <Link id="reportes_linkinicio" to="/Inicio">Inicio/</Link>
                     <img id="reportes_iconos" src='/img/icono_reportes.png' alt='' />
                     <text id='reportes_textrutas'>Reportes/</text>
                     <text id='reportes_textrutas'>Generar Reportes</text>

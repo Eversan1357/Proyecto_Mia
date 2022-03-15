@@ -8,7 +8,7 @@ class Contenido_Permisos_Privilegios extends React.Component {
             <div id="permisos_div">
                 <div id='permisos_divruta'>
                     <img id="permisos_iconos" src='/img/icono_inicio.png' alt='' />
-                    <Link id="permisos_linkinicio" to="/Inicio">Inicio</Link>
+                    <Link id="permisos_linkinicio" to="/Inicio">Inicio/</Link>
                     <img id="permisos_iconos" src='/img/icono_administrador.png' alt='' />
                     <text id='permisos_textrutas'>Administrador/</text>
                     <text id='permisos_textrutas'>Permisos y Privilegios</text>

@@ -30,7 +30,7 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
         <div id='huella_div'>
             <div id='huella_divruta'>
                 <img id="huella_iconos" src='/img/icono_inicio.png' alt='' />
-                <Link id="huella_linkinicio" to="/Inicio">Inicio</Link>
+                <Link id="huella_linkinicio" to="/Inicio">Inicio/</Link>
                 <img id="huella_iconos" src='/img/icono_administrador.png' alt='' />
                 <text id='huella_textrutas'>Administrador/</text>
                 <text id='huella_textrutas'>Huella Estudiante Nuevo</text>
@@ -153,6 +153,4 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
         </ div>
     );
 }
-
-
 export default Contenido_Huella_Estudiante_Nuevo;

@@ -6,6 +6,11 @@ import { Link } from "react-router-dom";
 
 
 export default function Navegacion() {
+
+    let fecha = new Date();
+    console.log(fecha.toLocaleDateString());
+    const hora = fecha.toLocaleDateString();
+
     return (
         <div>
             <header id="headermenu">
@@ -18,9 +23,9 @@ export default function Navegacion() {
                     <div />
                     <div />
                     <div id="div_hora" >
-                        <input id="fecha" type="date" value="2022-03-07"></input>
+                        <input id="fecha" type="date" value={hora} ></input>
                         <img id="dimagen" src="/img/icono_usuario.png" alt="" />
-                        <text id="texto_admin" >Admin</text>
+                        <text id="texto_admin" >{hora}</text>
                     </div>
                 </div>
                 <ul id="menu">
@@ -43,7 +48,7 @@ export default function Navegacion() {
                     </li>
                     <li id='item'><a href='#' className='menu_link'>Instituciones<img id='imgflecha' src="/img/flecha_abajo.png" alt="" /></a>
                         <ul id='desple'>
-                            <li id='boxli'><Link className='menu_link' to="/Instituciones">Instituciones</Link></li>
+                            <li id='boxli'><Link className='menu_link' to="/Instituciones">Buscar Instituciones</Link></li>
                         </ul>
                     </li>
                     <li id='item'><a href='#' className='menu_link'>Estudiantes<img id='imgflecha' src="/img/flecha_abajo.png" alt="" /></a>

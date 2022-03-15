@@ -8,7 +8,7 @@ class Contenido_Login extends React.Component {
             <div id="roles_div">
                 <div id='roles_divruta'>
                     <img id="roles_iconos" src='/img/icono_inicio.png' alt='' />
-                    <Link id="roles_linkinicio" to="/Inicio">Inicio</Link>
+                    <Link id="roles_linkinicio" to="/Inicio">Inicio/</Link>
                     <img id="roles_iconos" src='/img/icono_administrador.png' alt='' />
                     <text id='roles_textrutas'>Administrador/</text>
                     <text id='roles_textrutas'>Roles</text>
