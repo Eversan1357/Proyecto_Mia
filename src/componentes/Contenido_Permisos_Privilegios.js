@@ -43,13 +43,6 @@ class Contenido_Permisos_Privilegios extends React.Component {
                             <td>x</td>
                             <td></td>
                         </tr>
-                        <tr>
-                            <th scope="row">Administrador Sistema</th>
-                            <td>Jx</td>
-                            <td>x</td>
-                            <td>x</td>
-                            <td>x</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>

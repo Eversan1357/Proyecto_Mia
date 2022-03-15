@@ -31,5 +31,21 @@
 #roles_form{  
     width: fit-content;
     margin: 0 auto;
-    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 90px;
+    gap: 80px;
+}
+
+#roles_boton{
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#roles_table{
+  width: fit-content;
+  margin: 0 auto; 
+  margin-top: 50px;
+  width: 900px;
 }

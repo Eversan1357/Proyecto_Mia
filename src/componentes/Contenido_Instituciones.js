@@ -47,7 +47,7 @@ const Contenido_Instituciones = () => {
             <div id='busc_ins'>
                 <button type="submit" class="btn btn-danger">Buscar</button>
             </div>
-            <table id="tablains" class="table table-hover">
+            <table id="instituciones_table" class="table table-hover">
                 <thead>
                     <tr>
                         <th scope="col">Código DANE</th>

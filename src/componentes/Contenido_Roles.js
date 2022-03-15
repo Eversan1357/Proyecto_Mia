@@ -13,23 +13,22 @@ class Contenido_Login extends React.Component {
                     <text id='roles_textrutas'>Administrador/</text>
                     <text id='roles_textrutas'>Roles</text>
                 </div>
+
                 <form id="roles_form">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nuevo Rol:*</label>
                         <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Nuevo Rol" />
                     </div>
-                    <br></br>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Mensaje:</label>
                         <input type="text" class="form-control" />
                     </div>
-                    <br />
-                    <div>
-                        <div className='btn btn-danger' href='./Inicio'><a href="./Inicio">Crear</a></div>
-                    </div>
                 </form>
+                <div id="roles_boton">
+                    <div className='btn btn-danger' href='./Inicio'><a href="./Inicio">Crear</a></div>
+                </div>
 
-                <table class="table table-striped">
+                <table id="roles_table" class="table table-striped">
                     <thead>
                         <th scope="col">Roles</th>
                     </thead>

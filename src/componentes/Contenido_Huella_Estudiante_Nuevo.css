@@ -71,3 +71,9 @@
     height: 150px;
 }
 
+#card-table{
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: auto;
+}

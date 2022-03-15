@@ -32,7 +32,7 @@ class Contenido_Cambiar_Clave extends React.Component {
                     <input type="date" class="form-control" id="ins" placeholder="Repetir Contraseña Nueva" />
                 </form>
                 <div id="datos_boton">
-                    <div className='btn btn-danger' ><a href="./Cargar_Datos">Cargar Archivo</a></div>
+                    <button type="submit" class="btn btn-danger">Cargar Datos</button>
                 </div>
             </div>
         )

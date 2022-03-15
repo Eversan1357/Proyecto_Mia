@@ -28,36 +28,52 @@ const Contenido_Buscar_Estudiante = () => {
                 <text id='buscar_textrutas'>Buscar Estudiantes</text>
             </div>
             <div id="form_buscar">
-                <text>Departamento*</text>
-                <select id='seleccionar' class="form-select">
-                    <option>Selecione una Opción</option>
-                </select>
-                <text>Municipio*</text>
-                <select id='seleccionar' class="form-select">
-                    <option>Selecione una Opción</option>
-                </select>
-                <text>Institución:*</text>
-                <select id='seleccionar' class="form-select">
-                    <option>Selecione una Opción</option>
-                </select>
-                <text>Sede:*</text>
-                <select id='seleccionar' class="form-select">
-                    <option>Selecione una Opción</option>
-                </select>
-                <text>Nombre Completo:*</text>
-                <input type="text" id="ins" class="form-control" placeholder="Nombre Completo">
-                </input>
-                <text>Apellido Completo:*</text>
-                <input type="text" id="ins" class="form-control" placeholder="Apellido Completo">
-                </input>
-                <text>Tipo Documento:*</text>
-                <select id='seleccionar' class="form-select">
-                    <option>Targeta de Identidad</option>
-                    <option>Cedúla</option>
-                </select>
-                <text>Numero Documento:*</text>
-                <input type="text" id="ins" class="form-control" placeholder="Numero documento">
-                </input>
+                <div>
+                    <text>Departamento*</text>
+                    <select id='seleccionar' class="form-select">
+                        <option>Selecione una Opción</option>
+                    </select>
+                </div>
+                <div>
+                    <text>Municipio*</text>
+                    <select id='seleccionar' class="form-select">
+                        <option>Selecione una Opción</option>
+                    </select>
+                </div>
+                <div>
+                    <text>Institución:*</text>
+                    <select id='seleccionar' class="form-select">
+                        <option>Selecione una Opción</option>
+                    </select>
+                </div>
+                <div>
+                    <text>Sede:*</text>
+                    <select id='seleccionar' class="form-select">
+                        <option>Selecione una Opción</option>
+                    </select>
+                </div>
+                <div>
+                    <text>Nombre Completo:*</text>
+                    <input type="text" id="ins" class="form-control" placeholder="Nombre Completo">
+                    </input>
+                </div>
+                <div>
+                    <text>Apellido Completo:*</text>
+                    <input type="text" id="ins" class="form-control" placeholder="Apellido Completo">
+                    </input>
+                </div>
+                <div>
+                    <text>Tipo Documento:*</text>
+                    <select id='seleccionar' class="form-select">
+                        <option>Targeta de Identidad</option>
+                        <option>Cedúla</option>
+                    </select>
+                </div>
+                <div>
+                    <text>Numero Documento:*</text>
+                    <input type="text" id="ins" class="form-control" placeholder="Numero documento">
+                    </input>
+                </div>
             </div>
             <div id="busc">
                 <button type="submit" class="btn btn-danger">Buscar Estudiante</button>
