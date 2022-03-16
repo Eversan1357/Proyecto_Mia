@@ -14,22 +14,30 @@ class Contenido_Cambiar_Clave extends React.Component {
                     <text id='datos_textrutas'>Cargar Datos</text>
                 </div>
                 <form id="datos_formulario">
-                    <label for="exampleInputEmail1" id="ins" >Tipo de Archivo:*</label>
-                    <select id="ins" >
-                        <option>Tipo de Archivo:</option>
-                        <option>.jpg</option>
-                        <option>.png</option>
-                        <option>.rar</option>
-                        <option>.zip</option>
-                        <option>Documento de word</option>
-                        <option>.pdf</option>
-                    </select>
-                    <label for="exampleInputEmail1" id="ins" >Año Lectivo:* </label>
-                    <input type="text" class="form-control" id="ins" aria-describedby="emailHelp" placeholder="2022" />
-                    <label for="exampleInputEmail1" id="ins" >Archivo:*</label>
-                    <input type="file" class="form-control" id="ins" aria-describedby="emailHelp" />
-                    <label for="exampleInputPassword1" id="ins" >Fecha Cargue:*</label>
-                    <input type="date" class="form-control" id="ins" placeholder="Repetir Contraseña Nueva" />
+                    <div id="datos_divinfomacion">
+                        <label for="exampleInputEmail1" id="datos_inputstext" >Tipo de Archivo:*</label>
+                        <select class="form-control" >
+                            <option>Tipo de Archivo:</option>
+                            <option>.jpg</option>
+                            <option>.png</option>
+                            <option>.rar</option>
+                            <option>.zip</option>
+                            <option>Documento de word</option>
+                            <option>.pdf</option>
+                        </select>
+                    </div>
+                    <div id="datos_divinfomacion">
+                        <label for="exampleInputEmail1" id="datos_inputstext" >Año Lectivo:* </label>
+                        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="2022" />
+                    </div>
+                    <div id="datos_divinfomacion">
+                        <label for="exampleInputEmail1" id="datos_inputstext" >Archivo:*</label>
+                        <input type="file" class="form-control" aria-describedby="emailHelp" />
+                    </div>
+                    <div id="datos_divinfomacion">
+                        <label for="exampleInputPassword1" id="datos_inputstext" >Fecha Cargue:*</label>
+                        <input type="date" class="form-control" placeholder="Repetir Contraseña Nueva" />
+                    </div>
                 </form>
                 <div id="datos_boton">
                     <button type="submit" class="btn btn-danger">Cargar Datos</button>

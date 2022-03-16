@@ -7,13 +7,13 @@ class Contenido_Inse extends React.Component {
     return (
       <div id='inse_div'>
         <div id='inse_div_elegir'>
-          <img src='/img/usuario50.jpg' alt='/Login' />
+          <a href="/Login"><img src='/img/usuario50.jpg' alt='/Login' /></a>
           <br />
           <br />
           <Link id="inse_link" to="/Login">Usuario</Link>
         </div>
         <div id='inse_div_elegir'>
-          <img src='/img/usuario50.jpg' alt='' />
+        <a href="/Hlogin"><img src='/img/usuario50.jpg' alt='/Login' /></a>
           <br />
           <br />
           <Link id="inse_link" to="/Hlogin">Huella</Link>

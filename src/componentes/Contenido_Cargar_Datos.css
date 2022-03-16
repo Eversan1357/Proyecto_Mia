@@ -32,10 +32,21 @@
 #datos_formulario{
     width: fit-content;
     margin: 0 auto;
-    width: 600px;
     display: grid;
     grid-template-columns: 50% 50%;
-    margin-top: 90px;
+    margin-top: 60px;
+    gap: 30px;
+}
+
+#datos_divinfomacion{
+    display: flex;
+    width: 450px;
+    height: 80px;
+    align-items: center;
+}
+
+#datos_inputstext{
+ width: 200px;
 }
 
 #datos_boton{

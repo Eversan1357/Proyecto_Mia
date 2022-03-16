@@ -16,16 +16,16 @@ export default function Navegacion() {
             <header id="headermenu">
                 <header id="titulos">
                     <div id="circulos"><div id="circulo"> </div><div id="circulo"> </div><div id="circulo"> </div></div>
-                    <text id="texto_titulo">MI ALIMENTACIÓN MIA</text>
+                    <text></text>
                     <div></div>
                 </header>
                 <div id="div_horas">
                     <div />
                     <div />
                     <div id="div_hora" >
-                        <input id="fecha" type="date" value={hora} ></input>
+                        <input id="navegacion_fecha" type="text" Value={hora}></input>
                         <img id="dimagen" src="/img/icono_usuario.png" alt="" />
-                        <text id="texto_admin" >{hora}</text>
+                        <text id="texto_admin" >Admin</text>
                     </div>
                 </div>
                 <ul id="menu">

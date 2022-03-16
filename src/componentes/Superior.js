@@ -13,8 +13,7 @@ export default function Superior() {
             <img src='/img/usuario50.jpg' alt='' />LOGIN
           </div>
           <div id='superior_fecha' >
-            <input id="superior_fechas" type="date" defaultValue="{hora}" ></input>
-            <text id="texto_admin" >{hora}</text>
+            <input id="superior_fechas" type="text" defaultValue={hora}></input>
           </div>
         </div>
     )

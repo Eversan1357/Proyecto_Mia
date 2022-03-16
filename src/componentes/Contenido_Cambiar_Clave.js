@@ -14,14 +14,22 @@ class Contenido_Cambiar_Clave extends React.Component {
                     <text id='clave_textrutas'>Cambiar Clave</text>
                 </div>
                 <form id="clave_form">
-                    <label for="exampleInputEmail1">Login:*</label>
-                    <input type="email" class="form-control" id="ins" aria-describedby="emailHelp" placeholder="Ingrese su Usuario" />
-                    <label for="exampleInputEmail1">Clave Actual:*</label>
-                    <input type="password" class="form-control" id="ins" aria-describedby="emailHelp" placeholder="Clave Actual" />
-                    <label for="exampleInputEmail1">Clave Nueva*</label>
-                    <input type="password" class="form-control" id="ins" aria-describedby="emailHelp" placeholder="Clave Nueva" />
-                    <label for="exampleInputPassword1">Repetir Contraseña Nueva</label>
-                    <input type="password" class="form-control" id="ins" placeholder="Repetir Contraseña Nueva" />
+                    <div id="clave_divinfomacion">
+                        <label for="exampleInputEmail1" id="clave_inputstext">Usuario:*</label>
+                        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese su Usuario" />
+                    </div>
+                    <div id="clave_divinfomacion">
+                        <label for="exampleInputEmail1" id="clave_inputstext">Contraseña Actual:*</label>
+                        <input type="password" class="form-control" aria-describedby="emailHelp" placeholder="Clave Actual" />
+                    </div>
+                    <div id="clave_divinfomacion">
+                        <label for="exampleInputEmail1" id="clave_inputstext">Contraseña Nueva:*</label>
+                        <input type="password" class="form-control" aria-describedby="emailHelp" placeholder="Clave Nueva" />
+                    </div>
+                    <div id="clave_divinfomacion">
+                        <label for="exampleInputPassword1" id="clave_inputstext">Repetir Contraseña Nueva:*</label>
+                        <input type="password" class="form-control" placeholder="Repetir Contraseña Nueva" />
+                    </div>
                 </form>
                 <div id="busc">
                     <button type="submit" class="btn btn-danger">Actualizar Contraseña</button>
