@@ -27,22 +27,30 @@ const Contenido_Instituciones = () => {
                 <text id='instituciones_textrutas'>Buscar Instituciones/</text>
                 <text id='instituciones_textrutas'>Instituciones</text>
             </div>
-            <div id="card_ins">
-                <text>Departamento*</text>
-                <select id='seleccionar' class="form-select">
-                    <option>Selecione una Opción</option>
-                </select>
-                <text>Municipio*</text>
-                <select id='seleccionar' class="form-select">
-                    <option>Selecione una Opción</option>
-                </select>
-                <text>E.E(Establecimiento Educativo):*</text>
-                <input type="text" id="input_ins" class="form-control" placeholder="Institución Educativa">
-                </input>
-                <text>Sedes*</text>
-                <select id='seleccionar' class="form-select">
-                    <option>Selecione una Opción</option>
-                </select>
+            <div id="instituciones_form">
+                <div id="instituciones_divinfomacion">
+                    <text id="instituciones_inputstext">Departamento*</text>
+                    <select id='seleccionar' class="form-select">
+                        <option>Selecione una Opción</option>
+                    </select>
+                </div>
+                <div id="instituciones_divinfomacion">
+                    <text id="instituciones_inputstext">Municipio*</text>
+                    <select id='seleccionar' class="form-select">
+                        <option>Selecione una Opción</option>
+                    </select>
+                </div>
+                <div id="instituciones_divinfomacion">
+                    <text id="instituciones_inputstext">E.E(Establecimiento Educativo):*</text>
+                    <input type="text" id="instituciones_inputstext" class="form-control" placeholder="Institución Educativa">
+                    </input>
+                </div>
+                <div id="instituciones_divinfomacion">
+                    <text id="instituciones_inputstext">Sedes*</text>
+                    <select id='seleccionar' class="form-select">
+                        <option>Selecione una Opción</option>
+                    </select>
+                </div>
             </div>
             <div id='busc_ins'>
                 <button type="submit" class="btn btn-danger">Buscar</button>

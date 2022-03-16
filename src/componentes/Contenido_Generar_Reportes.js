@@ -13,19 +13,18 @@ class Contenido_Generar_Reportes extends React.Component {
                     <text id='reportes_textrutas'>Reportes/</text>
                     <text id='reportes_textrutas'>Generar Reportes</text>
                 </div>
-                <div id="divger">
-                    <div>
-                        <text>Fecha Inicial:*</text>
-                        <input class="date" type="date" value="2022-02-04" ></input>
+                <div id="reportes_form">
+                    <div id="reportes_divinfomacion">
+                        <text id="reportes_inputstext">Fecha Inicial:*</text>
+                        <input id="reportes_inputstext" class="date" type="date" value="2022-02-04" ></input>
                     </div>
-                    <div >
-                        <text>Fecha Final:*</text>
-                        <input class="date" type="date" value="2022-02-04" ></input>
+                    <div id="reportes_divinfomacion">
+                        <text id="reportes_inputstext" >Fecha Final:*</text>
+                        <input id="reportes_inputstext" class="date" type="date" value="2022-02-04" ></input>
                     </div>
-
-                    <div>
-                        <text>Reporte Grupos Poblacionales:*</text>
-                        <select id="mun" class="form-select">
+                    <div id="reportes_divinfomacion">
+                        <text id="reportes_inputstext">Reporte Grupos Poblacionales:*</text>
+                        <select class="form-select">
                             <option>Internos</option>
                             <option>Indigenas</option>
                             <option>Negritudes</option>
@@ -35,9 +34,9 @@ class Contenido_Generar_Reportes extends React.Component {
                             <option>Ninguna De Las Anteriores</option>
                         </select>
                     </div>
-                    <div>
-                        <text>Tipo Reporte:*</text>
-                        <select id="mun" class="form-select">
+                    <div id="reportes_divinfomacion">
+                        <text id="reportes_inputstext">Tipo Reporte:*</text>
+                        <select class="form-select">
                             <option>Formato Men-Planilla</option>
                             <option>Zona(Rural o Urbana)</option>
                             <option>Municipio</option>
@@ -46,9 +45,9 @@ class Contenido_Generar_Reportes extends React.Component {
                             <option>Consolidado Mensual Planilla</option>
                         </select>
                     </div>
-                    <div>
-                        <text>Reporte Tipo Alimentario:*</text>
-                        <select id="mun" class="form-select">
+                    <div id="reportes_divinfomacion">
+                        <text id="reportes_inputstext">Reporte Tipo Alimentario:*</text>
+                        <select class="form-select">
                             <option>AM</option>
                             <option>PM</option>
                             <option>Almuerzo</option>
@@ -59,9 +58,9 @@ class Contenido_Generar_Reportes extends React.Component {
                             <option>Otro</option>
                         </select>
                     </div>
-                    <div>
-                        <text>Reporte Por Jornada:*</text>
-                        <select id="mun" class="form-select">
+                    <div id="reportes_divinfomacion">
+                        <text id="reportes_inputstext">Reporte Por Jornada:*</text>
+                        <select class="form-select">
                             <option>Completa</option>
                             <option>Mañana</option>
                             <option>Tarde</option>
@@ -70,7 +69,6 @@ class Contenido_Generar_Reportes extends React.Component {
                         </select>
                     </div>
                 </div>
-
                 <div>
                     <div id="iconos_ger">
                         <div>
@@ -96,10 +94,9 @@ class Contenido_Generar_Reportes extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div id="boton_ger">
-                    <div className='btn btn-danger' href='./Inicio'><a href="./Inicio">Generar Reporte</a></div>
+                <div id="busc">
+                    <button type="submit" class="btn btn-danger">Generar Reporte</button>
                 </div>
-
             </div>
         )
     }

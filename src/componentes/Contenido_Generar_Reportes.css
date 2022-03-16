@@ -28,13 +28,24 @@
 }
 /*-Conteido de pagina-*/
 
-#divger{
+#reportes_form{
     width: fit-content;
-    margin: 0 auto; 
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 300px 300px ;
-    grid-template-rows: 100px 100px;
-    margin-top: 100px;
+    grid-template-columns: 33% 33% 33%;
+    margin-top: 60px;
+    gap: 30px;
+}
+
+#reportes_divinfomacion{
+    display: flex;
+    width: 340px;
+    height: 80px;
+    align-items: center;
+}
+
+#reportes_inputstext{
+    width: 300px;
 }
 
 #iconos_ger{
@@ -47,10 +58,4 @@
 
 #ico_ger{
  height: 70px;
-}
-
-#boton_ger{
-    width: fit-content;
-    margin: 0 auto; 
-    margin-top: 70px;
 }

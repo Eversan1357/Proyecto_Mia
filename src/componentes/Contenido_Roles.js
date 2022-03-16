@@ -13,21 +13,19 @@ class Contenido_Login extends React.Component {
                     <text id='roles_textrutas'>Administrador/</text>
                     <text id='roles_textrutas'>Roles</text>
                 </div>
-
                 <form id="roles_form">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Nuevo Rol:*</label>
+                    <div class="form-group" id="clave_divinfomacion">
+                        <label for="exampleInputEmail1" id="roles_inputstext">Nuevo Rol:*</label>
                         <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Nuevo Rol" />
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Mensaje:</label>
+                    <div class="form-group" id="clave_divinfomacion">
+                        <label for="exampleInputPassword1" id="roles_inputstext">Mensaje:</label>
                         <input type="text" class="form-control" />
                     </div>
                 </form>
-                <div id="roles_boton">
-                    <div className='btn btn-danger' href='./Inicio'><a href="./Inicio">Crear</a></div>
+                <div id="busc">
+                    <button type="submit" class="btn btn-danger">Crear Rol</button>
                 </div>
-
                 <table id="roles_table" class="table table-striped">
                     <thead>
                         <th scope="col">Roles</th>
@@ -57,7 +55,6 @@ class Contenido_Login extends React.Component {
                         </tr>
                     </tbody>
                 </table>
-
             </div>
         )
     }

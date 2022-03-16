@@ -29,10 +29,26 @@
 }
 /*-Conteido de pagina-*/
 
-#divfac{
+#facturacion_form{
     width: fit-content;
-    margin: 0 auto; 
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 250px 250px;
-    grid-template-rows: 100px 100px;
+    grid-template-columns: 33% 33% 33%;
+    margin-top: 60px;
+    gap: 30px;
+}
+
+#facturacion_divinfomacion{
+    display: flex;
+    width: 320px;
+    height: 80px;
+    align-items: center;
+}
+
+#facturacion_inputstext{
+    width: 260px;
+}
+
+#facturacion_inputs{
+    width: 350px;
 }

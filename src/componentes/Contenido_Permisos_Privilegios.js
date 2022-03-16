@@ -14,7 +14,7 @@ class Contenido_Permisos_Privilegios extends React.Component {
                     <text id='permisos_textrutas'>Permisos y Privilegios</text>
                 </div>
                 <div id="permisos_selector">
-                    <select>
+                    <select className="form-select">
                         <option>Rol</option>
                         <option>Rector</option>
                         <option>Administrador Sistema</option>

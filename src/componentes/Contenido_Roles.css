@@ -33,19 +33,30 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 50%;
-    margin-top: 90px;
-    gap: 80px;
+    margin-top: 60px;
+    gap: 30px;
+}
+
+#clave_divinfomacion{
+    display: flex;
+    width: 450px;
+    height: 80px;
+    align-items: center;
+}
+
+#roles_inputstext{
+    width: 200px;
 }
 
 #roles_boton{
   width: fit-content;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 #roles_table{
   width: fit-content;
   margin: 0 auto; 
-  margin-top: 50px;
+  margin-top: 30px;
   width: 900px;
 }

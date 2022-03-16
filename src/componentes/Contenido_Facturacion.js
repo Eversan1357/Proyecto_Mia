@@ -13,33 +13,36 @@ class Contenido_Facturacion extends React.Component {
                     <text id='facturacion_textrutas'>Facturación/</text>
                     <text id='facturacion_textrutas'>Generar Factura</text>
                 </div>
-                <div id='divfac'>
-                    <div>
-                        <label for="exampleInputEmail1" class="form-label">Fecha Registro</label>
-                        <input class="date" type="date" ></input>
+                <div id='facturacion_form'>
+                    <div id="facturacion_divinfomacion">
+                        <label id="facturacion_inputstext" for="exampleInputEmail1" class="form-label">Fecha Inicial:</label>
+                        <input id="facturacion_inputs" class="date" type="date" ></input>
                     </div>
-                    <div>
-                        <label for="exampleInputEmail1" class="form-label">Fecha Registro</label>
-                        <input class="date" type="date" ></input>
+                    <div id="facturacion_divinfomacion">
+                        <label id="facturacion_inputstext" for="exampleInputEmail1" class="form-label">Fecha Final:</label>
+                        <input id="facturacion_inputs" class="date" type="date" ></input>
                     </div>
-                    <div>
-                        <select id="mun" class="form-select">
-                            <option>Grado*</option>
+                    <div id="facturacion_divinfomacion">
+                        <label id="facturacion_inputstext" for="exampleInputEmail1" class="form-label">Institución Educativa:</label>
+                        <select class="form-select">
+                            <option>Institución Educativa*:</option>
                         </select>
                     </div>
-                    <div>
-                        <select id="mun" class="form-select">
-                            <option>Grado*</option>
+                    <div id="facturacion_divinfomacion">
+                        <label id="facturacion_inputstext" for="exampleInputEmail1" class="form-label">Sede:</label>
+                        <select class="form-select">
+                            <option>Sede*:</option>
                         </select>
                     </div>
-                    <div>
-                        <select id="mun" class="form-select">
-                            <option>Grado*</option>
+                    <div id="facturacion_divinfomacion">
+                        <label id="facturacion_inputstext" for="exampleInputEmail1" class="form-label">Zona:</label>
+                        <select class="form-select">
+                            <option>Zona*:</option>
                         </select>
                     </div>
-                    <div>
-                        <input type="text" id="ins" class="form-control" placeholder="Dirección*">
-                        </input>
+                    <div id="facturacion_divinfomacion">
+                        <label id="facturacion_inputstext" for="exampleInputEmail1" class="form-label">Numero Ración:</label>
+                        <input id="facturacion_inputs" type="text" class="form-control" placeholder="Numero Ración"></input>
                     </div>
                 </div>
                 <div id="busc">
