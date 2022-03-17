@@ -3,6 +3,25 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import estudianteService from '../services/estudiante.service';
 
+class hola extends Comment{
+    handleSubmit = e => {
+        e.preventDefaultult();
+        const data = {
+
+        };
+    };
+    render(){
+        return(
+            <div>
+                
+            </div>
+        )
+
+    }
+};
+
+
+
 const Contenido_Huella_Estudiante_Nuevo = () => {
 
     const [estudiantes, setEstudiantes] = useState([]);
@@ -35,19 +54,21 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
                 <text id='huella_textrutas'>Administrador/</text>
                 <text id='huella_textrutas'>Huella Estudiante Nuevo</text>
             </div>
-            <form id="datos">
+            <form id="datos" onSubmit={this.handleSubmit}>
                 <div>
                     <select id="mun" class="form-select" >
                         <option>Municipio*</option>
                     </select>
+                    <input type="text" className='form-control' onChange={e => this.municipio = e.target.value}/>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Institución Educativa"></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Institución Educativa" onChange={e => this.institucion = e.target.value} ></input>
                 </div>
                 <div>
                     <select id="mun" class="form-select" >
                         <option>Sede*</option>
                     </select>
+                    <input type="text" className='form-control' onChange={e => this.sede = e.target.value}/>
                 </div>
                 <div>
                     <input type="text" id="ins" class="form-control" placeholder="Fecha Registro"></input>
@@ -111,7 +132,7 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
                 </div>
             </div>
 
-            <div class="card shadow mb-4" id='card-table'>
+            <div className="card shadow mb-4" id='card-table'>
                 <div className='card-body'>
                     <div className='table-responsive'>
                         <table className='table table-bordered' id='tablacar' width="100%" cellspacing="0">

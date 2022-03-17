@@ -2,9 +2,7 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Inse from './pages/Inse'
 import Login from './pages/Login'
-import Hlogin from './pages/Hlogin'
 import Inicio from './pages/Inicio'
 import Sistema from './pages/Sistema'
 import Archivos from './pages/Archivos'
@@ -13,6 +11,7 @@ import Cargar_Datos from './pages/Cargar_Datos'
 import Permisos_Privilegios from './pages/Permisos_Privilegios'
 import Roles from './pages/Roles'
 import Usuarios from './pages/Usuarios'
+import Hlogin from './pages/Hlogin'
 import Huella_Estudiante_Nuevo from './pages/Huella_Estudiante_Nuevo'
 import Instituciones from './pages/Instituciones'
 import Buscar_Estudiante from './pages/Buscar_Estudiante'
@@ -25,9 +24,7 @@ const App = () => {
       <Router>
         <div>
           <Routes>
-            <Route exact path='/' element={<Inse />} />
-            <Route exact path='/Login' element={<Login />} />
-            <Route exact path='/Hlogin' element={<Hlogin />} />
+            <Route exact path='/' element={<Login />} />
             <Route exact path='/Inicio' element={<Inicio />} />
             <Route exact path='/Sistema' element={<Sistema />} />
             <Route exact path='/Archivos' element={<Archivos />} />
@@ -36,6 +33,7 @@ const App = () => {
             <Route exact path='/Permisos_Privilegios' element={<Permisos_Privilegios />} />
             <Route exact path='/Roles' element={<Roles />} />
             <Route exact path='/Usuarios' element={<Usuarios />} />
+            <Route exact path='/Hlogin' element={<Hlogin />} />
             <Route exact path='/Huella_Estudiante_Nuevo' element={<Huella_Estudiante_Nuevo />} />
             <Route exact path='/Instituciones' element={<Instituciones />} />
             <Route exact path='/Buscar_Estudiante' element={<Buscar_Estudiante />} />
