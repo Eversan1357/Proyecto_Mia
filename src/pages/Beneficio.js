@@ -1,16 +1,16 @@
 /* eslint-disable react/jsx-pascal-case */
 import React from "react";
 import Navegacion from '../componentes/Navegacion'
-import Contenido_Hlogin from "../componentes/Contenido_Hlogin";
+import Contenido_Beneficio from "../componentes/Contenido_Beneficio";
 
-class Hlogin extends React.Component {
+class Beneficio extends React.Component {
   render() {
     return (
       <>
         <Navegacion />
-        <Contenido_Hlogin />
+        <Contenido_Beneficio />
       </>
     )
   }
 }
-export default Hlogin;
+export default Beneficio;

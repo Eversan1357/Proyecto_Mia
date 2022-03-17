@@ -11,7 +11,7 @@ import Cargar_Datos from './pages/Cargar_Datos'
 import Permisos_Privilegios from './pages/Permisos_Privilegios'
 import Roles from './pages/Roles'
 import Usuarios from './pages/Usuarios'
-import Hlogin from './pages/Hlogin'
+import Beneficio from './pages/Beneficio'
 import Huella_Estudiante_Nuevo from './pages/Huella_Estudiante_Nuevo'
 import Instituciones from './pages/Instituciones'
 import Buscar_Estudiante from './pages/Buscar_Estudiante'
@@ -33,7 +33,7 @@ const App = () => {
             <Route exact path='/Permisos_Privilegios' element={<Permisos_Privilegios />} />
             <Route exact path='/Roles' element={<Roles />} />
             <Route exact path='/Usuarios' element={<Usuarios />} />
-            <Route exact path='/Hlogin' element={<Hlogin />} />
+            <Route exact path='/Beneficio' element={<Beneficio />} />
             <Route exact path='/Huella_Estudiante_Nuevo' element={<Huella_Estudiante_Nuevo />} />
             <Route exact path='/Instituciones' element={<Instituciones />} />
             <Route exact path='/Buscar_Estudiante' element={<Buscar_Estudiante />} />

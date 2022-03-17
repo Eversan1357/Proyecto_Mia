@@ -1,27 +1,29 @@
-#hlogin_div{
+#beneficio_div{
   height: 700px;
 }
 
-#divbienvenido{
-    width: fit-content;
-    margin: 0 auto; 
-    margin-top: 10px;
-    font-family: Arial, Helvetica, sans-serif; 
+#beneficio_divruta{
+  display: flex;
+  margin-bottom: -15px;
+  align-items: center;
+  margin: 10px;
+  display: flex;
+  gap: 7px;
 }
 
-#te1{
-    font-size: 27px;
-    margin-top: 20px;
-  }
-  
-#te2{
-    font-size: 21px;
-    margin-top: 20px;
+#beneficio_iconos{
+  height: 20px;
+  width: 20px;
 }
-  
-#te3{
-  font-size: 17px;
-  margin-top: -5px;
+
+#beneficio_textrutas{
+  font-size: 18px;
+}
+
+#beneficio_linkinicio{
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
 }
 
 #te4{

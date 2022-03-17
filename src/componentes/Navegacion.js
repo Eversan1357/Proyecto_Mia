@@ -46,11 +46,17 @@ export default function Navegacion() {
                             <li id='boxli'><Link className='menu_link' to="/Huella_Estudiante_Nuevo">Huella Estudiante Nuevo</Link></li>
                         </ul>
                     </li>
+                    <li id='item'><a href='#' className='menu_link'>Beneficio<img id='imgflecha' src="/img/flecha_abajo.png" alt="" /></a>
+                        <ul id='desple'>
+                            <li id='boxli'><Link className='menu_link' to="/Beneficio">Registro de Beneficio</Link></li>
+                        </ul>
+                    </li>
                     <li id='item'><a href='#' className='menu_link'>Instituciones<img id='imgflecha' src="/img/flecha_abajo.png" alt="" /></a>
                         <ul id='desple'>
                             <li id='boxli'><Link className='menu_link' to="/Instituciones">Buscar Instituciones</Link></li>
                         </ul>
                     </li>
+                    
                     <li id='item'><a href='#' className='menu_link'>Estudiantes<img id='imgflecha' src="/img/flecha_abajo.png" alt="" /></a>
                         <ul id='desple'>
                             <li id='boxli'><Link className='menu_link' to="/Buscar_Estudiante">Buscar Estudiante</Link></li>

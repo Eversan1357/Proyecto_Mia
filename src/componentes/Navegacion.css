@@ -85,7 +85,7 @@
 #menu{
     list-style: none;
     display: grid;
-    grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% ;
+    grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
     margin-right: 20px;
     margin-top: 20px;
 }

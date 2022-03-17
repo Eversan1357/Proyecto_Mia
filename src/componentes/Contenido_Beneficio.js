@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
-import './Contenido_Hlogin.css'
+import './Contenido_Beneficio.css'
+import { Link } from "react-router-dom";
 
-export default class Contenido_Hlogin extends Component {
+export default class Contenido_Beneficio extends Component {
     render() {
         return (
-            <div id='hlogin_div'>
-                <div id="divbienvenido">
-                    <h1 class="text-center" id='te1'>Bienvenido</h1>
-                    <h2 class="text-center" id='te2'>Fundación Mía</h2>
-                    <h3 class="text-center" id='te3'>Construyendo Futuro</h3>
+            <div id='beneficio_div'>
+                <div id='beneficio_divruta'>
+                    <img id="beneficio_iconos" src='/img/icono_inicio.png' alt='' />
+                    <Link id="beneficio_linkinicio" to="/Inicio">Inicio/</Link>
+                    <img id="beneficio_iconos" src='/img/icono_estudiantes.png' alt='' />
+                    <text id='beneficio_textrutas'>Beneficio/</text>
+                    <text id='beneficio_textrutas'>Registro Beneficio</text>
                 </div>
-                <br />
                 <div id='recuadro'>
                     <div id='cuadro'>
                         <h2 class="text-center" id='te4' >HUELLA</h2>
