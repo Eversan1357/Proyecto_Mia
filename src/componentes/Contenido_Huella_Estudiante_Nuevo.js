@@ -1,49 +1,40 @@
 import './Contenido_Huella_Estudiante_Nuevo.css'
 import { Link } from "react-router-dom";
+import React from 'react'
 import { useEffect, useState } from 'react';
-import estudianteService from '../services/estudiante.service';
-
-class hola extends Comment{
-    handleSubmit = e => {
-        e.preventDefaultult();
-        const data = {
-
-        };
-    };
-    render(){
-        return(
-            <div>
-                
-            </div>
-        )
-
-    }
-};
-
 
 
 const Contenido_Huella_Estudiante_Nuevo = () => {
 
     const [estudiantes, setEstudiantes] = useState([]);
-    useEffect(() => {
-        estudianteService.getAll()
-            .then(response => {
-                console.log('printing the estudiantes data', response.data);
-                setEstudiantes(response.data);
-            })
-            .catch(error => {
-                console.log('Something went wrong', error);
-            });
-    }, []);
-
 
     /*
-
-    handleSubmit = e => {
-        e.preventDefaultult();
-        console.log(data);
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.blind(this);
     }
-*/
+
+    handleSubmit(event) {
+        event.preventDefault();
+        fetch('http://localhost:8080/api/create', {
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            body: {
+                "first_name": this.firstName.value
+            }
+        });
+    };
+    */
+
+    useEffect(() => {
+        fetch('http://localhost:8080/api/estudiante')
+            .then((response) => {
+                return response.json()
+            })
+            .then((estudiante) => {
+                setEstudiantes(estudiante)
+            })
+    }, [])
 
     return (
         <div id='huella_div'>
@@ -54,59 +45,60 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
                 <text id='huella_textrutas'>Administrador/</text>
                 <text id='huella_textrutas'>Huella Estudiante Nuevo</text>
             </div>
-            <form id="datos" onSubmit={this.handleSubmit}>
+            <form id="datos">
                 <div>
                     <select id="mun" class="form-select" >
                         <option>Municipio*</option>
                     </select>
-                    <input type="text" className='form-control' onChange={e => this.municipio = e.target.value}/>
+                    <input type="text" className='form-control' name="municipio" />
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Institución Educativa" onChange={e => this.institucion = e.target.value} ></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Institución Educativa" name="institucionEducativa"  ></input>
                 </div>
                 <div>
                     <select id="mun" class="form-select" >
                         <option>Sede*</option>
                     </select>
-                    <input type="text" className='form-control' onChange={e => this.sede = e.target.value}/>
+                    <input type="text" className='form-control' name="sede" />
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Fecha Registro"></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Fecha Registro" name="fechaRegistro" ></input>
                 </div>
                 <div>
                     <select id="mun" class="form-select">
                         <option>Tipo de documento*</option>
                     </select>
+                    <input type="text" id="ins" class="form-control" placeholder="Fecha Registro" name="tipoDocumento" ></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Numero Documento:*"></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Numero Documento:*" name="numeroDocumento" ></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Nombre Completo:*"></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Nombre Completo:*" name="nombre1" ></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Apellido Completo:*"></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Apellido Completo:*" name="apellido1" ></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Grado:*"></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Grado:*" name="grado" ></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Dirección:*"></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Dirección:*" name="direccion" ></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Barrio:*"></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Barrio:*" name="barrio" ></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Fecha Nacimiento"></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Fecha Nacimiento" name="fechaNacimiento" ></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Nombre Acudiente:*"></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Nombre Acudiente:*" name="acudiente" ></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Parentesco:*"></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Parentesco:*" ></input>
                 </div>
                 <div>
-                    <input type="text" id="ins" class="form-control" placeholder="Telefono/Celular:*"></input>
+                    <input type="text" id="ins" class="form-control" placeholder="Telefono/Celular:*" name="telefono" ></input>
                 </div>
             </form>
             <div id="divdatos">
@@ -147,16 +139,16 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
                                     <th scope="col">Celular</th>
                                 </tr>
                             </thead>
-                            {estudiantes.map(estudiante => (
+                            {estudiantes.map(listadoEstudiantes => (
                                 <tbody>
-                                    <tr key={estudiante.idEstudiante}>
-                                        <td>{estudiante.nombre1}</td>
-                                        <td>{estudiante.numeroDocumento}</td>
-                                        <td>{estudiante.grado}</td>
-                                        <td>{estudiante.direccionRecidencia}</td>
-                                        <td>{estudiante.acudiente}</td>
-                                        <td>{estudiante.acudiente}</td>
-                                        <td>{estudiante.telefono}</td>
+                                    <tr key={listadoEstudiantes.idEstudiante}>
+                                        <td>{listadoEstudiantes.nombre1}</td>
+                                        <td>{listadoEstudiantes.numeroDocumento}</td>
+                                        <td>{listadoEstudiantes.grado}</td>
+                                        <td>{listadoEstudiantes.direccionRecidencia}</td>
+                                        <td>{listadoEstudiantes.acudiente}</td>
+                                        <td>{listadoEstudiantes.acudiente}</td>
+                                        <td>{listadoEstudiantes.telefono}</td>
                                     </tr>
                                 </tbody>
                             ))}
@@ -174,4 +166,5 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
         </ div>
     );
 }
+
 export default Contenido_Huella_Estudiante_Nuevo;

@@ -2,21 +2,20 @@ import React from "react";
 import './Contenido_Buscar_Estudiante.css'
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import estudianteService from '../services/estudiante.service';
 
 const Contenido_Buscar_Estudiante = () => {
 
     const [estudiantes, setEstudiantes] = useState([]);
+
     useEffect(() => {
-        estudianteService.getAll()
-            .then(response => {
-                console.log('printing the estudiantes data', response.data);
-                setEstudiantes(response.data);
+        fetch('http://localhost:8080/api/estudiante')
+            .then((response) => {
+                return response.json()
             })
-            .catch(error => {
-                console.log('Something went wrong', error);
-            });
-    }, []);
+            .then((estudiante) => {
+                setEstudiantes(estudiante)
+            })
+    }, [])
 
     return (
         <div id="buscar_div">
@@ -30,7 +29,7 @@ const Contenido_Buscar_Estudiante = () => {
             <div id="buscar_form">
                 <div id="buscar_divinfomacion">
                     <text id="buscar_inputstext" >Departamento*</text>
-                    <select  class="form-select">
+                    <select class="form-select">
                         <option>Selecione una Opción</option>
                     </select>
                 </div>
@@ -42,13 +41,13 @@ const Contenido_Buscar_Estudiante = () => {
                 </div>
                 <div id="buscar_divinfomacion">
                     <text id="buscar_inputstext">Institución:*</text>
-                    <select  class="form-select">
+                    <select class="form-select">
                         <option>Selecione una Opción</option>
                     </select>
                 </div>
                 <div id="buscar_divinfomacion">
                     <text id="buscar_inputstext">Sede:*</text>
-                    <select  class="form-select">
+                    <select class="form-select">
                         <option>Selecione una Opción</option>
                     </select>
                 </div>
@@ -64,7 +63,7 @@ const Contenido_Buscar_Estudiante = () => {
                 </div>
                 <div id="buscar_divinfomacion">
                     <text id="buscar_inputstext">Tipo Documento:*</text>
-                    <select  class="form-select">
+                    <select class="form-select">
                         <option>Targeta de Identidad</option>
                         <option>Cedúla</option>
                     </select>
@@ -96,21 +95,21 @@ const Contenido_Buscar_Estudiante = () => {
                         <th scope="col">Ver más</th>
                     </tr>
                 </thead>
-                {estudiantes.map(estudiante => (
+                {estudiantes.map(listadoestudiante => (
                     <tbody>
-                        <tr key={estudiante.idEstudiante}>
-                            <td>{estudiante.unTipoDocumento.nombre}</td>
-                            <td>{estudiante.numeroDocumento}</td>
-                            <td>{estudiante.nombre1}</td>
-                            <td>{estudiante.apellido1}</td>
-                            <td>{estudiante.fechaNacimiento}</td>
-                            <td>{estudiante.unaInstitucion.nombre}</td>
-                            <td>{estudiante.unaSede.nombre}</td>
-                            <td>{estudiante.grado}</td>
-                            <td>{estudiante.unTipoDocumento.nombre}</td>
-                            <td>{estudiante.unTipoDocumento.nombre}</td>
-                            <td>{estudiante.unTipoDocumento.nombre}</td>
-                            <td>{estudiante.unTipoDocumento.nombre}</td>
+                        <tr key={listadoestudiante.idEstudiante}>
+                            <td>{listadoestudiante.unTipoDocumento.nombre}</td>
+                            <td>{listadoestudiante.numeroDocumento}</td>
+                            <td>{listadoestudiante.nombre1}</td>
+                            <td>{listadoestudiante.apellido1}</td>
+                            <td>{listadoestudiante.fechaNacimiento}</td>
+                            <td>{listadoestudiante.unaInstitucion.nombre}</td>
+                            <td>{listadoestudiante.unaSede.nombre}</td>
+                            <td>{listadoestudiante.grado}</td>
+                            <td>{listadoestudiante.unTipoDocumento.nombre}</td>
+                            <td>{listadoestudiante.unTipoDocumento.nombre}</td>
+                            <td>{listadoestudiante.unTipoDocumento.nombre}</td>
+                            <td>{listadoestudiante.unTipoDocumento.nombre}</td>
                         </tr>
                     </tbody>
                 ))}

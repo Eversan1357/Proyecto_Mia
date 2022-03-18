@@ -2,21 +2,20 @@ import React from "react";
 import './Contenido_Instituciones.css'
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import institucioneService from '../services/institucion.service';
 
 const Contenido_Instituciones = () => {
 
     const [instituciones, setInstituciones] = useState([]);
+
     useEffect(() => {
-        institucioneService.getAll()
-            .then(response => {
-                console.log('printing the instituciones data', response.data);
-                setInstituciones(response.data);
+        fetch('http://localhost:8080/api/institucion')
+            .then((response) => {
+                return response.json()
             })
-            .catch(error => {
-                console.log('Something went wrong', error);
-            });
-    }, []);
+            .then((institucion) => {
+                setInstituciones(institucion)
+            })
+    }, [])
 
     return (
         <div id="instituciones_div">

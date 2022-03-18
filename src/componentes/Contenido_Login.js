@@ -48,12 +48,11 @@ export default class Contenido_Login extends Component {
     };
 
     return (
-      <>
-        <div id="login_div_bienvenido">
+      <div id="login_back">
+        <div id="login_div_bienvenido" >
           <h1 className="text-center" id='login_tex1'>Bienvenido</h1>
           <h2 className="text-center" id='login_tex2'>Fundación Mía</h2>
           <h3 className="text-center" id='login_tex3'>Construyendo Futuro</h3>
-          <div id='login_imag'> <img src='/img/usuario50.jpg' alt='' /> </div>
         </div>
         <br />
         <Form onSubmit={this.handleSubmit} id="login_usform" ref={c => { this.form = c; }}>
@@ -79,10 +78,10 @@ export default class Contenido_Login extends Component {
           </div>
           <div id="login_div_links">
             <Link id="login_link_res" to="/Login">He Olvidado Mi Contraseña</Link>
-            <CheckButton className='btn btn-danger' ref={c => { this.checkBtn = c; }} >Ingresar</CheckButton>
+            <CheckButton class="btn btn-success" ref={c => { this.checkBtn = c; }} >Ingresar</CheckButton>
           </div>
         </Form>
-      </>
+      </div>
     );
   }
 }
