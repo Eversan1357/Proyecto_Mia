@@ -20,29 +20,27 @@ import Facturacion from './pages/Facturacion'
 
 const App = () => {
   return (
-    <>
-      <Router>
-        <div>
-          <Routes>
-            <Route exact path='/' element={<Login />} />
-            <Route exact path='/Inicio' element={<Inicio />} />
-            <Route exact path='/Sistema' element={<Sistema />} />
-            <Route exact path='/Archivos' element={<Archivos />} />
-            <Route exact path='/Cambiar_Clave' element={<Cambiar_Clave />} />
-            <Route exact path='/Cargar_Datos' element={<Cargar_Datos />} />
-            <Route exact path='/Permisos_Privilegios' element={<Permisos_Privilegios />} />
-            <Route exact path='/Roles' element={<Roles />} />
-            <Route exact path='/Usuarios' element={<Usuarios />} />
-            <Route exact path='/Beneficio' element={<Beneficio />} />
-            <Route exact path='/Huella_Estudiante_Nuevo' element={<Huella_Estudiante_Nuevo />} />
-            <Route exact path='/Instituciones' element={<Instituciones />} />
-            <Route exact path='/Buscar_Estudiante' element={<Buscar_Estudiante />} />
-            <Route exact path='/Generar_Reportes' element={<Generar_Reportes />} />
-            <Route exact path='/Facturacion' element={<Facturacion />} />
-          </Routes>
-        </div>
-      </Router>
-    </ >
+    <Router>
+      <>
+        <Routes>
+          <Route exact path='/' element={<Login />} />
+          <Route exact path='/Inicio' element={<Inicio />} />
+          <Route exact path='/Sistema' element={<Sistema />} />
+          <Route exact path='/Archivos' element={<Archivos />} />
+          <Route exact path='/Cambiar_Clave' element={<Cambiar_Clave />} />
+          <Route exact path='/Cargar_Datos' element={<Cargar_Datos />} />
+          <Route exact path='/Permisos_Privilegios' element={<Permisos_Privilegios />} />
+          <Route exact path='/Roles' element={<Roles />} />
+          <Route exact path='/Usuarios' element={<Usuarios />} />
+          <Route exact path='/Beneficio' element={<Beneficio />} />
+          <Route exact path='/Huella_Estudiante_Nuevo' element={<Huella_Estudiante_Nuevo />} />
+          <Route exact path='/Instituciones' element={<Instituciones />} />
+          <Route exact path='/Buscar_Estudiante' element={<Buscar_Estudiante />} />
+          <Route exact path='/Generar_Reportes' element={<Generar_Reportes />} />
+          <Route exact path='/Facturacion' element={<Facturacion />} />
+        </Routes>
+      </>
+    </Router>
   );
 }
 export default App;

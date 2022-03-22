@@ -49,38 +49,41 @@ export default class Contenido_Login extends Component {
 
     return (
       <div id="login_back">
-        <div id="login_div_bienvenido" >
-          <h1 className="text-center" id='login_tex1'>Bienvenido</h1>
-          <h2 className="text-center" id='login_tex2'>Fundación Mía</h2>
-          <h3 className="text-center" id='login_tex3'>Construyendo Futuro</h3>
+        <div >.</div>
+        <div className="form-floating" id="login_card">
+          <div id="login_div_bienvenido"  >
+            <h1 className="text-center" id='login_tex1'>Bienvenido</h1>
+            <h2 className="text-center" id='login_tex2'>Fundación Mía</h2>
+            <h3 className="text-center" id='login_tex3'>Construyendo Futuro</h3>
+          </div>
+          <br />
+          <Form onSubmit={this.handleSubmit} id="login_usform" ref={c => { this.form = c; }}>
+            <div className="form-group">
+              <label htmlFor="usernameOrEmail">Usuario</label>
+              <Input
+                type="text"
+                className="form-control"
+                placeholder="Nombre"
+                onChange={e => this.usernameOrEmail = e.target.value}
+                validations={[required]}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Contraseña</label>
+              <Input
+                type="password"
+                className="form-control"
+                placeholder="Contraseña"
+                onChange={e => this.password = e.target.value}
+                validations={[required]}
+              />
+            </div>
+            <div id="login_div_links">
+              <Link id="login_link_res" to="/">He Olvidado Mi Contraseña</Link>
+              <CheckButton class="btn btn-success" ref={c => { this.checkBtn = c; }} >Ingresar</CheckButton>
+            </div>
+          </Form>
         </div>
-        <br />
-        <Form onSubmit={this.handleSubmit} id="login_usform" ref={c => { this.form = c; }}>
-          <div className="form-group">
-            <label htmlFor="usernameOrEmail">Usuario</label>
-            <Input
-              type="text"
-              className="form-control"
-              placeholder="Nombre"
-              onChange={e => this.usernameOrEmail = e.target.value}
-              validations={[required]}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Contraseña</label>
-            <Input
-              type="password"
-              className="form-control"
-              placeholder="Contraseña"
-              onChange={e => this.password = e.target.value}
-              validations={[required]}
-            />
-          </div>
-          <div id="login_div_links">
-            <Link id="login_link_res" to="/Login">He Olvidado Mi Contraseña</Link>
-            <CheckButton class="btn btn-success" ref={c => { this.checkBtn = c; }} >Ingresar</CheckButton>
-          </div>
-        </Form>
       </div>
     );
   }
