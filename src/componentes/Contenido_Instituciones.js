@@ -1,4 +1,3 @@
-import React from "react";
 import './Contenido_Instituciones.css'
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
@@ -6,7 +5,6 @@ import { useEffect, useState } from 'react';
 const Contenido_Instituciones = () => {
 
     const [instituciones, setInstituciones] = useState([]);
-
     useEffect(() => {
         fetch('http://localhost:8080/api/institucion')
             .then((response) => {
@@ -18,7 +16,7 @@ const Contenido_Instituciones = () => {
     }, [])
 
     return (
-        <div id="instituciones_div">
+        <div id="instituciones_div" >
             <div id='instituciones_divruta'>
                 <img id="instituciones_iconos" src='/img/icono_inicio.png' alt='' />
                 <Link id="instituciones_linkinicio" to="/Inicio">Inicio/</Link>

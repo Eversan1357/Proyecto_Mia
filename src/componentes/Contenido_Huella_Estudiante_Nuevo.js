@@ -26,6 +26,8 @@ const Contenido_Huella_Estudiante_Nuevo = () => {
     };
     */
 
+
+
     useEffect(() => {
         fetch('http://localhost:8080/api/estudiante')
             .then((response) => {
