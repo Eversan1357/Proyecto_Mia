@@ -31,12 +31,25 @@ export default class Contenido_Login extends Component {
         })
   };
 
+
+
+  statePassword = {
+    isPasswordShown: false
+  };
+  togglePasswordVisibility = () => {
+    const { isPasswordShown } = this.statePassword;
+    this.setState({ isPasswordShown: !isPasswordShown });
+  };
+
+
   render() {
+
+    const { isPasswordShown } = this.statePassword;
+
 
     if (this.state.loggedIn) {
       return <Navigate to={'/Inicio'} />
     }
-
     const required = value => {
       if (!value) {
         return (
@@ -56,31 +69,35 @@ export default class Contenido_Login extends Component {
             <h2 className="text-center" id='login_tex2'>Fundación Mía</h2>
             <h3 className="text-center" id='login_tex3'>Construyendo Futuro</h3>
           </div>
-          <br />
           <Form onSubmit={this.handleSubmit} id="login_usform" ref={c => { this.form = c; }}>
             <div className="form-group">
-              <label htmlFor="usernameOrEmail">Usuario</label>
+              <label id="inicio_labels">Usuario</label>
               <Input
                 type="text"
                 className="form-control"
-                placeholder="Nombre"
+                placeholder="Usuario"
                 onChange={e => this.usernameOrEmail = e.target.value}
                 validations={[required]}
               />
             </div>
             <div className="form-group">
-              <label htmlFor="password">Contraseña</label>
+              <label id="inicio_labels">Contraseña</label>
               <Input
-                type="password"
+                type={isPasswordShown ? "text" : "password"}
+                name="pass"
                 className="form-control"
                 placeholder="Contraseña"
                 onChange={e => this.password = e.target.value}
                 validations={[required]}
+                id="input_contraseña"
               />
+              <i className="fa fa-eye " onClick={this.togglePasswordVisiblity} />
             </div>
-            <div id="login_div_links">
-              <Link id="login_link_res" to="/">He Olvidado Mi Contraseña</Link>
-              <CheckButton class="btn btn-success" ref={c => { this.checkBtn = c; }} >Ingresar</CheckButton>
+            <div id="login_div_link">
+              <Link id="login_link_res" to="/">Restablecer Contraseña</Link>
+            </div>
+            <div id="login_div_boton">
+              <CheckButton class="btn btn-danger" ref={c => { this.checkBtn = c; }} >Inciar Sección</CheckButton>
             </div>
           </Form>
         </div>

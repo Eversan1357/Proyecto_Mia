@@ -1,15 +1,14 @@
 #login_back{
-  background: rgb(58,180,120);
-background: linear-gradient(16deg, rgba(58,180,120,0.8701855742296919) 19%, rgba(29,126,253,1) 57%, rgba(95,69,252,1) 97%);
-
+  background: rgb(235,51,73);
+  background: linear-gradient(194deg, rgba(235,51,73,1) 0%, rgba(244,92,67,1) 100%);
   min-height: 100vh;
 }
 
 #login_card{
-  background-color: rgb(211, 211, 211);
+  background-color: rgb(255, 255, 255);
   width: fit-content;
-  margin: 0 auto;
-  margin-top: 100px;
+  margin: 0 auto; 
+  margin-top: 70px;
   padding: 50px;
   border-radius: 15px;
 }
@@ -44,23 +43,25 @@ background: linear-gradient(16deg, rgba(58,180,120,0.8701855742296919) 19%, rgba
 #login_usform{
     width: fit-content;
     margin: 0 auto; 
+    margin-top: 30px;
+    width: 400px;
+    height: 250px;
 }
 
-#login_exampleInputEmail1{
-  width: 400px;
+#login_div_boton{
+  width: fit-content;
+  margin: 0 auto; 
+  margin-top: 50px;
 }
 
-
-#login_exampleInputPassword1{
-  width: 400px;
-}
-
-#login_div_links{
-  display: grid;
-  grid-template-columns: 70% 30%;
-  margin-top: 20px;
+#login_div_link{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #login_link_res{
-  color: rgb(0, 0, 0);
+  color: rgb(216, 8, 8);
+}
+
+.password-icon{
+  cursor: pointer;
 }
