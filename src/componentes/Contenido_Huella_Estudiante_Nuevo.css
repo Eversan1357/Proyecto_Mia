@@ -34,7 +34,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows:  80px 80px 80px 80px;
+    grid-template-rows:  80px 80px 80px 80px 80px 80px;
 }
 
 #ins{
@@ -51,10 +51,15 @@
 
 #lim{
     margin: 10px;
+    margin-top: 30px;
+}
+
+#contenedornuevo{
+    display: flex;
 }
 
 #reg{
-    margin-top: 10px;
+    width: 150px;
 }
 
 #divdatos{
@@ -69,6 +74,7 @@
 #huellita{
     border: 1px solid black;
     height: 150px;
+    margin-right: 10px;
 }
 
 #card-table{
