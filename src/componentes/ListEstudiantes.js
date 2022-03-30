@@ -1,35 +1,49 @@
-import React, { useState } from 'react'
+import { Component } from 'react';
+import axios from 'axios';
 
-const ListEstudiantes = () => {
+class ListEstudiantes extends Component {
 
-    const [estudiantes, setEstudiantes] = useState([])
+    state = {
+        documento: [],
+        documentoTipo: ''
+    }
+    componentDidMount() {
+        this.getdocumento();
+    }
 
-    return (
-        <div className='container'>
+    getdocumento = () => {
+        axios.get('http://localhost:8080/api/tipoDocumento')
+            .then(res => {
+                this.setState({
+                    documento: res.data,
+                });
+                console.log(this.state);
+            });
+    }
+    handleChange = (e) => {
+        this.setState({
+            documentoTipo: e.target.value
+        })
+    }
 
-            <h1 className='text-center'>Lista de empleados</h1>
-            <table className='table table-bordered table-striped'>
-                <thead>
-                    <th>id</th>
-                    <th>nombre</th>
-                    <th>apellido</th>
-                    <th>email</th>
-                </thead>
-                <tbody>
-                    {
-                        estudiantes.map(
-                            estudiante =>
-                            <tr key={estudiante.id}>
-                                <td> {estudiante.nombre}</td>
-                                <td> {estudiante.apellido}</td>
-                                <td> {estudiante.email}</td>
-                            </tr>
+    render() {
+        return (
+            <form className="form-group">
+                <label>Tipo De Documento</label>
+                <select className="form-select" aria-label="Default select example" onChange={this.handleChange}>
+                    {this.state.documento.map((documentos) => {
+                        return (
+                            <option key={documentos.idTipoDocumento}
+                            value={documentos.nombre}>{documentos.nombre}</option>
                         )
+                    })
                     }
-                </tbody>
-            </table>
-        </div>
-    )
+                </select>
+                <div id="Role_Date-box">
+                    <label>{this.state.documentoTipo}</label>
+                </div>
+            </form>
+        );
+    }
 }
-
 export default ListEstudiantes

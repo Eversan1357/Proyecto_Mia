@@ -35,6 +35,7 @@
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
     grid-template-rows:  80px 80px 80px 80px 80px 80px;
+    height: auto;
 }
 
 #ins{
@@ -54,21 +55,8 @@
     margin-top: 30px;
 }
 
-#contenedornuevo{
-    display: flex;
-}
-
 #reg{
     width: 150px;
-}
-
-#divdatos{
-    width: fit-content;
-    margin: 0 auto;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows:  auto;
 }
 
 #huellita{
@@ -77,9 +65,13 @@
     margin-right: 10px;
 }
 
-#card-table{
-    width: fit-content;
-    margin: 0 auto;
-    margin-top: 50px;
+#huella_inputs{
+    background: white;
+    border-radius: 9px;
+    border: 1px solid black;
+    color: black;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: auto;
+    border-color: gray;
 }

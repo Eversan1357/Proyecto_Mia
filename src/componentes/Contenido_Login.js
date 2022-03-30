@@ -1,13 +1,12 @@
 import { Link, Navigate } from "react-router-dom";
 import { Component } from "react";
 import Form from "react-validation/build/form";
-import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
+import Input from "react-validation/build/input";
 import axios from 'axios';
 
 import './Contenido_Login.css'
 import '../pages/Inicio'
-
 
 export default class Contenido_Login extends Component {
 
@@ -31,25 +30,19 @@ export default class Contenido_Login extends Component {
         })
   };
 
-
-
-  statePassword = {
-    isPasswordShown: false
-  };
-  togglePasswordVisibility = () => {
-    const { isPasswordShown } = this.statePassword;
-    this.setState({ isPasswordShown: !isPasswordShown });
-  };
-
+  constructor() {
+    super();
+    this.state = {
+      showPassword: false,
+    }
+  }
 
   render() {
-
-    const { isPasswordShown } = this.statePassword;
-
 
     if (this.state.loggedIn) {
       return <Navigate to={'/Inicio'} />
     }
+
     const required = value => {
       if (!value) {
         return (
@@ -61,7 +54,7 @@ export default class Contenido_Login extends Component {
     };
 
     return (
-      <div id="login_back">
+      <div id="login_back" >
         <div >.</div>
         <div className="form-floating" id="login_card">
           <div id="login_div_bienvenido"  >
@@ -83,21 +76,26 @@ export default class Contenido_Login extends Component {
             <div className="form-group">
               <label id="inicio_labels">Contraseña</label>
               <Input
-                type={isPasswordShown ? "text" : "password"}
-                name="pass"
+                id="input_contraseña"
+                type={this.state.showPassword ? "text" : "password"}
                 className="form-control"
                 placeholder="Contraseña"
                 onChange={e => this.password = e.target.value}
                 validations={[required]}
-                id="input_contraseña"
               />
-              <i className="fa fa-eye " onClick={this.togglePasswordVisiblity} />
+              <span id="password-icon"
+                className="material-icons"
+                onClick={() => this.setState({ showPassword: !this.state.showPassword })}
+              >visibility</span>
             </div>
             <div id="login_div_link">
               <Link id="login_link_res" to="/">Restablecer Contraseña</Link>
             </div>
             <div id="login_div_boton">
-              <CheckButton class="btn btn-danger" ref={c => { this.checkBtn = c; }} >Inciar Sección</CheckButton>
+              <CheckButton className="btn btn-success" id="login_boton_ingresar" ref={c => { this.checkBtn = c; }} >Inciar Sección
+                <span class="material-icons">
+                  login
+                </span></CheckButton>
             </div>
           </Form>
         </div>
