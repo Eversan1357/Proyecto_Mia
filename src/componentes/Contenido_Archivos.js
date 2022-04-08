@@ -17,11 +17,11 @@ class Contenido_Archivos extends React.Component {
                     <text id="archivos_tema">Tema :</text>
                     <select id='archivos_seleccionar' class="form-select">
                         <option >Selecione Un Formato</option>
-                        <option download="FORMATO DE PLANILLA - 1.xlsx" href="./public/FORMATO_DE_PLANILLA - 1.xlsx" >Diccionario de Datos</option>
+                       <option download="FORMATO DE PLANILLA - 1.xlsx" href="./public/FORMATO_DE_PLANILLA - 1.xlsx" >Diccionario de Datos</option>
                         <option>Estrategia PAE</option>
                     </select>
-                    <a href="../public/descargas/FORMATO_DE_PLANILLA-2.xls" download="FORMATO_DE_PLANILLA-2.xls">Download Text</a>
-                </div>
+                    {/*  <a href="../public/descargas/FORMATO_DE_PLANILLA-2.xls" download="FORMATO_DE_PLANILLA-2.xls">Download Text</a>
+                */}</div>
             </div>
         )
     }

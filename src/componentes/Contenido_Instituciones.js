@@ -1,18 +1,46 @@
 import './Contenido_Instituciones.css'
+import axios from 'axios';
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Contenido_Instituciones = () => {
 
-    const [instituciones, setInstituciones] = useState([]);
+function Contenido_Instituciones() {
+
+    const [instituciones, setinstituciones] = useState([]);
+    const [tablaInstituciones, settablaInstituciones] = useState([]);
+    const [busqueda, setBusqueda] = useState("");
+
+    const peticionGet = async () => {
+        await axios.get("http://localhost:8080/api/institucion")
+            .then(response => {
+                setinstituciones(response.data);
+                settablaInstituciones(response.data);
+            }).catch(error => {
+                console.log(error);
+            })
+    }
+
+    const handleChange = e => {
+        setBusqueda(e.target.value);
+        filtrar(e.target.value);
+    }
+
+    const filtrar = (terminoBusqueda) => {
+        var resultadosBusqueda = tablaInstituciones.filter((elemento) => {
+            if (elemento.codDane.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+                || elemento.nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+            ) {
+                return elemento;
+            }
+        });
+        setinstituciones(resultadosBusqueda);
+    }
+
+
     useEffect(() => {
-        fetch('http://localhost:8080/api/institucion')
-            .then((response) => {
-                return response.json()
-            })
-            .then((institucion) => {
-                setInstituciones(institucion)
-            })
+        peticionGet();
     }, [])
 
     return (
@@ -24,33 +52,18 @@ const Contenido_Instituciones = () => {
                 <text id='instituciones_textrutas'>Buscar Instituciones/</text>
                 <text id='instituciones_textrutas'>Instituciones</text>
             </div>
-            <div id="instituciones_form">
-                <div id="instituciones_divinfomacion">
-                    <text id="instituciones_inputstext">Departamento*</text>
-                    <select id='seleccionar' class="form-select">
-                        <option>Selecione una Opción</option>
-                    </select>
+            <div id="buscar_form">
+                <div id="buscar_divinfomacion" className="containerInput">
+                    <input
+                        className="form-control inputBuscar"
+                        value={busqueda}
+                        placeholder="Busqueda por Nombre o Numero de Documento"
+                        onChange={handleChange}
+                    />
+                    <button className="btn btn-success">
+                        <FontAwesomeIcon icon={faSearch} />
+                    </button>
                 </div>
-                <div id="instituciones_divinfomacion">
-                    <text id="instituciones_inputstext">Municipio*</text>
-                    <select id='seleccionar' class="form-select">
-                        <option>Selecione una Opción</option>
-                    </select>
-                </div>
-                <div id="instituciones_divinfomacion">
-                    <text id="instituciones_inputstext">E.E(Establecimiento Educativo):*</text>
-                    <input type="text" id="instituciones_inputstext" class="form-control" placeholder="Institución Educativa">
-                    </input>
-                </div>
-                <div id="instituciones_divinfomacion">
-                    <text id="instituciones_inputstext">Sedes*</text>
-                    <select id='seleccionar' class="form-select">
-                        <option>Selecione una Opción</option>
-                    </select>
-                </div>
-            </div>
-            <div id='busc_ins'>
-                <button type="submit" class="btn btn-danger">Buscar</button>
             </div>
             <table id="instituciones_table" class="table table-hover">
                 <thead>
@@ -64,18 +77,17 @@ const Contenido_Instituciones = () => {
                         <th scope="col">Eliminar</th>
                     </tr>
                 </thead>
-                {instituciones.map(instituciones => (
-                    <tbody>
-                        <tr key={instituciones.idInstitucion}>
-                            <td>{instituciones.codDane}</td>
-                            <td>{instituciones.nombre}</td>
-                            <td>{instituciones.rector.username}</td>
-                            <td>{ }</td>
-                            <td>{ }</td>
-                            <td>{ }</td>
-                        </tr>
-                    </tbody>
-                ))}
+                <tbody>
+                    {instituciones &&
+                        instituciones.map((institucion) => (
+                            <tr key={institucion.idInstitucion}>
+                                <td>{institucion.codDane}</td>
+                                <td>{institucion.nombre}</td>
+                                <td>{institucion.rector.unaPersona.nombre +" "+ institucion.rector.unaPersona.apellido}</td>
+                            </tr>
+                        ))}
+                </tbody>
+
             </table>
         </div>
     )

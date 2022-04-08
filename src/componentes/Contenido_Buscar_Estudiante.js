@@ -1,11 +1,9 @@
-import React from "react";
 import './Contenido_Buscar_Estudiante.css'
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import axios from "axios";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 
 
 function Contenido_Buscar_Estudiante() {

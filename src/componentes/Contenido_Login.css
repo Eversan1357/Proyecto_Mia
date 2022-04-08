@@ -12,6 +12,7 @@
   padding: 50px;
   border-radius: 15px;
   height: auto;
+  box-shadow:10px 10px 7px 3px rgba(0, 0, 0, 0.2);
 }
 
 #login_div_bienvenido{
@@ -59,6 +60,7 @@
 #login_boton_ingresar{
   display: flex;
   gap: 15px;
+  box-shadow:4px 4px 6px 4px rgba(0, 0, 0, 0.2);
 }
 
 #login_div_link{
