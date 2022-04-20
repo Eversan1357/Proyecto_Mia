@@ -96,7 +96,7 @@ function Contenido_Buscar_Estudiante() {
                                     <td>{estudiante.unaInstitucion.nombre}</td>
                                     <td>{estudiante.unaSede.nombre}</td>
                                     <td>{estudiante.grado}</td>
-                                    <td>{estudiante.idEstudiante}</td>
+                                    <td>{estudiante.unaInstitucion.rector.unaPersona.nombre}</td>
                                     <td>{estudiante.idEstudiante}</td>
                                     <td>{estudiante.idEstudiante}</td>
                                     <td>{estudiante.idEstudiante}</td>

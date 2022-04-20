@@ -1,6 +1,6 @@
 import './Contenido_Huella_Estudiante_Nuevo.css'
 import { Link } from "react-router-dom";
-import { Component } from 'react'
+import { Component, useEffect, useRef, useState } from 'react'
 import axios from 'axios';
 
 class Contenido_Huella_Estudiante_Nuevo extends Component {
@@ -47,26 +47,102 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
 
     //-------------Get de datos para los selects:tipo documento----------------//
     state = {
+        pais: [],
+        municipio: [],
+        institucion: [],
+        sede: [],
         documento: [],
-        documentoTipo: ''
+        departamento: [],
+        jornada: [],
+        discapacidad: [],
+        etnia: []
     }
     componentDidMount() {
-        this.getdocumento();
-    }
-    getdocumento = () => {
-        axios.get('http://localhost:8080/api/tipoDocumento')
-            .then(res => {
-                this.setState({
-                    documento: res.data,
-                });
-                console.log(this.state);
+        axios
+            .get('http://localhost:8080/api/paises/listar')
+            .then((response) => {
+                console.log(response);
+                this.setState({ pais: response.data })
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+        axios
+            .get('http://localhost:8080/api/municipios/listar')
+            .then((response) => {
+                console.log(response);
+                this.setState({ municipio: response.data })
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        axios
+            .get('http://localhost:8080/api/institucion')
+            .then((response) => {
+                console.log(response);
+                this.setState({ institucion: response.data })
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        axios
+            .get('http://localhost:8080/api/sede/listar')
+            .then((response) => {
+                console.log(response);
+                this.setState({ sede: response.data })
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        axios
+            .get('http://localhost:8080/api/tipoDocumento')
+            .then((response) => {
+                console.log(response);
+                this.setState({ documento: response.data })
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+        axios
+            .get('http://localhost:8080/api/departamento/listar')
+            .then((response) => {
+                console.log(response);
+                this.setState({ departamento: response.data })
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        axios
+            .get('http://localhost:8080/api/jornada/listar')
+            .then((response) => {
+                console.log(response);
+                this.setState({ jornada: response.data })
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        axios
+            .get('http://localhost:8080/api/discapacidad/listar')
+            .then((response) => {
+                console.log(response);
+                this.setState({ discapacidad: response.data })
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        axios
+            .get('http://localhost:8080/api/etnia/listar')
+            .then((response) => {
+                console.log(response);
+                this.setState({ etnia: response.data })
+            })
+            .catch((error) => {
+                console.log(error);
             });
     }
-    handleChange = (e) => {
-        this.setState({
-            documentoTipo: e.target.value
-        })
-    }
+    ///----------------------------------------------------------///
 
     render() {
         return (
@@ -80,35 +156,57 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
                 </div>
                 <form id="datos" onSubmit={this.handleSubmit}>
                     <div>
-                        <input type="text" id="huella_inputs" className='form-control' placeholder="País Origen:*"
-                        />
+                        <label>País Origen:*</label>
+                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                            {this.state.pais.map(paises => (
+                                <option key={paises.id_Pais} value={paises.nombre}>{paises.nombre}</option>
+                            )
+                            )}
+                        </select>
                     </div>
                     <div>
-                        <input type="text" id="huella_inputs" className='form-control' placeholder="Municipio:*"
-                        />
+                        <label>Municipio:*</label>
+                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                            {this.state.municipio.map(municipios => (
+                                <option key={municipios.id_Municipio} value={municipios.nombre}>{municipios.nombre}</option>
+                            )
+                            )}
+                        </select>
                     </div>
                     <div>
-                        <input type="text" id="huella_inputs" className='form-control' placeholder="Institucion:*"
-                        />
+                        <label>Institucion:*</label>
+                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                            {this.state.institucion.map(instituciones => (
+                                <option key={instituciones.id_Institucion} value={instituciones.nombre}>{instituciones.nombre}</option>
+                            )
+                            )}
+                        </select>
                     </div>
                     <div>
-                        <input type="text" id="huella_inputs" className='form-control' placeholder="Sede:*"
-                        />
+                        <label>Sede:*</label>
+                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                            {this.state.sede.map(sedes => (
+                                <option key={sedes.id_Sede} value={sedes.nombre}>{sedes.nombre}</option>
+                            )
+                            )}
+                        </select>
                     </div>
                     <div>
-                        <input type="text" id="huella_inputs" className='form-control' placeholder="Director:*"
-                        />
+                        <label>Director:*</label>
+                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                            {this.state.institucion.map(instituciones => (
+                                <option key={instituciones.id_Institucion} value={instituciones.rector.unaPersona.nombre}>{instituciones.rector.unaPersona.nombre}</option>
+                            )
+                            )}
+                        </select>
                     </div>
                     <div>
-                        <label>Tipo Documento</label>
-                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange}>
-                            {this.state.documento.map((documentos) => {
-                                return (
-                                    <option key={documentos.idTipoDocumento}
-                                        value={documentos.nombre}>{documentos.nombre}</option>
-                                )
-                            })
-                            }
+                        <label>Tipo de Documento</label>
+                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                            {this.state.documento.map(documentos => (
+                                <option key={documentos.id_TipoDocumento} value={documentos.nombre}>{documentos.nombre}</option>
+                            )
+                            )}
                         </select>
                     </div>
                     <div>
@@ -116,16 +214,31 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
                             onChange={e => this.numeroDocumento = e.target.value} />
                     </div>
                     <div>
-                        <input type="text" id="huella_inputs" className='form-control' placeholder="Municipio de Residencia:*"
-                            onChange={e => this.municipioRecidencia = e.target.value} />
+                        <label>Municipio de Residencia:*</label>
+                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                            {this.state.municipio.map(municipios => (
+                                <option key={municipios.id_Municipio} value={municipios.nombre}>{municipios.nombre}</option>
+                            )
+                            )}
+                        </select>
                     </div>
                     <div>
-                        <input type="text" id="huella_inputs" className='form-control' placeholder="Departamento de Nacimiento:*"
-                            onChange={e => this.nacimientoDepartamento = e.target.value} />
+                        <label>Departamento de Nacimiento:*</label>
+                        <select className="form-select" aria-label="Default select example">
+                            {this.state.departamento.map(departamentos => (
+                                <option key={departamentos.id_Departamento} value={departamentos.nombre}>{departamentos.nombre}</option>
+                            )
+                            )}
+                        </select>
                     </div>
                     <div>
-                        <input type="text" id="huella_inputs" className='form-control' placeholder="Municipio de Nacimiento:*"
-                            onChange={e => this.nacimientoMunicipio = e.target.value} />
+                        <label>Municipio de Nacimiento:*</label>
+                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                            {this.state.municipio.map(municipios => (
+                                <option key={municipios.id_Municipio} value={municipios.nombre}>{municipios.nombre}</option>
+                            )
+                            )}
+                        </select>
                     </div>
                     <div>
                         <input type="text" id="huella_inputs" className='form-control' placeholder="Primer Nombre:*"
@@ -172,25 +285,35 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
                             onChange={e => this.telefonoAcudiente = e.target.value} />
                     </div>
                     <div>
-                        <input type="text" id="huella_inputs" className='form-control' placeholder="Tipo Jornada:*"
-                        />
+                        <label>Tipo de Jornada:*</label>
+                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                            {this.state.jornada.map(jornadas => (
+                                <option key={jornadas.id_Jornada} value={jornadas.nombre}>{jornadas.nombre}</option>
+                            )
+                            )}
+                        </select>
                     </div>
                     <div>
-                        <input type="text" id="huella_inputs" className='form-control' placeholder="Discapacidad:*"
-                        />
+                        <label>Tipo de Discapacidad:*</label>
+                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                            {this.state.discapacidad.map(discapacidades => (
+                                <option key={discapacidades.id_TipoDiscapacidad} value={discapacidades.nombre}>{discapacidades.nombre}</option>
+                            )
+                            )}
+                        </select>
                     </div>
                     <div>
-                        <input type="text" id="huella_inputs" className='form-control' placeholder="Etnia:*"
-                        />
+                        <label>Tipo de Etnia:*</label>
+                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                            {this.state.etnia.map(etnias => (
+                                <option key={etnias.id_Etnia} value={etnias.nombre}>{etnias.nombre}</option>
+                            )
+                            )}
+                        </select>
                     </div>
-                    <div id='reg'>
-                        <img id="huellita" src='/img/Huella.jpg' alt='' />
-                        <button id="" type="submit" class="btn btn-danger" disabled>Regitro Huella</button>
-                    </div>
-                    <div id='reg'>
-                        <img id="huellita" src='/img/people.jpg' alt='' />
-                        <button id="" type="submit" class="btn btn-danger" disabled>Registro Facial</button>
-                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                     <div>
                         <button id="lim" type="submit" class="btn btn-danger" disabled>Limpiar</button>
                         <button id="lim" class="btn btn-primary btn-block">Guardar</button>
