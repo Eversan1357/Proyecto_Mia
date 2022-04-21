@@ -1,6 +1,6 @@
 import './Contenido_Huella_Estudiante_Nuevo.css'
 import { Link } from "react-router-dom";
-import { Component, useEffect, useRef, useState } from 'react'
+import { Component, } from 'react'
 import axios from 'axios';
 
 class Contenido_Huella_Estudiante_Nuevo extends Component {
@@ -8,12 +8,26 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
     //-------------Post para registro de estudiante----------------//
     handleSubmit = e => {
         e.preventDefault();
-        const data = {
+
+        this.director = parseInt(this.director);
+        this.municipioRecidencia = parseInt(this.municipioRecidencia);
+        this.nacimientoDepartamento = parseInt(this.nacimientoDepartamento);
+        this.nacimientoMunicipio = parseInt(this.nacimientoMunicipio);
+        this.paisOrigen = parseInt(this.paisOrigen);
+        this.unMunicipio = parseInt(this.unMunicipio);
+        this.unTipoDocumento = parseInt(this.unTipoDocumento);
+        this.unaDiscapacidad = parseInt(this.unaDiscapacidad);
+        this.unaEtnia = parseInt(this.unaEtnia);
+        this.unaInstitucion = parseInt(this.unaInstitucion);
+        this.unaJornada = parseInt(this.unaJornada);
+        this.unaSede = parseInt(this.unaSede);
+
+        const data = [{
             acudiente: this.acudiente,
             apellido1: this.apellido1,
             apellido2: this.apellido2,
             direccionRecidencia: this.direccionRecidencia,
-            //director: this.director,
+            director: this.director,
             fechaNacimiento: this.fechaNacimiento,
             genero: this.genero,
             grado: this.grado,
@@ -23,24 +37,26 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
             nombre1: this.nombre1,
             nombre2: this.nombre2,
             numeroDocumento: this.numeroDocumento,
-            //paisOrigen: this.paisOrigen,
+            paisOrigen: this.paisOrigen,
             telefono: this.telefono,
             telefonoAcudiente: this.telefonoAcudiente,
-            //unMunicipio: this.unMunicipio,
-            //unTipoDocumento: this.unTipoDocumento,
-            //unaDiscapacidad: this.unaDiscapacidad,
-            //unaEtnia: this.unaEtnia,
-            //unaInstitucion: this.unaInstitucion,
-            //unaJornada: this.unaJornada,
-            //unaSede: this.unaSede
-        };
+            unMunicipio: this.unMunicipio,
+            unTipoDocumento: this.unTipoDocumento,
+            unaDiscapacidad: this.unaDiscapacidad,
+            naEtnia: this.unaEtnia,
+            unaInstitucion: this.unaInstitucion,
+            unaJornada: this.unaJornada,
+            unaSede: this.unaSede
+        }];
         axios.post('http://localhost:8080/api/estudiante', data).then(
             res => {
                 console.log(res)
+                console.log(data)
             }
         ).catch(
             err => {
                 console.log(err);
+                console.log(data)
             }
         )
     };
@@ -144,7 +160,11 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
     }
     ///----------------------------------------------------------///
 
+
     render() {
+
+        parseInt(this.paisOrigen);
+
         return (
             <div id='huella_div'>
                 <div id='huella_divruta'>
@@ -157,54 +177,60 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
                 <form id="datos" onSubmit={this.handleSubmit}>
                     <div>
                         <label>País Origen:*</label>
-                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                        <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.paisOrigen = e.target.value} >
+                            <option selected="selected" >Selecccione un País</option>
                             {this.state.pais.map(paises => (
-                                <option key={paises.id_Pais} value={paises.nombre}>{paises.nombre}</option>
+                                <option key={paises.idPais} value={paises.idPais}>{paises.nombre}</option>
                             )
                             )}
                         </select>
                     </div>
                     <div>
                         <label>Municipio:*</label>
-                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                        <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.unMunicipio = e.target.value} >
+                            <option selected="selected" >Selecccione un Municipio</option>
                             {this.state.municipio.map(municipios => (
-                                <option key={municipios.id_Municipio} value={municipios.nombre}>{municipios.nombre}</option>
+                                <option key={municipios.idMunicipio} value={municipios.idMunicipio}>{municipios.nombre}</option>
                             )
                             )}
                         </select>
                     </div>
                     <div>
                         <label>Institucion:*</label>
-                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                        <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.unaInstitucion = e.target.value} >
+                            <option selected="selected" >Selecccione una Institución</option>
                             {this.state.institucion.map(instituciones => (
-                                <option key={instituciones.id_Institucion} value={instituciones.nombre}>{instituciones.nombre}</option>
+                                <option key={instituciones.idInstitucion} value={instituciones.idInstitucion}>{instituciones.nombre}</option>
                             )
                             )}
                         </select>
                     </div>
                     <div>
                         <label>Sede:*</label>
-                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                        <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.unaSede = e.target.value} >
+                            <option selected="selected" >Selecccione una Sede</option>
                             {this.state.sede.map(sedes => (
-                                <option key={sedes.id_Sede} value={sedes.nombre}>{sedes.nombre}</option>
+                                <option key={sedes.idSede} value={sedes.idSede}>{sedes.nombre}</option>
                             )
                             )}
                         </select>
                     </div>
                     <div>
                         <label>Director:*</label>
-                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                        <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.director = e.target.value}  >
+                            <option selected="selected" >Selecccione un Director</option>
                             {this.state.institucion.map(instituciones => (
-                                <option key={instituciones.id_Institucion} value={instituciones.rector.unaPersona.nombre}>{instituciones.rector.unaPersona.nombre}</option>
+                                <option key={instituciones.idInstitucion} value={instituciones.idInstitucion}>{instituciones.rector.unaPersona.nombre}</option>
                             )
                             )}
                         </select>
                     </div>
                     <div>
                         <label>Tipo de Documento</label>
-                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                        <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.unTipoDocumento = e.target.value}>
+                            <option selected="selected" >Selecccione un Tipo Documento</option>
                             {this.state.documento.map(documentos => (
-                                <option key={documentos.id_TipoDocumento} value={documentos.nombre}>{documentos.nombre}</option>
+                                <option key={documentos.idTipoDocumento} value={documentos.idTipoDocumento}>{documentos.nombre}</option>
                             )
                             )}
                         </select>
@@ -215,27 +241,30 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
                     </div>
                     <div>
                         <label>Municipio de Residencia:*</label>
-                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                        <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.municipioRecidencia = e.target.value}>
+                            <option selected="selected" >Selecccione un Municipio</option>
                             {this.state.municipio.map(municipios => (
-                                <option key={municipios.id_Municipio} value={municipios.nombre}>{municipios.nombre}</option>
+                                <option key={municipios.idMunicipio} value={municipios.idMunicipio}>{municipios.nombre}</option>
                             )
                             )}
                         </select>
                     </div>
                     <div>
                         <label>Departamento de Nacimiento:*</label>
-                        <select className="form-select" aria-label="Default select example">
+                        <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.nacimientoDepartamento = e.target.value}>
+                            <option selected="selected" >Selecccione un Departamento</option>
                             {this.state.departamento.map(departamentos => (
-                                <option key={departamentos.id_Departamento} value={departamentos.nombre}>{departamentos.nombre}</option>
+                                <option key={departamentos.idDepartamento} value={departamentos.idDepartamento}>{departamentos.nombre}</option>
                             )
                             )}
                         </select>
                     </div>
                     <div>
                         <label>Municipio de Nacimiento:*</label>
-                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                        <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.nacimientoMunicipio = e.target.value}>
+                            <option selected="selected" >Selecccione un Municipio</option>
                             {this.state.municipio.map(municipios => (
-                                <option key={municipios.id_Municipio} value={municipios.nombre}>{municipios.nombre}</option>
+                                <option key={municipios.idMunicipio} value={municipios.idMunicipio}>{municipios.nombre}</option>
                             )
                             )}
                         </select>
@@ -286,27 +315,30 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
                     </div>
                     <div>
                         <label>Tipo de Jornada:*</label>
-                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                        <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.unaJornada = e.target.value}>
+                            <option selected="selected" >Selecccione una Jornada</option>
                             {this.state.jornada.map(jornadas => (
-                                <option key={jornadas.id_Jornada} value={jornadas.nombre}>{jornadas.nombre}</option>
+                                <option key={jornadas.idJornada} value={jornadas.idJornada}>{jornadas.nombre}</option>
                             )
                             )}
                         </select>
                     </div>
                     <div>
                         <label>Tipo de Discapacidad:*</label>
-                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                        <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.unaDiscapacidad = e.target.value}>
+                            <option selected="selected" >Selecccione una Discapacidad</option>
                             {this.state.discapacidad.map(discapacidades => (
-                                <option key={discapacidades.id_TipoDiscapacidad} value={discapacidades.nombre}>{discapacidades.nombre}</option>
+                                <option key={discapacidades.idTipoDiscapacidad} value={discapacidades.idTipoDiscapacidad}>{discapacidades.nombre}</option>
                             )
                             )}
                         </select>
                     </div>
                     <div>
                         <label>Tipo de Etnia:*</label>
-                        <select className="form-select" aria-label="Default select example" onChange={this.handleChange} >
+                        <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.unaEtnia = e.target.value}>
+                            <option selected="selected" >Selecccione una Etnia</option>
                             {this.state.etnia.map(etnias => (
-                                <option key={etnias.id_Etnia} value={etnias.nombre}>{etnias.nombre}</option>
+                                <option key={etnias.idEtnia} value={etnias.idEtnia}>{etnias.nombre}</option>
                             )
                             )}
                         </select>
@@ -316,7 +348,7 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
                     <div></div>
                     <div>
                         <button id="lim" type="submit" class="btn btn-danger" disabled>Limpiar</button>
-                        <button id="lim" class="btn btn-primary btn-block">Guardar</button>
+                        <button id="lim" class="btn btn-primary btn-block" >Guardar</button>
                     </div>
                 </form>
             </ div>

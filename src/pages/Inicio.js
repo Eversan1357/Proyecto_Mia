@@ -2,7 +2,7 @@
 import React from "react";
 import Navegacion from "../componentes/Navegacion";
 import Contenido_Inicio from '../componentes/Contenido_Inicio';
-import Contenido_selects from '../componentes/contenido_selects';
+//import Contenido_selects from '../componentes/contenido_selects';
 
 
 
@@ -12,6 +12,7 @@ class Inicio extends React.Component {
       <>
         <Navegacion />
         <Contenido_Inicio />
+        {/*<Contenido_selects /> */}
       </>
     )
   }
