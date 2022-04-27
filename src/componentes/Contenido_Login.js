@@ -13,6 +13,7 @@ export default class Contenido_Login extends Component {
   state = {}
   handleSubmit = e => {
     e.preventDefault();
+    
     const data = {
       usernameOrEmail: this.usernameOrEmail,
       password: this.password
@@ -93,7 +94,7 @@ export default class Contenido_Login extends Component {
             </div>
             <div id="login_div_boton">
               <CheckButton className="btn btn-success" id="login_boton_ingresar" ref={c => { this.checkBtn = c; }} >Inciar Sección
-                <span class="material-icons">
+                <span class="material-icons"> 
                   login
                 </span></CheckButton>
             </div>

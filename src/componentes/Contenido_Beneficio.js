@@ -13,22 +13,12 @@ export default class Contenido_Beneficio extends Component {
                     <text id='beneficio_textrutas'>Beneficio/</text>
                     <text id='beneficio_textrutas'>Registro Beneficio</text>
                 </div>
-                <div id='recuadro'>
-                    <div id='cuadro'>
-                        <h2 class="text-center" id='te4' >HUELLA</h2>
-                        <img src='/img/Huella.jpg' alt='' />
-                    </div>
-                    <div id='cuadro'>
-                        <h2 class="text-center" id='te4' >FOTO</h2>
-                        <img src='/img/people.jpg' alt='' />
+                <div id='cuadro'>
+                    <div>
+                        
                     </div>
                 </div>
-                <br />
-                <br />
                 <div id='divbotones'>
-                    <button id='botones' className='btn btn-danger'>
-                        <a href='./Inicio' >Validar Ingreso</a>
-                    </button>
                     <button id='botones' className='btn btn-danger'>
                         <a href='./Inicio' >Validar Ingreso</a>
                     </button>

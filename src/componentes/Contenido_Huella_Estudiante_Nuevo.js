@@ -6,28 +6,20 @@ import axios from 'axios';
 class Contenido_Huella_Estudiante_Nuevo extends Component {
 
     //-------------Post para registro de estudiante----------------//
+
+
+
+    
     handleSubmit = e => {
         e.preventDefault();
-
-        this.director = parseInt(this.director);
-        this.municipioRecidencia = parseInt(this.municipioRecidencia);
-        this.nacimientoDepartamento = parseInt(this.nacimientoDepartamento);
-        this.nacimientoMunicipio = parseInt(this.nacimientoMunicipio);
-        this.paisOrigen = parseInt(this.paisOrigen);
-        this.unMunicipio = parseInt(this.unMunicipio);
-        this.unTipoDocumento = parseInt(this.unTipoDocumento);
-        this.unaDiscapacidad = parseInt(this.unaDiscapacidad);
-        this.unaEtnia = parseInt(this.unaEtnia);
-        this.unaInstitucion = parseInt(this.unaInstitucion);
-        this.unaJornada = parseInt(this.unaJornada);
-        this.unaSede = parseInt(this.unaSede);
-
-        const data = [{
+        const data = {
             acudiente: this.acudiente,
             apellido1: this.apellido1,
             apellido2: this.apellido2,
             direccionRecidencia: this.direccionRecidencia,
-            director: this.director,
+
+            director: { 'id': this.director },
+
             fechaNacimiento: this.fechaNacimiento,
             genero: this.genero,
             grado: this.grado,
@@ -37,26 +29,31 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
             nombre1: this.nombre1,
             nombre2: this.nombre2,
             numeroDocumento: this.numeroDocumento,
-            paisOrigen: this.paisOrigen,
+
+            paisOrigen: { 'idPais': this.paisOrigen },
+
             telefono: this.telefono,
             telefonoAcudiente: this.telefonoAcudiente,
-            unMunicipio: this.unMunicipio,
-            unTipoDocumento: this.unTipoDocumento,
-            unaDiscapacidad: this.unaDiscapacidad,
-            naEtnia: this.unaEtnia,
-            unaInstitucion: this.unaInstitucion,
-            unaJornada: this.unaJornada,
-            unaSede: this.unaSede
-        }];
+
+            unMunicipio: { 'idMunicipio': this.unMunicipio },
+            unTipoDocumento: { 'idTipoDocumento': this.unTipoDocumento },
+            unaDiscapacidad: { 'idTipoDiscapacidad': this.unaDiscapacidad },
+            unaEtnia: { 'idEtnia': this.unaEtnia },
+            unaInstitucion: { 'idInstitucion': this.unaInstitucion },
+            unaJornada: { 'idJornada': this.unaJornada },
+            unaSede: { 'idSede': this.unaSede }
+        };
         axios.post('http://localhost:8080/api/estudiante', data).then(
             res => {
                 console.log(res)
                 console.log(data)
+                alert('Estudiante Guardado Exitosamente')
             }
         ).catch(
             err => {
                 console.log(err);
                 console.log(data)
+                alert('Error, llene todos los campos')
             }
         )
     };
@@ -163,8 +160,6 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
 
     render() {
 
-        parseInt(this.paisOrigen);
-
         return (
             <div id='huella_div'>
                 <div id='huella_divruta'>
@@ -177,10 +172,10 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
                 <form id="datos" onSubmit={this.handleSubmit}>
                     <div>
                         <label>País Origen:*</label>
-                        <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.paisOrigen = e.target.value} >
-                            <option selected="selected" >Selecccione un País</option>
+                        <select defaultValue="1" className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.paisOrigen = e.target.value} >
+                            <option value="1" >Selecccione un País</option>
                             {this.state.pais.map(paises => (
-                                <option key={paises.idPais} value={paises.idPais}>{paises.nombre}</option>
+                                <option key={paises.idPais} value={paises.idPais} >{paises.nombre}</option>
                             )
                             )}
                         </select>
@@ -220,7 +215,7 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
                         <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.director = e.target.value}  >
                             <option selected="selected" >Selecccione un Director</option>
                             {this.state.institucion.map(instituciones => (
-                                <option key={instituciones.idInstitucion} value={instituciones.idInstitucion}>{instituciones.rector.unaPersona.nombre}</option>
+                                <option key={instituciones.rector.id} value={instituciones.rector.id}>{instituciones.rector.unaPersona.nombre}</option>
                             )
                             )}
                         </select>
@@ -244,7 +239,7 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
                         <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.municipioRecidencia = e.target.value}>
                             <option selected="selected" >Selecccione un Municipio</option>
                             {this.state.municipio.map(municipios => (
-                                <option key={municipios.idMunicipio} value={municipios.idMunicipio}>{municipios.nombre}</option>
+                                <option key={municipios.nombre} value={municipios.nombre}>{municipios.nombre}</option>
                             )
                             )}
                         </select>
@@ -254,7 +249,7 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
                         <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.nacimientoDepartamento = e.target.value}>
                             <option selected="selected" >Selecccione un Departamento</option>
                             {this.state.departamento.map(departamentos => (
-                                <option key={departamentos.idDepartamento} value={departamentos.idDepartamento}>{departamentos.nombre}</option>
+                                <option key={departamentos.nombre} value={departamentos.nombre}>{departamentos.nombre}</option>
                             )
                             )}
                         </select>
@@ -264,7 +259,7 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
                         <select className="form-select" aria-label="Default select example" id="huella_inputs" onChange={e => this.nacimientoMunicipio = e.target.value}>
                             <option selected="selected" >Selecccione un Municipio</option>
                             {this.state.municipio.map(municipios => (
-                                <option key={municipios.idMunicipio} value={municipios.idMunicipio}>{municipios.nombre}</option>
+                                <option key={municipios.nombre} value={municipios.nombre}>{municipios.nombre}</option>
                             )
                             )}
                         </select>
@@ -347,11 +342,11 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
                     <div></div>
                     <div></div>
                     <div>
-                        <button id="lim" type="submit" class="btn btn-danger" disabled>Limpiar</button>
-                        <button id="lim" class="btn btn-primary btn-block" >Guardar</button>
+                        <button id="lim" type="submit" className="btn btn-danger" disabled>Limpiar</button>
+                        <button id="lim" className="btn btn-primary btn-block" >Guardar</button>
                     </div>
-                </form>
-            </ div>
+                </form >
+            </ div >
         );
     }
 }
