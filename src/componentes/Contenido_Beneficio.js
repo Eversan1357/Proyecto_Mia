@@ -10,12 +10,11 @@ export default class Contenido_Beneficio extends Component {
                     <img id="beneficio_iconos" src='/img/icono_inicio.png' alt='' />
                     <Link id="beneficio_linkinicio" to="/Inicio">Inicio/</Link>
                     <img id="beneficio_iconos" src='/img/icono_estudiantes.png' alt='' />
-                    <text id='beneficio_textrutas'>Beneficio/</text>
-                    <text id='beneficio_textrutas'>Registro Beneficio</text>
+                    <label id='beneficio_textrutas'>Beneficio/</label>
+                    <label id='beneficio_textrutas'>Registro Beneficio</label>
                 </div>
                 <div id='cuadro'>
                     <div>
-                        
                     </div>
                 </div>
                 <div id='divbotones'>

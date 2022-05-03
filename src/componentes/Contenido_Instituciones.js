@@ -49,8 +49,8 @@ function Contenido_Instituciones() {
                 <img id="instituciones_iconos" src='/img/icono_inicio.png' alt='' />
                 <Link id="instituciones_linkinicio" to="/Inicio">Inicio/</Link>
                 <img id="instituciones_iconos" src='/img/icono_instituciones.png' alt='' />
-                <text id='instituciones_textrutas'>Buscar Instituciones/</text>
-                <text id='instituciones_textrutas'>Instituciones</text>
+                <label id='instituciones_textrutas'>Buscar Instituciones/</label>
+                <label id='instituciones_textrutas'>Instituciones</label>
             </div>
             <div id="buscar_form">
                 <div id="buscar_divinfomacion" className="containerInput">
@@ -65,30 +65,30 @@ function Contenido_Instituciones() {
                     </button>
                 </div>
             </div>
-            <table id="instituciones_table" class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">Código DANE</th>
-                        <th scope="col">Nombre Institución</th>
-                        <th scope="col">Rector Institución</th>
-                        <th scope="col">Cantidad Sedes</th>
-                        <th scope="col">Ver Institución</th>
-                        <th scope="col">Ver Sedes</th>
-                        <th scope="col">Eliminar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {instituciones &&
-                        instituciones.map((institucion) => (
-                            <tr key={institucion.idInstitucion}>
-                                <td>{institucion.codDane}</td>
-                                <td>{institucion.nombre}</td>
-                                <td>{institucion.rector.unaPersona.nombre +" "+ institucion.rector.unaPersona.apellido}</td>
-                            </tr>
-                        ))}
-                </tbody>
-
-            </table>
+            <div className="table-responsive" >
+                <table id="instituciones_table" className="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Código DANE</th>
+                            <th scope="col">Nombre Institución</th>
+                            <th scope="col">Rector Institución</th>
+                            <th scope="col">Cantidad Sedes</th>
+                            <th scope="col">Ver Institución</th>
+                            <th scope="col">Ver Sedes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {instituciones &&
+                            instituciones.map((institucion) => (
+                                <tr key={institucion.idInstitucion}>
+                                    <td>{institucion.codDane}</td>
+                                    <td>{institucion.nombre}</td>
+                                    <td>{institucion.rector.unaPersona.nombre + " " + institucion.rector.unaPersona.apellido}</td>
+                                </tr>
+                            ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

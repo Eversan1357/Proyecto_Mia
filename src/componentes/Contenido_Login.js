@@ -13,21 +13,28 @@ export default class Contenido_Login extends Component {
   state = {}
   handleSubmit = e => {
     e.preventDefault();
-    
+
     const data = {
       usernameOrEmail: this.usernameOrEmail,
       password: this.password
     };
-    axios.post('http://localhost:8080/api/auth/iniciarSesion', data)
+    axios.post('http://localhost:8080/api/auth/iniciarSesion/', data)
       .then(res => {
+
         localStorage.setItem('tokeDeAcceso', res.data.tokeDeAcceso);
+
+        console.log(res.data.unUsuario.roles[0].nombre)
+
+        console.log(res.data)
+
         this.setState({
-          loggedIn: true
+          tipoRol:(res.data.unUsuario.roles[0].nombre)
         })
       })
       .catch(
         err => {
           console.log(err);
+          alert('Usuario o Contraseña Incorrectos')
         })
   };
 
@@ -40,19 +47,30 @@ export default class Contenido_Login extends Component {
 
   render() {
 
-    if (this.state.loggedIn) {
+    if(this.state.tipoRol==="ROLE_ADMIN"){
       return <Navigate to={'/Inicio'} />
     }
+    if(this.state.tipoRol==="ROLE_COORDINADOR"){
+      return <Navigate to={'/Archivos'} />
+    }
+    if(this.state.tipoRol==="ROLE_RECTOR"){
+      return <Navigate to={'/Facturacion'} />
+    }
+    
+    
 
     const required = value => {
       if (!value) {
         return (
-          <div className="alert alert-danger" role="alert">
+          <div className="alert alert-danger" role="alert" id="login_alerterror">
             ¡Este campo es obligatorio!
           </div>
         );
       }
     };
+
+
+
 
     return (
       <div id="login_back" >
@@ -63,6 +81,9 @@ export default class Contenido_Login extends Component {
             <h2 className="text-center" id='login_tex2'>Fundación Mía</h2>
             <h3 className="text-center" id='login_tex3'>Construyendo Futuro</h3>
           </div>
+          <div id="login_divimg">
+            <img  id="login_img" src="/img/logo_mia.png" alt="" />
+          </div>
           <Form onSubmit={this.handleSubmit} id="login_usform" ref={c => { this.form = c; }}>
             <div className="form-group">
               <label id="inicio_labels">Usuario</label>
@@ -70,17 +91,18 @@ export default class Contenido_Login extends Component {
                 type="text"
                 className="form-control"
                 placeholder="Usuario"
+                autoComplete="username"
                 onChange={e => this.usernameOrEmail = e.target.value}
                 validations={[required]}
               />
             </div>
-            <div className="form-group">
+            <div className="form-group" id="login_passwordform" >
               <label id="inicio_labels">Contraseña</label>
               <Input
-                id="input_contraseña"
                 type={this.state.showPassword ? "text" : "password"}
                 className="form-control"
                 placeholder="Contraseña"
+                autoComplete="current-password"
                 onChange={e => this.password = e.target.value}
                 validations={[required]}
               />
@@ -94,7 +116,7 @@ export default class Contenido_Login extends Component {
             </div>
             <div id="login_div_boton">
               <CheckButton className="btn btn-success" id="login_boton_ingresar" ref={c => { this.checkBtn = c; }} >Inciar Sección
-                <span class="material-icons"> 
+                <span className="material-icons">
                   login
                 </span></CheckButton>
             </div>

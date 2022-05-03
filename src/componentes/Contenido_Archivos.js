@@ -10,12 +10,12 @@ class Contenido_Archivos extends React.Component {
                     <img id="archivos_iconos" src='/img/icono_inicio.png' alt='' />
                     <Link id="archivos_linkinicio" to="/Inicio">Inicio/</Link>
                     <img id="archivos_iconos" src='/img/icono_ayuda.png' alt='' />
-                    <text id='archivos_textrutas'>Ayuda/</text>
-                    <text id='archivos_textrutas'>Archivos</text>
+                    <label id='archivos_textrutas'>Ayuda/</label>
+                    <label id='archivos_textrutas'>Archivos</label>
                 </div>
                 <div id='archivos_selector'>
-                    <text id="archivos_tema">Tema :</text>
-                    <select id='archivos_seleccionar' class="form-select">
+                    <label id="archivos_tema">Tema :</label>
+                    <select id='archivos_seleccionar' className="form-select">
                         <option >Selecione Un Formato</option>
                        <option download="FORMATO DE PLANILLA - 1.xlsx" href="./public/FORMATO_DE_PLANILLA - 1.xlsx" >Diccionario de Datos</option>
                         <option>Estrategia PAE</option>

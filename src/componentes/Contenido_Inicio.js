@@ -8,7 +8,7 @@ export default class Contenido_Inicio extends Component {
             <div id="inicio_div">
                 <div id='inicio_divruta'>
                     <img id="inicio_icono" src='/img/icono_inicio.png' alt='' />
-                    <text id='inicio_textrutas'>Inicio</text>
+                    <label id='inicio_textrutas'>Inicio</label>
                 </div>
                 <h4 id='inicio_text_titulo' >Bienvenido al Sistema</h4>
                 <Carousel id="inicio_carusel" >

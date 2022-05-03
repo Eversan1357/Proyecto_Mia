@@ -8,7 +8,6 @@ import Sistema from './pages/Sistema'
 import Archivos from './pages/Archivos'
 import Cambiar_Clave from './pages/Cambiar_Clave'
 import Cargar_Datos from './pages/Cargar_Datos'
-import Permisos_Privilegios from './pages/Permisos_Privilegios'
 import Roles from './pages/Roles'
 import Usuarios from './pages/Usuarios'
 import Beneficio from './pages/Beneficio'
@@ -29,7 +28,6 @@ const App = () => {
           <Route exact path='/archivos' element={<Archivos />} />
           <Route exact path='/cambiar_Clave' element={<Cambiar_Clave />} />
           <Route exact path='/cargar_Datos' element={<Cargar_Datos />} />
-          <Route exact path='/permisos_Privilegios' element={<Permisos_Privilegios />} />
           <Route exact path='/roles' element={<Roles />} />
           <Route exact path='/usuarios' element={<Usuarios />} />
           <Route exact path='/beneficio' element={<Beneficio />} />

@@ -33,9 +33,16 @@
     width: fit-content;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows:  80px 80px 80px 80px 80px 80px;
-    height: auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows:  20% 20% 20% 20% 20% 20%;
+    min-height: 50%;
+}
+
+#huella_divinfomacion{
+    display: flex;
+    width: 450px;
+    height: 80px;
+    align-items: center;
 }
 
 #ins{

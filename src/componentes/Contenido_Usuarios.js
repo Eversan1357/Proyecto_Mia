@@ -22,14 +22,11 @@ const Contenido_Usuarios = () => {
                 <img id="usuarios_iconos" src='/img/icono_inicio.png' alt='' />
                 <Link id="usuarios_linkinicio" to="/Inicio">Inicio/</Link>
                 <img id="usuarios_iconos" src='/img/icono_administrador.png' alt='' />
-                <text id='usuarios_textrutas'>Administrador/</text>
-                <text id='usuarios_textrutas'>Usuarios</text>
+                <label id='usuarios_textrutas'>Administrador/</label>
+                <label id='usuarios_textrutas'>Usuarios</label>
             </div>
 
-            <table id="usuarios_tabla" class="table table-striped">
-                <thead>
-                    <th id="usuarios_th" scope="col">Roles</th>
-                </thead>
+            <table id="usuarios_tabla" className="table table-striped">
                 <thead>
                     <tr>
                         <th id="usuarios_th" scope="col">Nombre</th>
@@ -38,16 +35,16 @@ const Contenido_Usuarios = () => {
                         <th id="usuarios_th" scope="col">Estado</th>
                     </tr>
                 </thead>
-                {instituciones.map(instituciones => (
-                    <tbody>
+                <tbody>
+                    {instituciones.map(instituciones => (
                         <tr key={instituciones.id}>
                             <td>{instituciones.unaPersona.nombre}</td>
                             <td>{instituciones.unaPersona.apellido}</td>
                             <td>{instituciones.roles.id}</td>
                             <td>{instituciones.unaPersona.estado}</td>
                         </tr>
-                    </tbody>
-                ))}
+                    ))}
+                </tbody>
             </table>
         </div>
     )

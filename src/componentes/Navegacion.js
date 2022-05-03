@@ -16,16 +16,16 @@ export default function Navegacion() {
             <header id="headermenu">
                 <header id="titulos">
                     <div id="circulos"><div id="circulo"> </div><div id="circulo"> </div><div id="circulo"> </div></div>
-                    <text></text>
+                    <label></label>
                     <div></div>
                 </header>
                 <div id="div_horas">
                     <div />
                     <div />
                     <div id="div_hora" >
-                        <input id="navegacion_fecha" type="text" Value={hora}></input>
+                        <input id="navegacion_fecha" type="text" defaultValue={hora}></input>
                         <img id="dimagen" src="/img/icono_usuario.png" alt="" />
-                        <text id="texto_admin" >Admin</text>
+                        <label id="texto_admin">Admin</label>
                     </div>
                 </div>
                 <ul id="menu">
@@ -40,7 +40,6 @@ export default function Navegacion() {
                         <ul id='desple'>
                             <li id='boxli'><Link className='menu_link' to="/Cambiar_Clave">Cambiar Clave</Link></li>
                             <li id='boxli'><Link className='menu_link' to="/Cargar_Datos">Cargar Datos</Link></li>
-                            <li id='boxli'><Link className='menu_link' to="/Permisos_Privilegios">Permisos Privilegios</Link></li>
                             <li id='boxli'><Link className='menu_link' to="/Roles">Roles</Link></li>
                             <li id='boxli'><Link className='menu_link' to="/Usuarios">Usuarios</Link></li>
                             <li id='boxli'><Link className='menu_link' to="/Huella_Estudiante_Nuevo">Huella Estudiante Nuevo</Link></li>

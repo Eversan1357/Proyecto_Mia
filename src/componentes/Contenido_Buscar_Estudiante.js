@@ -13,7 +13,7 @@ function Contenido_Buscar_Estudiante() {
     const [busqueda, setBusqueda] = useState("");
 
     const peticionGet = async () => {
-        await axios.get("http://localhost:8080/api/estudiante")
+        await axios.get("http://localhost:8080/api/beneficiario/listar")
             .then(response => {
                 setUsuarios(response.data);
                 setTablaUsuarios(response.data);
@@ -29,9 +29,11 @@ function Contenido_Buscar_Estudiante() {
 
     const filtrar = (terminoBusqueda) => {
         var resultadosBusqueda = tablaUsuarios.filter((elemento) => {
-            if (elemento.numeroDocumento.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
-                || elemento.nombre1.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
-            ){
+            if (elemento.estado.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+                || elemento.unEstudiante.nombre1.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+                || elemento.unEstudiante.apellido1.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+                || elemento.unEstudiante.numeroDocumento.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+            ) {
                 return elemento;
             }
         });
@@ -49,8 +51,8 @@ function Contenido_Buscar_Estudiante() {
                 <img id="buscar_iconos" src='/img/icono_inicio.png' alt='' />
                 <Link id="buscar_linkinicio" to="/Inicio">Inicio/</Link>
                 <img id="buscar_iconos" src='/img/icono_estudiantes.png' alt='' />
-                <text id='buscar_textrutas'>Estudiantes/</text>
-                <text id='buscar_textrutas'>Buscar Estudiantes</text>
+                <label id='buscar_textrutas'>Estudiantes/</label>
+                <label id='buscar_textrutas'>Buscar Estudiantes</label>
             </div>
             <div id="buscar_form">
                 <div id="buscar_divinfomacion" className="containerInput">
@@ -66,7 +68,7 @@ function Contenido_Buscar_Estudiante() {
                 </div>
             </div>
             <div className="table-responsive">
-                <table id="tablains" class="table tabvle-sm table-bordered">
+                <table id="buscar_tabla" className="table tabvle-sm table-bordered">
                     <thead>
                         <tr>
                             <th scope="col">Tipo Documento</th>
@@ -80,30 +82,26 @@ function Contenido_Buscar_Estudiante() {
                             <th scope="col">Fecha de Registro</th>
                             <th scope="col">Tipo Beneficio</th>
                             <th scope="col">Estado Beneficio</th>
-                            <th scope="col">Ver más</th>
                         </tr>
                     </thead>
-
                     <tbody>
                         {usuarios &&
                             usuarios.map((estudiante) => (
-                                <tr key={estudiante.idEstudiante}>
-                                    <td>{estudiante.unTipoDocumento.nombre}</td>
-                                    <td>{estudiante.numeroDocumento}</td>
-                                    <td>{estudiante.nombre1 + " " + estudiante.nombre2}</td>
-                                    <td>{estudiante.apellido1 + " " + estudiante.apellido2}</td>
-                                    <td>{estudiante.fechaNacimiento}</td>
-                                    <td>{estudiante.unaInstitucion.nombre}</td>
-                                    <td>{estudiante.unaSede.nombre}</td>
-                                    <td>{estudiante.grado}</td>
-                                    <td>{estudiante.unaInstitucion.rector.unaPersona.nombre}</td>
-                                    <td>{estudiante.idEstudiante}</td>
-                                    <td>{estudiante.idEstudiante}</td>
-                                    <td>{estudiante.idEstudiante}</td>
+                                <tr key={estudiante.unEstudiante.idEstudiante}>
+                                    <td>{estudiante.unEstudiante.unTipoDocumento.nombre}</td>
+                                    <td>{estudiante.unEstudiante.numeroDocumento}</td>
+                                    <td>{estudiante.unEstudiante.nombre1 + " " + estudiante.unEstudiante.nombre2}</td>
+                                    <td>{estudiante.unEstudiante.apellido1 + " " + estudiante.unEstudiante.apellido2}</td>
+                                    <td>{estudiante.unEstudiante.fechaNacimiento}</td>
+                                    <td>{estudiante.unEstudiante.unaInstitucion.nombre}</td>
+                                    <td>{estudiante.unEstudiante.unaSede.nombre}</td>
+                                    <td>{estudiante.unEstudiante.grado}</td>
+                                    <td>{estudiante.fechaCreacion}</td>
+                                    <td>{estudiante.tipoBeneficio.nombre}</td>
+                                    <td>{estudiante.estado}</td>
                                 </tr>
                             ))}
                     </tbody>
-
                 </table>
             </div>
         </div>

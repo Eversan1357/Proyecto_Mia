@@ -10,21 +10,21 @@ class Contenido_Generar_Reportes extends React.Component {
                     <img id="reportes_iconos" src='/img/icono_inicio.png' alt='' />
                     <Link id="reportes_linkinicio" to="/Inicio">Inicio/</Link>
                     <img id="reportes_iconos" src='/img/icono_reportes.png' alt='' />
-                    <text id='reportes_textrutas'>Reportes/</text>
-                    <text id='reportes_textrutas'>Generar Reportes</text>
+                    <label id='reportes_textrutas'>Reportes/</label>
+                    <label id='reportes_textrutas'>Generar Reportes</label>
                 </div>
                 <div id="reportes_form">
                     <div id="reportes_divinfomacion">
-                        <text id="reportes_inputstext">Fecha Inicial:*</text>
-                        <input id="reportes_inputstext" class="date" type="date" value="2022-02-04" ></input>
+                        <label id="reportes_inputstext">Fecha Inicial:*</label>
+                        <input id="reportes_inputstext" className="date" type="date"></input>
                     </div>
                     <div id="reportes_divinfomacion">
-                        <text id="reportes_inputstext" >Fecha Final:*</text>
-                        <input id="reportes_inputstext" class="date" type="date" value="2022-02-04" ></input>
+                        <label id="reportes_inputstext" >Fecha Final:*</label>
+                        <input id="reportes_inputstext" className="date" type="date"></input>
                     </div>
                     <div id="reportes_divinfomacion">
-                        <text id="reportes_inputstext">Reporte Grupos Poblacionales:*</text>
-                        <select class="form-select">
+                        <label id="reportes_inputstext">Reporte Grupos Poblacionales:*</label>
+                        <select className="form-select">
                             <option>Internos</option>
                             <option>Indigenas</option>
                             <option>Negritudes</option>
@@ -35,8 +35,8 @@ class Contenido_Generar_Reportes extends React.Component {
                         </select>
                     </div>
                     <div id="reportes_divinfomacion">
-                        <text id="reportes_inputstext">Tipo Reporte:*</text>
-                        <select class="form-select">
+                        <label id="reportes_inputstext">Tipo Reporte:*</label>
+                        <select className="form-select">
                             <option>Formato Men-Planilla</option>
                             <option>Zona(Rural o Urbana)</option>
                             <option>Municipio</option>
@@ -46,8 +46,8 @@ class Contenido_Generar_Reportes extends React.Component {
                         </select>
                     </div>
                     <div id="reportes_divinfomacion">
-                        <text id="reportes_inputstext">Reporte Tipo Alimentario:*</text>
-                        <select class="form-select">
+                        <label id="reportes_inputstext">Reporte Tipo Alimentario:*</label>
+                        <select className="form-select">
                             <option>AM</option>
                             <option>PM</option>
                             <option>Almuerzo</option>
@@ -59,8 +59,8 @@ class Contenido_Generar_Reportes extends React.Component {
                         </select>
                     </div>
                     <div id="reportes_divinfomacion">
-                        <text id="reportes_inputstext">Reporte Por Jornada:*</text>
-                        <select class="form-select">
+                        <label id="reportes_inputstext">Reporte Por Jornada:*</label>
+                        <select className="form-select">
                             <option>Completa</option>
                             <option>Mañana</option>
                             <option>Tarde</option>
@@ -73,29 +73,29 @@ class Contenido_Generar_Reportes extends React.Component {
                     <div id="iconos_ger">
                         <div>
                             <img id="ico_ger" src='/img/icono_pdf.png' alt='' />
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                <label class="form-check-label" for="flexCheckDefault">PDF</label>
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <label className="form-check-label" htmlFor="flexCheckDefault">PDF</label>
                             </div>
                         </div>
                         <div>
                             <img id="ico_ger" src='/img/icono_excel.png' alt='' />
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                <label class="form-check-label" for="flexCheckDefault">Excel</label>
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <label className="form-check-label" htmlFor="flexCheckDefault">Excel</label>
                             </div>
                         </div>
                         <div>
                             <img id="ico_ger" src='/img/icono_archivo_plano.png' alt='' />
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                <label class="form-check-label" for="flexCheckDefault">Archivo Plano</label>
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <label className="form-check-label" htmlFor="flexCheckDefault">Archivo Plano</label>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="busc">
-                    <button type="submit" class="btn btn-danger">Generar Reporte</button>
+                    <button type="submit" className="btn btn-danger">Generar Reporte</button>
                 </div>
             </div>
         )
