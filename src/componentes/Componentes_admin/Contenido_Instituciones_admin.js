@@ -1,4 +1,4 @@
-import './Contenido_Instituciones.css'
+import './Contenido_Instituciones_admin.css'
 import axios from 'axios';
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
@@ -6,7 +6,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-function Contenido_Instituciones() {
+export default  function Contenido_Instituciones_admin() {
 
     const [instituciones, setinstituciones] = useState([]);
     const [tablaInstituciones, settablaInstituciones] = useState([]);
@@ -92,4 +92,3 @@ function Contenido_Instituciones() {
         </div>
     )
 }
-export default Contenido_Instituciones;

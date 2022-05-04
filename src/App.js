@@ -2,20 +2,22 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+//Imports Admin
 import Login from './pages/Login'
-import Inicio from './pages/Inicio'
-import Sistema from './pages/Sistema'
-import Archivos from './pages/Archivos'
-import Cambiar_Clave from './pages/Cambiar_Clave'
-import Cargar_Datos from './pages/Cargar_Datos'
-import Roles from './pages/Roles'
-import Usuarios from './pages/Usuarios'
-import Beneficio from './pages/Beneficio'
-import Huella_Estudiante_Nuevo from './pages/Huella_Estudiante_Nuevo'
-import Instituciones from './pages/Instituciones'
-import Buscar_Estudiante from './pages/Buscar_Estudiante'
-import Generar_Reportes from './pages/Generar_Reportes'
-import Facturacion from './pages/Facturacion'
+
+import Inicio from './pages/pages_admin/Inicio'
+import Sistema from './pages/pages_admin/Sistema'
+import Archivos from './pages/pages_admin/Archivos'
+import Cambiar_Clave from './pages/pages_admin/Cambiar_Clave'
+import Cargar_Datos from './pages/pages_admin/Cargar_Datos'
+import Roles from './pages/pages_admin/Roles'
+import Usuarios from './pages/pages_admin/Usuarios'
+import Beneficio from './pages/pages_admin/Beneficio'
+import Huella_Estudiante_Nuevo from './pages/pages_admin/Huella_Estudiante_Nuevo'
+import Instituciones from './pages/pages_admin/Instituciones'
+import Buscar_Estudiante from './pages/pages_admin/Buscar_Estudiante'
+import Generar_Reportes from './pages/pages_admin/Generar_Reportes'
+import Facturacion from './pages/pages_admin/Facturacion'
 
 const App = () => {
   return (
@@ -23,6 +25,7 @@ const App = () => {
       <>
         <Routes>
           <Route exact path='/' element={<Login />} />
+
           <Route exact path='/inicio' element={<Inicio />} />
           <Route exact path='/sistema' element={<Sistema />} />
           <Route exact path='/archivos' element={<Archivos />} />

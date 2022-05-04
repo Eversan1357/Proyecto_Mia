@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Contenido_Cambiar_Clave.css'
+import './Contenido_Cambiar_Clave_admin.css'
 import Form from "react-validation/build/form";
 import CheckButton from "react-validation/build/button";
 import Input from "react-validation/build/input";
 import axios from 'axios';
 
-class Contenido_Cambiar_Clave extends React.Component {
+export default class Contenido_Cambiar_Clave_admin extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
@@ -60,11 +60,11 @@ class Contenido_Cambiar_Clave extends React.Component {
                     <div id="clave_divinfomacion">
                         <label htmlFor="exampleInputEmail1" id="clave_inputs">Contraseña Nueva:*</label>
                         <Input autoComplete="true"
-                         type="password" 
-                         className="form-control"
-                          aria-describedby="emailHelp" 
-                          placeholder="Clave Nueva" 
-                          />
+                            type="password"
+                            className="form-control"
+                            aria-describedby="emailHelp"
+                            placeholder="Clave Nueva"
+                        />
                     </div>
                     <div id="clave_divinfomacion">
                         <label htmlFor="exampleInputPassword1" id="clave_inputs">Repetir Contraseña Nueva:*</label>
@@ -78,4 +78,3 @@ class Contenido_Cambiar_Clave extends React.Component {
         )
     }
 }
-export default Contenido_Cambiar_Clave;

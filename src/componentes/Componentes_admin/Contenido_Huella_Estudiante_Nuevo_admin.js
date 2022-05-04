@@ -1,9 +1,9 @@
-import './Contenido_Huella_Estudiante_Nuevo.css'
+import './Contenido_Huella_Estudiante_Nuevo_admin.css'
 import { Link } from "react-router-dom";
 import { Component, } from 'react'
 import axios from 'axios';
 
-class Contenido_Huella_Estudiante_Nuevo extends Component {
+export default class Contenido_Huella_Estudiante_Nuevo_admin extends Component {
 
     //-------------Post para registro de estudiante----------------//
     handleSubmit = e => {
@@ -339,4 +339,3 @@ class Contenido_Huella_Estudiante_Nuevo extends Component {
         );
     }
 }
-export default Contenido_Huella_Estudiante_Nuevo;

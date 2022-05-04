@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Contenido_Generar_Reportes.css'
+import './Contenido_Generar_Reportes_admin.css'
 
-class Contenido_Generar_Reportes extends React.Component {
+export default class Contenido_Generar_Reportes_admin extends React.Component {
     render() {
         return (
             <div id="reportes_div">
@@ -101,4 +101,3 @@ class Contenido_Generar_Reportes extends React.Component {
         )
     }
 }
-export default Contenido_Generar_Reportes;

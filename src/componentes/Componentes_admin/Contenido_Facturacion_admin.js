@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Contenido_Facturacion.css'
+import './Contenido_Facturacion_admin.css'
 
-class Contenido_Facturacion extends React.Component {
+export default class Contenido_Facturacion_admin extends React.Component {
     render() {
         return (
             <div id="facturacion_div">
@@ -48,7 +48,7 @@ class Contenido_Facturacion extends React.Component {
                 <div id="busc">
                     <button type="submit" className="btn btn-danger">Buscar</button>
                 </div>
-                <div className="table-responsive"> 
+                <div className="table-responsive">
                     <table id="facturacion_table" className="table tabvle-sm table-bordered">
                         <thead>
                             <tr>
@@ -109,4 +109,3 @@ class Contenido_Facturacion extends React.Component {
         )
     }
 }
-export default Contenido_Facturacion;

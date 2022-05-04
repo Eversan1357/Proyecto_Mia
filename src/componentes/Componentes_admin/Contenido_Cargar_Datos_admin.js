@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Contenido_Cargar_Datos.css'
+import './Contenido_Cargar_Datos_admin.css'
 
-class Contenido_Cambiar_Clave extends React.Component {
+export default class Contenido_Cambiar_Clave_admin extends React.Component {
     render() {
         return (
             <div id="datos_div">
@@ -46,4 +46,3 @@ class Contenido_Cambiar_Clave extends React.Component {
         )
     }
 }
-export default Contenido_Cambiar_Clave;

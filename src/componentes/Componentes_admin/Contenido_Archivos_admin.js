@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Contenido_Archivos.css'
+import './Contenido_Archivos_admin.css'
 
-class Contenido_Archivos extends React.Component {
+export default class Contenido_Archivos_admin extends React.Component {
     render() {
         return (
             <div id="archivos_div">
@@ -17,7 +17,7 @@ class Contenido_Archivos extends React.Component {
                     <label id="archivos_tema">Tema :</label>
                     <select id='archivos_seleccionar' className="form-select">
                         <option >Selecione Un Formato</option>
-                       <option download="FORMATO DE PLANILLA - 1.xlsx" href="./public/FORMATO_DE_PLANILLA - 1.xlsx" >Diccionario de Datos</option>
+                        <option download="FORMATO DE PLANILLA - 1.xlsx" href="./public/FORMATO_DE_PLANILLA - 1.xlsx" >Diccionario de Datos</option>
                         <option>Estrategia PAE</option>
                     </select>
                     {/*  <a href="../public/descargas/FORMATO_DE_PLANILLA-2.xls" download="FORMATO_DE_PLANILLA-2.xls">Download Text</a>
@@ -26,4 +26,3 @@ class Contenido_Archivos extends React.Component {
         )
     }
 }
-export default Contenido_Archivos;

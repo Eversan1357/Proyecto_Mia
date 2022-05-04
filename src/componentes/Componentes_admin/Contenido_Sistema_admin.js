@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Contenido_Sistema.css'
+import './Contenido_Sistema_admin.css'
 
-class Contenido_Sistema extends React.Component {
+export default class Contenido_Sistema_admin extends React.Component {
   render() {
     return (
       <div id="sistema_div">
@@ -37,4 +37,3 @@ class Contenido_Sistema extends React.Component {
     )
   }
 }
-export default Contenido_Sistema;

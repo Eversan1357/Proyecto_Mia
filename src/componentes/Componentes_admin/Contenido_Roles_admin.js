@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Contenido_Roles.css'
+import './Contenido_Roles_admin.css'
 
-class Contenido_Login extends React.Component {
+export default class Contenido_Roles_admin extends React.Component {
     render() {
         return (
             <div id="roles_div">
@@ -56,4 +56,3 @@ class Contenido_Login extends React.Component {
         )
     }
 }
-export default Contenido_Login;

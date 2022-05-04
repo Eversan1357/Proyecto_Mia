@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import './Contenido_Beneficio.css'
+import './Contenido_Beneficio_admin.css'
 import { Link } from "react-router-dom";
 
-export default class Contenido_Beneficio extends Component {
+export default class Contenido_Beneficio_admin extends Component {
     render() {
         return (
             <div id='beneficio_div'>
