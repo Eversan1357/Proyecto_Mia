@@ -2,22 +2,22 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-//Imports Admin
-import Login from './pages/Login'
 
-import Inicio from './pages/pages_admin/Inicio'
-import Sistema from './pages/pages_admin/Sistema'
-import Archivos from './pages/pages_admin/Archivos'
-import Cambiar_Clave from './pages/pages_admin/Cambiar_Clave'
-import Cargar_Datos from './pages/pages_admin/Cargar_Datos'
-import Roles from './pages/pages_admin/Roles'
-import Usuarios from './pages/pages_admin/Usuarios'
-import Beneficio from './pages/pages_admin/Beneficio'
-import Huella_Estudiante_Nuevo from './pages/pages_admin/Huella_Estudiante_Nuevo'
-import Instituciones from './pages/pages_admin/Instituciones'
-import Buscar_Estudiante from './pages/pages_admin/Buscar_Estudiante'
-import Generar_Reportes from './pages/pages_admin/Generar_Reportes'
-import Facturacion from './pages/pages_admin/Facturacion'
+import Login from './pages/Login'
+//Imports Admin
+import Inicio_admin from './pages/pages_admin/Inicio_admin'
+import Sistema_admin from './pages/pages_admin/Sistema_admin'
+import Archivos_admin from './pages/pages_admin/Archivos_admin'
+import Cambiar_Clave_admin from './pages/pages_admin/Cambiar_Clave_admin'
+import Cargar_Datos_admin from './pages/pages_admin/Cargar_Datos_admin'
+import Roles_admin from './pages/pages_admin/Roles_admin'
+import Usuarios_admin from './pages/pages_admin/Usuarios_admin'
+import Beneficio_admin from './pages/pages_admin/Beneficio_admin'
+import Huella_Estudiante_Nuevo_admin from './pages/pages_admin/Huella_Estudiante_Nuevo_admin'
+import Instituciones_admin from './pages/pages_admin/Instituciones_admin'
+import Buscar_Estudiante_admin from './pages/pages_admin/Buscar_Estudiante_admin'
+import Generar_Reportes_admin from './pages/pages_admin/Generar_Reportes_admin'
+import Facturacion_admin from './pages/pages_admin/Facturacion_admin'
 
 const App = () => {
   return (
@@ -26,19 +26,19 @@ const App = () => {
         <Routes>
           <Route exact path='/' element={<Login />} />
 
-          <Route exact path='/inicio' element={<Inicio />} />
-          <Route exact path='/sistema' element={<Sistema />} />
-          <Route exact path='/archivos' element={<Archivos />} />
-          <Route exact path='/cambiar_Clave' element={<Cambiar_Clave />} />
-          <Route exact path='/cargar_Datos' element={<Cargar_Datos />} />
-          <Route exact path='/roles' element={<Roles />} />
-          <Route exact path='/usuarios' element={<Usuarios />} />
-          <Route exact path='/beneficio' element={<Beneficio />} />
-          <Route exact path='/huella_Estudiante_Nuevo' element={<Huella_Estudiante_Nuevo />} />
-          <Route exact path='/instituciones' element={<Instituciones />} />
-          <Route exact path='/buscar_Estudiante' element={<Buscar_Estudiante />} />
-          <Route exact path='/generar_Reportes' element={<Generar_Reportes />} />
-          <Route exact path='/facturacion' element={<Facturacion />} />
+          <Route exact path='/inicio_admin' element={<Inicio_admin />} />
+          <Route exact path='/sistema_admin' element={<Sistema_admin />} />
+          <Route exact path='/archivos_admin' element={<Archivos_admin />} />
+          <Route exact path='/cambiar_Clave_admin' element={<Cambiar_Clave_admin />} />
+          <Route exact path='/cargar_Datos_admin' element={<Cargar_Datos_admin />} />
+          <Route exact path='/roles_admin' element={<Roles_admin />} />
+          <Route exact path='/usuarios_admin' element={<Usuarios_admin />} />
+          <Route exact path='/beneficio_admin' element={<Beneficio_admin />} />
+          <Route exact path='/huella_Estudiante_Nuevo_admin' element={<Huella_Estudiante_Nuevo_admin />} />
+          <Route exact path='/instituciones_admin' element={<Instituciones_admin />} />
+          <Route exact path='/buscar_Estudiante_admin' element={<Buscar_Estudiante_admin />} />
+          <Route exact path='/generar_Reportes_admin' element={<Generar_Reportes_admin />} />
+          <Route exact path='/facturacion_admin' element={<Facturacion_admin />} />
         </Routes>
       </>
     </Router>

@@ -6,7 +6,7 @@ import Input from "react-validation/build/input";
 import axios from 'axios';
 
 import './Contenido_Login.css'
-import '../pages/Inicio'
+import '../pages/pages_admin/Inicio_admin'
 
 export default class Contenido_Login extends Component {
 
@@ -48,13 +48,13 @@ export default class Contenido_Login extends Component {
   render() {
 
     if(this.state.tipoRol==="ROLE_ADMIN"){
-      return <Navigate to={'/Inicio'} />
+      return <Navigate to={'/Inicio_admin'} />
     }
     if(this.state.tipoRol==="ROLE_COORDINADOR"){
-      return <Navigate to={'/Archivos'} />
+      return <Navigate to={'/Archivos_admin'} />
     }
     if(this.state.tipoRol==="ROLE_RECTOR"){
-      return <Navigate to={'/Facturacion'} />
+      return <Navigate to={'/Facturacion_admin'} />
     }
     
     

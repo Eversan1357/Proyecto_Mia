@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import './Contenido_Usuarios.css'
+import './Contenido_Usuarios_admin.css'
 
-const Contenido_Usuarios = () => {
+const Contenido_Usuarios_admin = () => {
 
     const [instituciones, setInstituciones] = useState([]);
 
@@ -49,4 +49,4 @@ const Contenido_Usuarios = () => {
         </div>
     )
 }
-export default Contenido_Usuarios;
+export default Contenido_Usuarios_admin;
