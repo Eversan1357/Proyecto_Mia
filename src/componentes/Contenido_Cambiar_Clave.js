@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Contenido_Cambiar_Clave_admin.css'
+import './Contenido_Cambiar_Clave.css'
 import Form from "react-validation/build/form";
 import CheckButton from "react-validation/build/button";
 import Input from "react-validation/build/input";
 import axios from 'axios';
 
-export default class Contenido_Cambiar_Clave_admin extends React.Component {
+export default class Contenido_Cambiar_Clave extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();

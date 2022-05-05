@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Contenido_Facturacion_admin.css'
+import './Contenido_Facturacion_contratista.css'
 
-export default class Contenido_Facturacion_admin extends React.Component {
+export default class Contenido_Facturacion_contratista extends React.Component {
     render() {
         return (
             <div id="facturacion_div">

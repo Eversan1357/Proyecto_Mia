@@ -1,4 +1,4 @@
-import './Contenido_Buscar_Estudiante_admin.css'
+import './Contenido_Buscar_Estudiante_contratista.css'
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
@@ -6,7 +6,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-export default function Contenido_Buscar_Estudiante_admin() {
+export default function Contenido_Buscar_Estudiante_contratista() {
 
     const [usuarios, setUsuarios] = useState([]);
     const [tablaUsuarios, setTablaUsuarios] = useState([]);

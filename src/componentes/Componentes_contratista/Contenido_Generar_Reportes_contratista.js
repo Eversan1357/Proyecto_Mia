@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Contenido_Generar_Reportes_admin.css'
+import './Contenido_Generar_Reportes_contratista.css'
 
-export default class Contenido_Generar_Reportes_admin extends React.Component {
+export default class Contenido_Generar_Reportes_contratista extends React.Component {
     render() {
         return (
             <div id="reportes_div">

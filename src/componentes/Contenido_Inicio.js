@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Carousel from 'react-bootstrap/Carousel'
-import './Contenido_Inicio_admin.css'
+import './Contenido_Inicio.css'
 
-export default class Contenido_Inicio_admin extends Component {
+export default class Contenido_Inicio extends Component {
     render() {
         return (
             <div id="inicio_div">
