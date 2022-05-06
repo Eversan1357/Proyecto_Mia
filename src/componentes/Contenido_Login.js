@@ -54,7 +54,10 @@ export default class Contenido_Login extends Component {
       return <Navigate to={'/Archivos_admin'} />
     }
     if(this.state.tipoRol==="ROLE_RECTOR"){
-      return <Navigate to={'/Facturacion_admin'} />
+      return <Navigate to={'/Inicio_rector'} />
+    }
+    if(this.state.tipoRol==="ROLE_CONTRATISTA"){
+      return <Navigate to={'/Inicio_contratista'} />
     }
     
     
