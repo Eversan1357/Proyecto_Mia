@@ -25,13 +25,19 @@ import Facturacion_contratista from './pages/pages_contratista/Facturacion_contr
 import Generar_Reportes_contratista from './pages/pages_contratista/Generar_Reportes_contratista'
 import Inicio_contratista from './pages/pages_contratista/Inicio_contratista'
 import Sistema_contratista from './pages/pages_contratista//Sistema_contratista'
-//Imports Contratista
+//Imports Rector
 import Buscar_Estudiante_rector from './pages/pages_rector/Buscar_Estudiante_rector';
 import Cambiar_Clave_rector from './pages/pages_rector/Cambiar_Clave_rector';
 import Facturacion_rector from './pages/pages_rector/Facturacion_rector'
 import Generar_Reportes_rector from './pages/pages_rector/Generar_Reportes_rector'
 import Inicio_rector from './pages/pages_rector/Inicio_contratista'
 import Sistema_rector from './pages/pages_rector/Sistema_contratista'
+//Imports Coordinador
+import Buscar_Estudiante_coordinador from './pages/pages_coordinador/Buscar_Estudiante_coordinador';
+import Cambiar_Clave_coordinador from './pages/pages_coordinador/Cambiar_Clave_coordinador';
+import Huella_Estudiante_Nuevo_coordinador from './pages/pages_coordinador/Huella_Estudiante_Nuevo_coordinador'
+import Inicio_coordinador from './pages/pages_coordinador/Inicio_coordinador'
+import Sistema_coordinador from './pages/pages_coordinador/Sistema_coordinador'
 const App = () => {
   return (
     <Router>
@@ -66,6 +72,12 @@ const App = () => {
           <Route exact path='/generar_reportes_rector' element={<Generar_Reportes_rector />} />
           <Route exact path='/inicio_rector' element={<Inicio_rector />} />
           <Route exact path='/sistema_rector' element={<Sistema_rector />} />
+          {/*Rutas Coordinador */}
+          <Route exact path='/buscar_Estudiante_coordinador' element={<Buscar_Estudiante_coordinador />} />
+          <Route exact path='/cambiar_Clave_coordinador' element={<Cambiar_Clave_coordinador />} />
+          <Route exact path='/huella_Estudiante_Nuevo_coordinador' element={<Huella_Estudiante_Nuevo_coordinador />} />
+          <Route exact path='/inicio_coordinador' element={<Inicio_coordinador />} />
+          <Route exact path='/sistema_coordinador' element={<Sistema_coordinador />} />
         </Routes>
       </>
     </Router>

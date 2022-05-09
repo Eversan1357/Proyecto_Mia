@@ -28,7 +28,7 @@ export default class Contenido_Login extends Component {
         console.log(res.data)
 
         this.setState({
-          tipoRol:(res.data.unUsuario.roles[0].nombre)
+          tipoRol: (res.data.unUsuario.roles[0].nombre)
         })
       })
       .catch(
@@ -47,20 +47,18 @@ export default class Contenido_Login extends Component {
 
   render() {
 
-    if(this.state.tipoRol==="ROLE_ADMIN"){
+    if (this.state.tipoRol === "ROLE_ADMIN") {
       return <Navigate to={'/Inicio_admin'} />
     }
-    if(this.state.tipoRol==="ROLE_COORDINADOR"){
-      return <Navigate to={'/Archivos_admin'} />
-    }
-    if(this.state.tipoRol==="ROLE_RECTOR"){
-      return <Navigate to={'/Inicio_rector'} />
-    }
-    if(this.state.tipoRol==="ROLE_CONTRATISTA"){
+    if (this.state.tipoRol === "ROLE_CONTRATISTA") {
       return <Navigate to={'/Inicio_contratista'} />
     }
-    
-    
+    if (this.state.tipoRol === "ROLE_RECTOR") {
+      return <Navigate to={'/Inicio_rector'} />
+    }
+    if (this.state.tipoRol === "ROLE_COORDINADOR") {
+      return <Navigate to={'/Inicio_coordinador'} />
+    }
 
     const required = value => {
       if (!value) {
@@ -85,7 +83,7 @@ export default class Contenido_Login extends Component {
             <h3 className="text-center" id='login_tex3'>Construyendo Futuro</h3>
           </div>
           <div id="login_divimg">
-            <img  id="login_img" src="/img/logo_mia.png" alt="" />
+            <img id="login_img" src="/img/logo_mia.png" alt="" />
           </div>
           <Form onSubmit={this.handleSubmit} id="login_usform" ref={c => { this.form = c; }}>
             <div className="form-group">
