@@ -1,4 +1,4 @@
-import './Contenido_Buscar_Estudiante_admin.css'
+import './Contenido_Buscar_Estudiante_profesor.css'
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
@@ -6,7 +6,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-export default function Contenido_Buscar_Estudiante_admin() {
+export default function Contenido_Buscar_Estudiante_profesor() {
 
     const [usuarios, setUsuarios] = useState([]);
     const [tablaUsuarios, setTablaUsuarios] = useState([]);
@@ -19,7 +19,6 @@ export default function Contenido_Buscar_Estudiante_admin() {
                 setTablaUsuarios(response.data);
             }).catch(error => {
                 console.log(error);
-
             })
     }
 
@@ -97,7 +96,7 @@ export default function Contenido_Buscar_Estudiante_admin() {
                                     <td>{estudiante.unEstudiante.unaInstitucion.nombre}</td>
                                     <td>{estudiante.unEstudiante.unaSede.nombre}</td>
                                     <td>{estudiante.unEstudiante.grado}</td>
-                                    <td>{estudiante.fechaActual}</td>
+                                    <td>{estudiante.fechaCreacion}</td>
                                     <td>{estudiante.tipoBeneficio.nombre}</td>
                                     <td>{estudiante.estado}</td>
                                 </tr>

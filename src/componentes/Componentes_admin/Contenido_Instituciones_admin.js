@@ -6,7 +6,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-export default  function Contenido_Instituciones_admin() {
+export default function Contenido_Instituciones_admin() {
 
     const [instituciones, setinstituciones] = useState([]);
     const [tablaInstituciones, settablaInstituciones] = useState([]);

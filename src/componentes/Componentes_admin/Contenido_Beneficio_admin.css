@@ -26,31 +26,11 @@
   color: black;
 }
 
-#te4{
-  font-size: 17px;
-  margin-top: 30px;
-  font-weight: bold;
-}
-  
-#botones{
-  color: white;
-  background: red;
-}
-
-#divbotones{
+#beneficio_form{
   width: fit-content;
   margin: 0 auto;
   display: grid;
-  margin-top: 50px;
-  width: 425px;
-  gap: 10px;
-}
-
-#cuadro{
-  width: fit-content;
-  margin: 0 auto;
-  width: 500px;
-  height: 500px;
-  padding: 40px;
-  border: 1px solid black;
+  grid-template-columns: 33% 33% 33%;
+  margin-top: 60px;
+  gap: 30px;
 }

@@ -38,6 +38,12 @@ import Cambiar_Clave_coordinador from './pages/pages_coordinador/Cambiar_Clave_c
 import Huella_Estudiante_Nuevo_coordinador from './pages/pages_coordinador/Huella_Estudiante_Nuevo_coordinador'
 import Inicio_coordinador from './pages/pages_coordinador/Inicio_coordinador'
 import Sistema_coordinador from './pages/pages_coordinador/Sistema_coordinador'
+//Imports Profesor
+import Buscar_Estudiante_profesor from './pages/pages_profesor/Buscar_Estudiante_profesor';
+import Cambiar_Clave_profesor from './pages/pages_profesor/Cambiar_Clave_profesor';
+import Huella_Estudiante_Nuevo_profesor from './pages/pages_profesor/Huella_Estudiante_Nuevo_profesor'
+import Inicio_profesor from './pages/pages_profesor/Inicio_profesor'
+import Sistema_profesor from './pages/pages_profesor/Sistema_profesor'
 const App = () => {
   return (
     <Router>
@@ -78,6 +84,12 @@ const App = () => {
           <Route exact path='/huella_Estudiante_Nuevo_coordinador' element={<Huella_Estudiante_Nuevo_coordinador />} />
           <Route exact path='/inicio_coordinador' element={<Inicio_coordinador />} />
           <Route exact path='/sistema_coordinador' element={<Sistema_coordinador />} />
+          {/*Rutas Profesor */}
+          <Route exact path='/buscar_Estudiante_profesor' element={<Buscar_Estudiante_profesor />} />
+          <Route exact path='/cambiar_Clave_profesor' element={<Cambiar_Clave_profesor />} />
+          <Route exact path='/huella_Estudiante_Nuevo_profesor' element={<Huella_Estudiante_Nuevo_profesor />} />
+          <Route exact path='/inicio_profesor' element={<Inicio_profesor />} />
+          <Route exact path='/sistema_profesor' element={<Sistema_profesor/>} />
         </Routes>
       </>
     </Router>

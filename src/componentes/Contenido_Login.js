@@ -22,13 +22,19 @@ export default class Contenido_Login extends Component {
       .then(res => {
 
         localStorage.setItem('tokeDeAcceso', res.data.tokeDeAcceso);
+        localStorage.setItem('tipoRol', res.data.unUsuario.roles[0].nombre)
+        localStorage.setItem('estado', res.data.unUsuario.unaPersona.estado)
+        localStorage.setItem('id', res.data.unUsuario.id)
+        localStorage.setItem('email', res.data.unUsuario.email)
+        localStorage.setItem('password', res.data.unUsuario.password)
+        localStorage.setItem('username', res.data.unUsuario.username)
 
         console.log(res.data.unUsuario.roles[0].nombre)
-
-        console.log(res.data)
+        console.log(res.data.unUsuario.unaPersona.estado)
 
         this.setState({
-          tipoRol: (res.data.unUsuario.roles[0].nombre)
+          tipoRol: (res.data.unUsuario.roles[0].nombre),
+          tipoEstado: (res.data.unUsuario.unaPersona.estado)
         })
       })
       .catch(
@@ -47,16 +53,19 @@ export default class Contenido_Login extends Component {
 
   render() {
 
-    if (this.state.tipoRol === "ROLE_ADMIN") {
+    if (this.state.tipoRol === "ROLE_ADMIN" && this.state.tipoEstado === "A") {
       return <Navigate to={'/Inicio_admin'} />
     }
-    if (this.state.tipoRol === "ROLE_CONTRATISTA") {
+    if (this.state.tipoRol === "ROLE_CONTRATISTA" && this.state.tipoEstado === "A") {
       return <Navigate to={'/Inicio_contratista'} />
     }
-    if (this.state.tipoRol === "ROLE_RECTOR") {
+    if (this.state.tipoRol === "ROLE_RECTOR" && this.state.tipoEstado === "A") {
       return <Navigate to={'/Inicio_rector'} />
     }
-    if (this.state.tipoRol === "ROLE_COORDINADOR") {
+    if (this.state.tipoRol === "ROLE_COORDINADOR" && this.state.tipoEstado === "A") {
+      return <Navigate to={'/Inicio_coordinador'} />
+    }
+    if (this.state.tipoRol === "ROLE_PROFESOR" && this.state.tipoEstado === "A") {
       return <Navigate to={'/Inicio_coordinador'} />
     }
 
@@ -69,9 +78,6 @@ export default class Contenido_Login extends Component {
         );
       }
     };
-
-
-
 
     return (
       <div id="login_back" >

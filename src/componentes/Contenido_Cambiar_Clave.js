@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import './Contenido_Cambiar_Clave.css'
 import Form from "react-validation/build/form";
@@ -6,26 +6,90 @@ import CheckButton from "react-validation/build/button";
 import Input from "react-validation/build/input";
 import axios from 'axios';
 
-export default class Contenido_Cambiar_Clave extends React.Component {
+import { Modal, Button, } from 'react-bootstrap'
 
+export default class Contenido_Cambiar_Clave extends React.Component {
+    ///////////////////////////////////Primera Peticion
     handleSubmit = e => {
         e.preventDefault();
         const data = {
-            email: this.usernameOrEmail,
+            usernameOrEmail: this.usernameOrEmail,
             password: this.password
         };
-        axios.put('http://localhost:8080/api/usuarios/actualizar/', data)
+        axios.post('http://localhost:8080/api/usuarios/Verificacion', data)
             .then(res => {
-                console.log(data);
-                console.log(res);
+
+                const id = localStorage.getItem('id', res.data.unUsuario.id)
+                const username = localStorage.getItem('username', res.data.unUsuario.username)
+                const email = localStorage.getItem('email', res.data.unUsuario.email)
+                const password = localStorage.getItem('password', res.data.unUsuario.password)
+
+                this.setState({
+                    showModal: true,
+                })
+
+                console.log(id)
+                console.log(username)
+                console.log(email)
+                console.log(password)
             })
             .catch(
                 err => {
                     console.log(err);
+                    alert('Usuario o Contraseña Incorrectos')
                 })
     };
+    ////////////////////////////////////
+    
+    handlePassword = e => {
+        e.preventDefault();
+        const datas = {
+            id: this.id,
+            username: this.username,
+            email: this.email,
+            password: this.setpassword
+        };
+        axios.put('http://localhost:8080/api/usuarios/actualizar/1', datas)
+            .then(res => {
+                console.log(datas)
+                console.log(res)
+                console.log(this.setState.setid)
+            })
+            .catch(
+                err => {
+                    console.log(err);
+                    console.log(datas)
+                    alert('Incorrecto')
+                }
+            )
+    }
+
+    constructor() {
+        super()
+        this.state = {
+            showModal: false,
+            username: localStorage.getItem('username'),
+            email: localStorage.getItem('email'),
+            password: localStorage.getItem('password')
+        }
+    }
+
+    handleModal() {
+        this.setState({ showModal: !this.state.showModal })
+    }
 
     render() {
+
+        const required = value => {
+            if (!value) {
+                return (
+                    <div className="alert alert-danger" role="alert" id="login_alerterror">
+                        ¡Este campo es obligatorio!
+                    </div>
+                );
+            }
+        };
+
         return (
             <div id="clave_div">
                 <div id='clave_divruta'>
@@ -37,41 +101,65 @@ export default class Contenido_Cambiar_Clave extends React.Component {
                 </div>
                 <Form onSubmit={this.handleSubmit} id="clave_form" ref={c => { this.form = c; }} >
                     <div id="clave_divinfomacion">
-                        <label htmlFor="exampleInputEmail1" id="clave_inputs">Usuario:*</label>
+                        <label htmlFor="exampleInputEmail1" id="clave_inputs">Usuario o Email:*</label>
                         <Input
                             autoComplete="true"
                             type="text"
                             className="form-control"
                             aria-describedby="emailHelp"
-                            placeholder="Ingrese su Usuario"
+                            placeholder="Ingrese Usuario o Email"
                             onChange={e => this.usernameOrEmail = e.target.value}
+                            validations={[required]}
                         />
                     </div>
                     <div id="clave_divinfomacion">
                         <label htmlFor="exampleInputEmail1" id="clave_inputs">Contraseña Actual:*</label>
                         <Input autoComplete="true"
-                            type="password"
+                            type="text"
                             className="form-control"
                             aria-describedby="emailHelp"
                             placeholder="Clave Actual"
                             onChange={e => this.password = e.target.value}
+                            validations={[required]}
                         />
-                    </div>
-                    <div id="clave_divinfomacion">
-                        <label htmlFor="exampleInputEmail1" id="clave_inputs">Contraseña Nueva:*</label>
-                        <Input autoComplete="true"
-                            type="password"
-                            className="form-control"
-                            aria-describedby="emailHelp"
-                            placeholder="Clave Nueva"
-                        />
-                    </div>
-                    <div id="clave_divinfomacion">
-                        <label htmlFor="exampleInputPassword1" id="clave_inputs">Repetir Contraseña Nueva:*</label>
-                        <Input autoComplete="true" type="password" className="form-control" placeholder="Repetir Contraseña Nueva" onChange={e => this.password = e.target.value} />
                     </div>
                     <div id="busc">
-                        <CheckButton type="submit" className="btn btn-danger" ref={c => { this.checkBtn = c; }} >Actualizar Contraseña</CheckButton>
+                        <CheckButton type="submit" className="btn btn-primary" ref={c => { this.checkBtn = c; }} data-toggle="modal" data-target="#exampleModal"
+                        >Actualizar Contraseña</CheckButton>
+                    </div>
+                    <div>
+                        <Modal show={this.state.showModal} onHide={() => this.handleModal()} >
+                            <Modal.Header closeButton>
+                                Actualizar Contraseña, Usuario o Email
+                            </Modal.Header>
+                            <Modal.Body>
+                                <Form onSubmit={this.handlePassword} ref={c => { this.form = c; }}>
+                                    <div>
+                                        <label>Username</label>
+                                        <Input
+                                            ref={c => { this.id = c; }}
+                                            value={this.state.username}
+                                        />
+                                    </div>
+                                    <div>
+                                        <label>Email</label>
+                                        <Input
+                                            onSubmit={e => this.email = e.target.value}
+                                            value={this.state.email}
+                                        />
+                                    </div>
+                                    <div>
+                                        <label>Nueva Contraseña</label>
+                                        <Input
+                                            onChange={e => this.setpassword = e.target.value}
+                                            value={this.state.password}
+                                        />
+                                    </div>
+                                    <CheckButton ref={c => { this.check = c; }} >Actualizar</CheckButton>
+                                    <Button onClick={() => this.handleModal()} variant="danger" >Cancelar</Button>
+                                </Form>
+                            </Modal.Body>
+                        </Modal>
                     </div>
                 </Form>
             </div>

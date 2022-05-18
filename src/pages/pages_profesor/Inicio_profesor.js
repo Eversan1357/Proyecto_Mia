@@ -1,16 +1,14 @@
 /* eslint-disable react/jsx-pascal-case */
 import React from "react";
-import Navegacion_admin from '../../componentes/Componentes_admin/Navegacion_admin'
+import Navegacion_profesor from '../../componentes/Componentes_profesor/Navegacion_profesor'
 import Contenido_Inicio from '../../componentes/Contenido_Inicio';
-import Modales from '../../componentes/Componentes_admin/Modales'
 
 export default class Inicio_admin extends React.Component {
   render() {
     return (
       <>
-        <Navegacion_admin />
+        <Navegacion_profesor />
         <Contenido_Inicio />
-        <Modales />
       </>
     )
   }

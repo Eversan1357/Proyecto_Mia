@@ -22,51 +22,41 @@ export default class Contenido_Generar_Reportes_admin extends React.Component {
                         <label id="reportes_inputstext" >Fecha Final:*</label>
                         <input id="reportes_inputstext" className="date" type="date"></input>
                     </div>
-                    <div id="reportes_divinfomacion">
-                        <label id="reportes_inputstext">Reporte Grupos Poblacionales:*</label>
-                        <select className="form-select">
-                            <option>Internos</option>
-                            <option>Indigenas</option>
-                            <option>Negritudes</option>
-                            <option>Internos</option>
-                            <option>Victimas Del Conflicto Armado</option>
-                            <option>NEE(Población Necesidades Especiales)</option>
-                            <option>Ninguna De Las Anteriores</option>
-                        </select>
+                    <div id="reportes_divinfomacion_prueba">
+                        <label id="reportes_inputstext">Reporte Grupos Poblacionales:</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Internos</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Indigenas</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Negritudes</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Victimas Del Conflicto Armado</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />NEE(Población Necesidades Especiales)</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Ninguna De Las Anteriores</label>
                     </div>
-                    <div id="reportes_divinfomacion">
+                    <div id="reportes_divinfomacion_prueba">
                         <label id="reportes_inputstext">Tipo Reporte:*</label>
-                        <select className="form-select">
-                            <option>Formato Men-Planilla</option>
-                            <option>Zona(Rural o Urbana)</option>
-                            <option>Municipio</option>
-                            <option>Sede Educativa</option>
-                            <option>Sexo(F o M)</option>
-                            <option>Consolidado Mensual Planilla</option>
-                        </select>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Formato Men-Planilla</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Zona(Rural o Urbana)</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Municipio</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Sede Educativa</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Sexo(F o M)</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Consolidado Mensual Planilla</label>
                     </div>
-                    <div id="reportes_divinfomacion">
+                    <div id="reportes_divinfomacion_prueba">
                         <label id="reportes_inputstext">Reporte Tipo Alimentario:*</label>
-                        <select className="form-select">
-                            <option>AM</option>
-                            <option>PM</option>
-                            <option>Almuerzo</option>
-                            <option>Ración Industrial</option>
-                            <option>Ración Transportada en Caliente</option>
-                            <option>RPC(Ración Para Preparar En Casa)</option>
-                            <option>Bono</option>
-                            <option>Otro</option>
-                        </select>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Complemento Am Pm</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Almuerzo</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Ración Industrial</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Ración Transportada en Caliente</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />RPC(Ración Para Preparar En Casa)</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Bono</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Otro</label>
                     </div>
-                    <div id="reportes_divinfomacion">
+                    <div id="reportes_divinfomacion_prueba">
                         <label id="reportes_inputstext">Reporte Por Jornada:*</label>
-                        <select className="form-select">
-                            <option>Completa</option>
-                            <option>Mañana</option>
-                            <option>Tarde</option>
-                            <option>Única</option>
-                            <option>Otra</option>
-                        </select>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Completa</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Mañana</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Tarde</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Única</label>
+                        <label id="label_checks"><input type="checkbox" id="checks" />Otra</label>
                     </div>
                 </div>
                 <div>
@@ -97,6 +87,8 @@ export default class Contenido_Generar_Reportes_admin extends React.Component {
                 <div id="busc">
                     <button type="submit" className="btn btn-danger">Generar Reporte</button>
                 </div>
+
+
             </div>
         )
     }
